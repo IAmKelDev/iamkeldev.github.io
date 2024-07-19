@@ -16,7 +16,7 @@ const config = {
   url: 'https://IAmKelDev.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/landing-site-ds',
+  baseUrl: '/landing-site-ds/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -41,8 +41,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/IAmKelDev/landing-site-ds/tree/dev/',
           routeBasePath: '/'
@@ -50,6 +48,7 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        blog: false
       }),
     ],
   ],
