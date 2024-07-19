@@ -13,15 +13,15 @@ const config = {
   favicon: 'img/opendi-icon-small.png',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://IAmKelDev.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/landing-site-ds',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'opendi-org', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'IAmKelDev', // Usually your GitHub org/user name.
+  projectName: 'landing-site-ds', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -44,7 +44,8 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/opendi-org/landing-site/tree/dev/',
+            'https://github.com/IAmKelDev/landing-site-ds/tree/dev/',
+          routeBasePath: '/'
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -95,7 +96,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                to: '/docs/index',
+                to: '/',
               },
             ],
           },
