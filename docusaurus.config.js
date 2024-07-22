@@ -56,7 +56,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'OpenDI',
@@ -97,24 +96,23 @@ const config = {
                 label: 'Home',
                 to: '/',
               },
+              {
+                label: 'Roles and User Stories',
+                href: 'http://roles-user-stories.opendi.org'
+              },
+              {
+                label: 'JSON Schema',
+                href: 'http://json-schema.opendi.org'
+              },
             ],
           },
           {
-            title: 'Community',
+            title: 'Get Involved',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
               {
                 label: 'OpenDI Discord',
                 href: 'https://discord.gg/FtAX3JStJz',
-              }
-            ],
-          },
-          {
-            title: 'More',
-            items: [
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/opendi-org',
