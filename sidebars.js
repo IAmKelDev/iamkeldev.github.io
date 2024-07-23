@@ -1,5 +1,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 //https://docusaurus.io/docs/sidebar
+
+//MAIN!!!
 const sidebars = {
   landingSidebar: [
     {
