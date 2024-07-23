@@ -1,11 +1,14 @@
-name: Test deployment
+name: Test deployment to main
 
 on:
-  pull_request:
+  pull_request: # Validate proposed changes
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+  push:         # Validate changes set for deployment
+    branches:
+      - main
+  
+  workflow_dispatch:  # Allow manual re-run from Actions tab
 
 jobs:
   test-deploy:
