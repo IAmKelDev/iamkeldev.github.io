@@ -8,6 +8,8 @@ Please consider [contributing](./How%20To%20Contribute.md), and joining the [Ope
 
 ## Who is OpenDI?
 
+This is a test change to index.md on the dev branch.
+
 We are a decentralized group of entrepreneurs, executives, researchers, government leaders, and educators working to build an inclusive Decision Intelligence (DI) ecosystem dedicated to driving technological innovation, collaboration, and advancements in human decision making. Our goal is simple: *to break down the barriers that hinder progress and create a more open and integrated platform for Decision Intelligence technologies and services.*
 
 ## Why
