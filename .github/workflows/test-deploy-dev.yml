@@ -1,11 +1,13 @@
 name: Test deployment to dev
 
+# Checkout most-recent changes for dev, then run build command to check for errors
+
 on:
   pull_request: # Validate proposed changes
     branches:
       - dev
-  push:
-    branches:   # Validate incoming changes
+  push:         # Validate incoming changes
+    branches:
       - dev
   
   workflow_dispatch:  # Allow manual re-run from Actions tab
