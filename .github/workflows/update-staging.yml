@@ -1,0 +1,64 @@
+name: Sync main and dev with staging branch
+
+on:
+    workflow_run:
+        workflows: ["Test deployment to dev", "Test deployment to main"]
+    
+    workflow_dispatch:  # Allow manual re-run from Actions tab
+
+
+jobs:
+    push-from-main:
+        name: Gather changes and push
+
+        permissions:
+          contents: write # Permission to write (push) to repo contents
+
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+            
+            - name: Configure git # Setup user info and origin url so push will succeed
+              run: |
+                git config --global user.name 'Actions: Generate MKDocs Website'
+                git config --global user.email 'actions-generate-mkdocs-website@users.noreply.github.com'
+                git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+            
+            - name: Switch to staging branch
+              run: git switch deployment-staging
+            
+            - name: Get versioned changes from main
+              run: git checkout main ":!docs/*" ":!sidebars.js"
+            
+            - name: Get latest changes from dev
+              run: git checkout dev docs/* sidebars.js
+            
+            - name: Update staging branch with changes
+              run: |
+                git add *
+                git commit -m "Action: Auto-update staging branch"
+                git push
+    
+    deploy:
+      name: Deploy to GitHub Pages
+      needs: push-from-main
+
+      permissions:
+        pages: write
+        id-token: write
+      
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      
+      runs-on: ubuntu-latest
+      steps:
+        - name: Switch to staging branch
+          run: git switch deployment-staging
+
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v4
+                
