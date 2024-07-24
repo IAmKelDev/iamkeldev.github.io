@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - deployment-staging
+  workflow_run:
+    workflows: ["Sync main and dev with staging branch"]
+    types:
+      - completed
   
   workflow_dispatch:  # Allow manual re-run from Actions tab
 
