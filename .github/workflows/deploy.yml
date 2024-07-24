@@ -54,6 +54,9 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - name: Select staging branch
+        run: git switch deployment-staging
+        
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
