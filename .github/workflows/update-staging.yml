@@ -43,25 +43,4 @@ jobs:
                 git add *
                 git commit -m "Action: Auto-update staging branch"
                 git push
-    
-    deploy:
-      name: Deploy to GitHub Pages
-      needs: push-from-main
-
-      permissions:
-        pages: write
-        id-token: write
-      
-      environment:
-        name: github-pages
-        url: ${{ steps.deployment.outputs.page_url }}
-      
-      runs-on: ubuntu-latest
-      steps:
-        - name: Switch to staging branch
-          run: git switch deployment-staging
-
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
                 
