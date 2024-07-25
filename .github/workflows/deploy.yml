@@ -43,11 +43,13 @@ jobs:
         run: npm run build
 
       - name: Replace build artifacts
-        run: mv build/ deployed-source/
+        run: |
+          rm -rf deployed-source/
+          mv build/ deployed-source/
 
       - name: Push new source
         run: |
-          git add *
+          git add deployed-source/*
           git commit -m "Action: Move pages src to staging dir"
           git push
 
