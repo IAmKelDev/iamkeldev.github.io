@@ -44,6 +44,7 @@ jobs:
 
       - name: Replace build artifacts
         run: |
+          touch ../TEMP
           mv ./build ../TEMP/docs
           git switch gh-pages
           rm -rf ./docs/
