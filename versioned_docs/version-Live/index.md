@@ -1,4 +1,7 @@
-!!MAIN VERSION!
+!!!
+MAIN
+07/25/2024 11:02am
+!!!
 
 # Welcome to OpenDI 
 We're glad you're here!  The purpose of this website is to publish OpenDI standards, materials, and resources for you to use and contribute to.  
