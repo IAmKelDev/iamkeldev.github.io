@@ -26,11 +26,11 @@ jobs:
                 git config --global user.email 'actions-generate-mkdocs-website@users.noreply.github.com'
                 git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
             
-            - name: Get a local copy of dev and main branches
-              # This should check for an origin/dev and main, and allow future commands to refer to 'dev' and 'main' locally
-              run: |
-                git switch dev
-                git switch main
+              # Check for an origin/dev and main, and allow future commands to refer to 'dev' and 'main' locally
+            - name: Get a local copy of dev branch
+              run: git switch dev
+            - name: Get a local copy of main branch
+              run: git switch main
 
             - name: Switch to staging branch
               run: git switch deployment-staging
