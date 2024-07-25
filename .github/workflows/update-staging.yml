@@ -36,10 +36,10 @@ jobs:
               run: git switch deployment-staging
             
             - name: Get versioned changes from main
-              run: git checkout origin/main ":!docs/*" ":!sidebars.js"
+              run: git checkout main ":!docs/*" ":!sidebars.js"
             
             - name: Get latest changes from dev
-              run: git checkout origin/dev docs/* sidebars.js
+              run: git checkout dev docs/* sidebars.js
             
             - name: Update staging branch with changes
               run: |
