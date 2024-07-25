@@ -53,7 +53,7 @@ jobs:
 
       - name: Push new source
         run: |
-          git add deployed-source/*
+          git add docs/*
           git commit -m "Action: Move pages src to staging dir"
           git push
 
