@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: 18
           cache: npm
+      
+      - name: Switch to staging branch
+        run: git switch deployment-staging
 
       - name: Install dependencies
         run: npm ci
