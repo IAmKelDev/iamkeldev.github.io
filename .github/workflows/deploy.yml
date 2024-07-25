@@ -44,11 +44,11 @@ jobs:
 
       - name: Replace build artifacts
         run: |
-          touch ../TEMP
-          mv ./build ../TEMP/docs
+          touch TEMP
+          mv ./build TEMP/docs
           git switch gh-pages
           rm -rf ./docs/
-          mv ../TEMP/docs ./docs
+          mv TEMP/docs ./docs
 
 
       - name: Push new source
