@@ -1,4 +1,6 @@
-name: Deploy to GitHub Pages
+name: Build and prep for Pages Deployment
+
+# Create new build files, and put them in the gh-pages branch where GitHub will deploy them to Pages
 
 on:
   push:
@@ -13,17 +15,21 @@ on:
 
 jobs:
   build:
+    # Only run if the triggering workflow succeeded, or if triggered manually
     if: ${{github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+
     name: Build Docusaurus
     permissions:
-      contents: write
+      contents: write # Permission to write (push) to repo contents
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Configure git # Setup user info and origin url so push will succeed
+        # Setup user info and origin url so push will succeed
+      - name: Configure git
         run: |
           git config --global user.name 'Actions: Generate MKDocs Website'
           git config --global user.email 'actions-generate-mkdocs-website@users.noreply.github.com'
@@ -34,6 +40,7 @@ jobs:
           node-version: 18
           cache: npm
       
+        # Build the staged changes to create build artifacts
       - name: Switch to staging branch
         run: git switch deployment-staging
 
@@ -42,7 +49,9 @@ jobs:
       - name: Build website
         run: npm run build
 
+        # Need to put built site in the gh-pages branch for deployment
       - name: Replace build artifacts
+        # Move site build files out of repo, switch branches, replace old site build files with new files
         run: |
           mkdir ../TEMP
           mv ./build ../TEMP/docs
@@ -56,24 +65,3 @@ jobs:
           git add docs/*
           git commit -m "Action: Move pages src to staging dir"
           git push
-
-  deploy:
-    if: ${{false && github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
-    name: Deploy to GitHub Pages
-    needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
-    steps:        
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
