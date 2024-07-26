@@ -6,9 +6,30 @@ on:
   pull_request: # Validate proposed changes
     branches:
       - main
+    paths:
+      - docs/*
+      - src/*
+      - static/*
+      - versioned_docs/*
+      - versioned_sidebars/*
+      - babel.config.js
+      - docusaurus.config.js
+      - sidebars.js
+      - versions.json
+
   push:         # Validate changes set for deployment
     branches:
       - main
+    paths:
+      - docs/*
+      - src/*
+      - static/*
+      - versioned_docs/*
+      - versioned_sidebars/*
+      - babel.config.js
+      - docusaurus.config.js
+      - sidebars.js
+      - versions.json
   
   workflow_dispatch:  # Allow manual re-run from Actions tab
 
