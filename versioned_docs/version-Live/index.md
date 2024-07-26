@@ -1,6 +1,5 @@
 !!!
-MAIN
-07/25/2024 11:02am
+DEV TO MAIN 07/26/2024 2:04pm
 !!!
 
 # Welcome to OpenDI 
@@ -12,6 +11,8 @@ Currently, standards are in draft / working draft format and may need significan
 Please consider [contributing](./How%20To%20Contribute.md), and joining the [OpenDI Discord community](https://discord.gg/FtAX3JStJz).
 
 ## Who is OpenDI?
+
+This is a test change to index.md on the dev branch.
 
 We are a decentralized group of entrepreneurs, executives, researchers, government leaders, and educators working to build an inclusive Decision Intelligence (DI) ecosystem dedicated to driving technological innovation, collaboration, and advancements in human decision making. Our goal is simple: *to break down the barriers that hinder progress and create a more open and integrated platform for Decision Intelligence technologies and services.*
 
