@@ -6,32 +6,16 @@ on:
   pull_request: # Validate proposed changes
     branches:
       - main
-    paths:
-      - src/*
-      - static/*
-      - versioned_docs/*
-      - versioned_sidebars/*
-      - babel.config.js
-      - docusaurus.config.js
-      - versions.json
 
   push:         # Validate changes set for deployment
     branches:
       - main
-    paths:
-      - src/*
-      - static/*
-      - versioned_docs/*
-      - versioned_sidebars/*
-      - babel.config.js
-      - docusaurus.config.js
-      - versions.json
   
   workflow_dispatch:  # Allow manual re-run from Actions tab
 
 jobs:
   test-deploy:
-    name: Test deployment
+    name: Test deployment (main)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
