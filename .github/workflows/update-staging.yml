@@ -51,7 +51,7 @@ jobs:
             
               # Grab only the "Next" version docs from dev
             - name: Get latest changes from dev
-              run: git checkout dev docs/* sidebars.js
+              run: git checkout dev ":docs/*" ":sidebars.js"
             
             - name: Update staging branch with changes
               run: |
