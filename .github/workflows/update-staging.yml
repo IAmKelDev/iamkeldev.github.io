@@ -7,6 +7,8 @@ name: Sync main and dev with staging branch
 on:
     workflow_run:
         workflows: ["Test deployment to dev", "Test deployment to main"]
+        types:
+          - completed
     
     workflow_dispatch:  # Allow manual re-run from Actions tab
 
