@@ -43,8 +43,11 @@ jobs:
               run: git switch main
 
               # We'll collect changes in deployment-staging
+              # Start fresh every time, in case files have been deleted
             - name: Switch to staging branch
-              run: git switch deployment-staging
+              run: |
+                rm -rf ./*
+                git switch deployment-staging
             
               # Grab only the non-"Next" docs from main
               # Uses "exclude" pathspec. See https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-exclude
