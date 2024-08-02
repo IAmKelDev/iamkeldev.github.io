@@ -1,7 +1,3 @@
-!!!  
-MAIN CHANGED 07/29/2024 8:46am
-!!!
-
 # Welcome to OpenDI 
 We're glad you're here!  The purpose of this website is to publish OpenDI standards, materials, and resources for you to use and contribute to.  
 
@@ -68,4 +64,5 @@ Join the OpenDI Discord community!
 <iframe src="https://discord.com/widget?id=1208154608984129557&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
 ## Credits
-David Roberts, Lorien Pratt, Nadine Malcolm, Isaac Kellogg, \<your name here!, [here's how](./How%20To%20Contribute.md)\>.
+David Roberts, Lorien Pratt, Nadine Malcolm, Isaac Kellogg.  
+Add your name here! [Here's how.](./How%20To%20Contribute.md)

@@ -41,10 +41,10 @@ The OpenDI Discord Server is best for providing general feedback about the stand
 
 To access the Discord channels for these OpenDI materials:
 
-1. Select the "I would like to contribute to OpenDI standards" option in the initial join question.
+1. Select the "I would like to contribute to OpenDI standards" option in the initial join question.  
     ![Discord Contributor Option](./img/contribution-guide/Discord-Contributor.png)
 2. Read and accept the server rules, by clicking "Finish".
-3. Look for the Ecosystem Resources channel category in your channel list
+3. Look for the Ecosystem Resources channel category in your channel list  
     ![Discord Contributor Channels](./img/contribution-guide/Discord-Contributor-Channels.png)  
     If you do not see the channel category, check the "Browse Channels" option in the "Channels and Roles" page, at the top of the channel list.  
     ![Discord Browse Channels](./img/contribution-guide/Discord-Browse-Channels.png)
