@@ -77,7 +77,7 @@ const config = {
           {
             'aria-label': 'GitHub Repo',
             className: 'navbar--github-link',
-            href: 'https://github.com/opendi-org/json-schema',
+            href: 'https://github.com/opendi-org/landing-site',
             position: 'right',
           },
           {
@@ -96,7 +96,7 @@ const config = {
             items: [
               {
                 label: 'Home',
-                to: '/',
+                to: 'http://opendi.org',
               },
               {
                 label: 'Roles and User Stories',
