@@ -1,7 +1,3 @@
-!!!  
-DEV CHANGED 07/29/2024 7:47am  
-!!!
-
 # Welcome to OpenDI 
 We're glad you're here!  The purpose of this website is to publish OpenDI standards, materials, and resources for you to use and contribute to.  
 
@@ -11,8 +7,6 @@ Currently, standards are in draft / working draft format and may need significan
 Please consider [contributing](./How%20To%20Contribute.md), and joining the [OpenDI Discord community](https://discord.gg/FtAX3JStJz).
 
 ## Who is OpenDI?
-
-This is a test change to index.md on the dev branch.
 
 We are a decentralized group of entrepreneurs, executives, researchers, government leaders, and educators working to build an inclusive Decision Intelligence (DI) ecosystem dedicated to driving technological innovation, collaboration, and advancements in human decision making. Our goal is simple: *to break down the barriers that hinder progress and create a more open and integrated platform for Decision Intelligence technologies and services.*
 
@@ -70,4 +64,5 @@ Join the OpenDI Discord community!
 <iframe src="https://discord.com/widget?id=1208154608984129557&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
 ## Credits
-David Roberts, Lorien Pratt, Nadine Malcolm, Isaac Kellogg, \<your name here!, [here's how](./How%20To%20Contribute.md)\>.
+David Roberts, Lorien Pratt, Nadine Malcolm, Isaac Kellogg.  
+Add your name here! [Here's how.](./How%20To%20Contribute.md)
