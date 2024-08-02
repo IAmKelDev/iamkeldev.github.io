@@ -14,5 +14,5 @@ Want to engage in community discussion? Join the [OpenDI Discord server!](https:
 
 ## Maintenance
 
-Looking for notes about project configuration, GitHub Actions setup, Pages Deployment, etc.?  
+Looking for notes about local deployment for testing, GitHub Actions setup, Pages Deployment, etc.?  
 View the [Maintainer Guide, here.](./Maintainer%20Guide/README.md)
