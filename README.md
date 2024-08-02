@@ -1,41 +1,18 @@
-# Website
+![](./docs/img/opendi-icon.png)
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+# Welcome to OpenDI
 
-### Installation
+Welcome! You're currently browsing source files for the OpenDI public website.
 
-```
-$ yarn
-```
+## Get started
 
-### Local Development
+If you're looking to explore the standards or learn more about the project, [start on the website.](https://opendi-org.github.io/landing-site/)
 
-```
-$ yarn start
-```
+If you'd like to contribute to OpenDI, check the [contribution guide.](https://opendi-org.github.io/landing-site/How%20To%20Contribute/)
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Want to engage in community discussion? Join the [OpenDI Discord server!](https://discord.gg/FtAX3JStJz).
 
-### Build
+## Maintenance
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Looking for notes about project configuration, GitHub Actions setup, Pages Deployment, etc.?  
+View the [Maintainer Guide, here.](./Maintainer%20Guide/README.md)
