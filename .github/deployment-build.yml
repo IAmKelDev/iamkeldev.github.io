@@ -1,0 +1,57 @@
+name: Build for Pages Deployment
+
+# Create new build files. Put them in gh-pages branch for GitHub Pages deployment.
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch: # Allow manual re-run from GitHub web UI.
+
+
+jobs:
+  build:
+
+    name: Build Docusaurus
+    permissions:
+      contents: write # Need permission to push to gh-pages branch
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Configure git # Set up user info and origin URL so the push goes through
+        run: |
+          git config --global user.name 'Actions: Build Docusaurus'
+          git config --global user.email 'actions-build-docusaurus@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+        # Note: node_modules/ is in .gitignore so this shouldn't register uncommitted changes.
+      - name: Install dependencies
+        run: npm ci
+
+        # Note: keldev/build/ is in .gitignore so this shouldn't register uncommitted changes.
+      - name: Build website
+        run: npm run build
+      
+      - name: Replace build artifacts
+        run: |
+          mkdir ../TEMP_BUILD_ARTIFACTS
+          mv ./build ../TEMP_BUILD_ARTIFACTS/docs
+          git switch gh-pages
+          rm -rf ./docs/
+          mv ../TEMP_BUILD_ARTIFACTS/docs ./docs
+      
+      - name: Push new artifacts
+        run: |
+          git add docs/*
+          git commit -m "Action: Move build artifacts to Pages build directory"
+          git push
