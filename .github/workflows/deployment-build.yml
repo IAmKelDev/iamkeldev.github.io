@@ -41,7 +41,7 @@ jobs:
         # Note: keldev/build/ is in .gitignore so this shouldn't register uncommitted changes.
       - name: Build website
         run: |
-        cd keldev
+        cd ./keldev
         npm run build
       
         # Copy out build artifacts to a temp directory outside of the repo, to avoid registering uncommitted changes
