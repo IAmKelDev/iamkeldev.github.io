@@ -40,14 +40,16 @@ jobs:
 
         # Note: keldev/build/ is in .gitignore so this shouldn't register uncommitted changes.
       - name: Build website
-        run: npm run build
+        run: |
+        cd keldev
+        npm run build
       
         # Copy out build artifacts to a temp directory outside of the repo, to avoid registering uncommitted changes
         # Then put the artifacts in the docs subdirectory of the gh-pages branch.
       - name: Replace build artifacts
         run: |
           mkdir ../TEMP_BUILD_ARTIFACTS
-          mv ./build ../TEMP_BUILD_ARTIFACTS/docs
+          mv ./keldev/build ../TEMP_BUILD_ARTIFACTS/docs
           git switch gh-pages
           rm -rf ./docs/
           mv ../TEMP_BUILD_ARTIFACTS/docs ./docs
