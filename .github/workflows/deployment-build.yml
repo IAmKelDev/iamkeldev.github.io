@@ -29,14 +29,14 @@ jobs:
           git config --global user.email 'actions-build-docusaurus@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
       
+      - name: Set working directory
+        run:
+          cd ./keldev
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-
-      - name: Set working directory
-        run:
-          cd ./keldev
 
         # Note: node_modules/ is in .gitignore so this shouldn't register uncommitted changes.
       - name: Install dependencies
