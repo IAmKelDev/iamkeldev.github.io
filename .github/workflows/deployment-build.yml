@@ -34,14 +34,18 @@ jobs:
           node-version: 18
           cache: npm
 
+      - name: Set working directory
+        run:
+          cd ./keldev
+
         # Note: node_modules/ is in .gitignore so this shouldn't register uncommitted changes.
       - name: Install dependencies
-        run: npm ci
+        run:
+          npm ci
 
         # Note: keldev/build/ is in .gitignore so this shouldn't register uncommitted changes.
       - name: Build website
-        run: |
-          cd ./keldev
+        run: 
           npm run build
       
         # Copy out build artifacts to a temp directory outside of the repo, to avoid registering uncommitted changes
