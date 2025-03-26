@@ -1,3 +1,181 @@
 # Projects
 
-Description of my projects here.
+## Current
+
+### OpenDI Initiative (2024-Current)
+
+[OpenDI.org](https://opendi.org)
+
+### 481Engine - 2D Game Engine (2021-???)
+Flexible 2D game engine. Uses [SFML](https://www.sfml-dev.org/) for basic rendering, with a custom C++ backend.  
+Supports full game scripting via runtime-interpreted JavaScript.
+
+<div class="video-wrap">
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/ZPiseP_8DHo?si=ddTc7RPCu6xCnAjv"
+      title="481Engine Demo v0.1.0"
+      frameborder="0"
+      allowfullscreen>
+    </iframe><br></br>
+  </div>
+2D Game Engine (C++, JavaScript)
+</div>
+
+#### Highlights
+- Multithreaded subsystem architecture for division of engine tasks
+- Timekeeping for framerate-independent realtime game logic
+- Game Object model representation, using a hierarchical generic component system
+- Framework for constructing Game Objects and Scenes in JavaScript (using [DukGlue](https://github.com/Aloshi/dukglue))
+
+#### Full Description
+I created the initial version of this engine for a class (CSC 481 - “Game Engine Foundations”) at NC State, over the course of a semester. This is a project I return to occasionally as time permits.
+
+The engine backend (written in C++) provides a robust game loop and engine subsystem management architecture. 481Engine has separate subsystems for handling:  
+- Rendering
+- Physics/collisions
+- Events
+- Game Object/Component logic.  
+The engine is multithreaded; all physics calculations are performed on a separate thread.
+
+481Engine supports complete game scripting. Game developers can use built-in components (Cameras, Colliders, rendering elements, etc.) to compose new Game Objects and Scenes, script per-frame-loop logic for those Game Objects and Scenes, construct Event handlers, and raise custom Events. This can all be done in JavaScript, utilizing the C++ backend code without having access to it.
+
+At the request of the instructor, the backend code for this project lives in a private GitHub repository on my account. [Contact me](mailto:keldtdev@gmail.com) if you want to see the repo, or get the latest executable release.
+
+##### Future plans
+I still return to this project occasionally. Here's a rough list of things I'm looking to do next.
+
+###### Backend Features
+- Basic 2D ray casting. [Ray casting](https://docs.unity3d.com/ScriptReference/Physics2D.Raycast.html), not [Ray casting](https://en.wikipedia.org/wiki/Ray_casting).
+- Better garbage collection.
+###### Games
+- Something to showcase ray casting. I'd like to implement a basic light/shadow algorithm like the one described in [this devlog](https://ncase.me/sight-and-light/). I have some basic platformer ideas to move from there.
+###### Other
+- Public release build, so you don't have to [Contact me](mailto:keldtdev@gmail.com) for the executable.
+- Public scripting documentation, so you don't have to [Contact me](mailto:keldtdev@gmail.com) to figure out how scripting works.
+
+## Past
+
+### Coccidia Detection (2022-2024)
+
+Applied computer vision for commercial poultry. I trained machine learning models to identify single-celled parasites ([coccidia](https://en.wikipedia.org/wiki/Coccidia)) in images taken from magnified slide samples of poultry feces. I handled software for this project, under the direction of [Dr. David Roberts](https://www.csc.ncsu.edu/people/dlrober4) and [Dr. Rocio Crespo](https://cvm.ncsu.edu/people/rcrespo/) at NC State. We published [an article](https://doi.org/10.3390/ani14020212) in *Animals* about the project.
+
+![Sample Output](https://i.ibb.co/37tNm2f/Sample-Output.png)
+
+#### Premise
+This was an [instance segmentation](https://paperswithcode.com/task/instance-segmentation) project. The goal was to create lightweight models that workers in the poultry industry can use to analyze images taken from their field samples.  A successfully-trained model should afford users the ability to:
+- Highlight instances of detected coccidia oocysts,
+- Classify each oocyst by species and sporulation status, and
+- Provide summaries about the number of each type of oocyst detected.
+
+Sporulated oocysts have become infective. There is a slight visual distinction between sporulated and non-sporulated oocysts.
+
+A field-ready tool made with this system could help alert workers to the presence of infective coccidia as early as possible, to prevent the spread of [coccidiosis](https://en.wikipedia.org/wiki/Coccidiosis).
+
+#### Model Training
+I adapted the existing [Mask R-CNN](https://github.com/matterport/Mask_RCNN) framework, using the implementation offered in the Python library [PixelLib](https://github.com/ayoolaolafenwa/PixelLib), which makes the process [very accessible](https://github.com/ayoolaolafenwa/PixelLib#custom-training-with-7-lines-of-code).  To make the most out of a smaller dataset, I implemented some custom data augmentation, with lots of incremental crops and rotations.
+
+#### *Animals* Article
+We got an article published in *Animals* about this project. I was a co-author. This was my first exposure to academic writing, and I'm proud of how it turned out!
+
+[Read the article here](https://doi.org/10.3390/ani14020212).
+
+I put together most of the charts and figures using a combination of [pandas](https://pandas.pydata.org/), [Vega-Altair](https://altair-viz.github.io/), and (good ol') [GIMP](https://www.gimp.org/). I drafted most of the Materials/Methods and Results sections, and had lots of smaller edits and additions throughout the other sections. [Contact me](mailto:keldtdev@gmail.com) for any questions related to this!
+
+### Gmail Add-on for LexisNexis InterAction+ (2023)
+
+[CRM](https://en.wikipedia.org/wiki/Customer_relationship_management) add-on for Gmail, with CRM data sourced from LexisNexis's InterAction+ API. This was a capstone project for NC State's [Senior Design program](https://sdc.csc.ncsu.edu/about/the-center). Meant to be similar to the [existing add-in for Outlook](https://www.lexisnexis.com/pdf/intelligence/IMO_Lit.pdf) (pdf for an _ancient_ version).
+
+<div class="video-wrap">
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/U8OLiGiwaPY?si=U_iL5BcpLSMYwPMj" 
+      title="InterAction+ for Gmail"
+      frameborder="0"
+      allowfullscreen>
+    </iframe><br></br>
+  </div>
+InterAction+ for Gmail (Google Apps Script)
+</div>
+
+This was somewhat exploratory for LexisNexis, who was interested in targeting the Google Workspace ecosystem for smaller law firms who might be outside of the Office 365 ecosystem. My team of 4 adapted much of the expected CRM functionality into a Gmail add-on, targeting these main use cases:
+- Authentication w/ InterAction+ OIDC protocol
+- View sender or recipients as InterAction+ contacts
+- Create new contact / Generate contact info from email
+- View activities related to all contacts
+
+Check out this [YouTube playlist](https://youtube.com/playlist?list=PLgH0660NsdrTx3XIxSDaK9KvLjnWytttf&si=4PPp5yJiH8LVD9z1) showing our progress at the end of the semester! The add-on is running on a test instance of InterAction+ here, so all of the contact data is placeholder.
+
+The team worked well together! We all traded responsibilities periodically, including leadership, so we all put at least some work into most areas of the project. Working with LexisNexis was a great experience. See the YT Playlist for a list of everyone involved.
+
+The biggest challenge throughout this project was just working with [Google Apps Script](https://www.google.com/script/start/) (GAS), and the whole framework for Gmail add-ons. GAS is effectively a JavaScript programming environment that comes with a Google-specific library, where projects must be pushed to [the Apps Script cloud environment](https://script.google.com/home/) to run. It has [some quirks](https://developers.google.com/apps-script/add-ons/how-tos/navigation) that I might write more about later. Notably, sponsors initially wanted to try an add-on for [Contacts](https://contacts.google.com/), but as of Fall 2023 Google hadn't added support for Contacts add-ons yet. Check the "works with" dropdown [here](https://workspace.google.com/marketplace) to see if that has changed!
+
+### Game AI - Monster Chase Demo (2022)
+
+This demo shows my implementation of the final project for a Game AI class taken at NC State in Spring 2022.
+
+<div class="video-wrap">
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/k_Jhq-ZC86Y?si=saucU_y_f3dcK98k"
+      title="484 Pathfinding Demo"
+      frameborder="0"
+      allowfullscreen>
+    </iframe><br></br>
+  </div>
+Game AI Pathfinding Demo (C++)
+</div>
+
+#### AI concepts demonstrated
+- Decision and Behavior Trees
+- A\* Pathfinding
+- Simple arrive/align
+
+#### Full Description
+In this demo, a *monster* (the character with the dark purple path) chases a *flee-er* (the character with the green path), who runs away. This demonstrates pathfinding and path-following in a procedural grid-based environment.
+
+The *flee-er* character's algorithm is slightly more sophisticated than a random wander algorithm. The *flee-er* divides the environment into sections, then moves between sections based on a decision tree. It initially seeks a section near one of the corners of the screen. Once there, it wanders using random short paths until it wanders out of the section. Then, depending on which non-corner section it wandered into, it picks a different corner section to move towards and then wander within.
+
+The *monster* character's algorithm is more focused. It attempts to close distance to the *flee-er* by pathfinding to the euclidean midpoint between the current position and the intended goal position of the *flee-er*. Once it gets close enough, the *monster* begins pathfinding towards the *flee-er* directly. If the *flee-er* then escapes the *monster* by putting to much distance between the characters, the *monster* will express frustration by spinning in place, before resuming the chase. The *monster*'s pursuit algorithm is handled by a behavior tree.
+
+The *monster* and *flee-er* persist until the *flee-er* is inevitably caught.
+
+### Retro Asteroids (2021)
+
+Simple modern implementation of the classic [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) game, with 3D graphics. It uses colorful wireframe rendering to evoke the classic visuals, with force-based movement for a spaceflight feel.
+
+<div class="video-wrap">
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/LZIe3uUedo4?si=uw-eAPw79fxLH5E1"
+      title="Retro Asteroids"
+      frameborder="0"
+      allowfullscreen>
+    </iframe><br></br>
+  </div>
+Unity Asteroids (C#)
+</div>
+
+This was implemented in Unity, for a class (CSC 461 - "Introduction to Computer Graphics") at NC State. This link to the [GitHub repo](https://github.com/IAmKelDev/CSC461-Asteroids) will work once I make it public.
+
+### fLight (Old Game Project) (~2016)
+
+I created this game for an introductory game development class in high school.
+
+<div class="video-wrap">
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/u5dELQFEw9g?si=sAwBMuz3MLUY444E"
+      title="fLight - Walls Glow When Bullets Are Near"
+      frameborder="0"
+      allowfullscreen>
+    </iframe><br></br>
+  </div>
+fLight (GameMaker)
+</div>
+
+fLight is a physics platformer with light puzzle elements. You control an eye-ball, whose ability to float recharges on contact with walls. The game explored different wall materials: bouncy, ultra-charging, wire-walls, etc. It featured the classic “shoot to move” idea had by many aspiring game developers. The player’s eyelid was procedurally animated based on velocity changes. Bullets reflected off of bouncy walls. Environment elements lit up when the player got close enough.
+
+I had lots of fun making this on my own as a teen, and I learned plenty! An old WIP build of the game is still up on an [old itch.io page](https://keldt.itch.io/flight), but I can’t guarantee it will run on anything.
+
+See more old WIP gameplay uploads in [this playlist](https://youtube.com/playlist?list=PLgH0660NsdrQGFwervai1nRyzrN726qG9).

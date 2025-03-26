@@ -61,6 +61,11 @@ const config: Config = {
           label: 'About',
         },
         {
+          to: '/about/projects',
+          label: 'Projects',
+          position: 'left'
+        },
+        {
           to: '/blog',
           label: 'Blog',
           position: 'left'
@@ -77,7 +82,7 @@ const config: Config = {
       links: [
         {
           label: 'Email',
-          href: 'mailto:sikellogg98@gmail.com',
+          href: 'mailto:keldtdev@gmail.com',
         },
         {
           label: 'LinkedIn',
