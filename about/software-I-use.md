@@ -33,7 +33,7 @@ They offer a paid subscription for multi-device note syncing. I just put the not
 **Free?** Yes.  
 [VS Code site](https://code.visualstudio.com/)
 
-Nice balance between feeling lightweight and having extensive functionality. That's the plugin model working well, I guess. I'm not super picky with IDEs. For a little while I regularly used Notepad++ as my main editor for [a Python project](./projects.md/#coccidia-detection-2022-2024) and had a fine time.
+Nice balance between feeling lightweight and having extensive functionality. That's the plugin model working well, I guess. I'm not super picky with IDEs. For a little while I regularly used Notepad++ as my main editor for [a Python project](./projects/#coccidia-detection-2022-2024) and had a fine time.
 
 ### Firefox
 **Type:** Internet browser  
