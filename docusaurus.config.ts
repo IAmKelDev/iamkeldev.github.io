@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'KelDev',
-  tagline: 'Isaac Kellogg\'s personal/professional site',
+  tagline: 'Yet Another Personal/Professional Site (Isaac K)',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -47,7 +47,7 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     navbar: {
-      title: 'Isaac Kellogg',
+      title: 'Isaac K',
       logo: {
         alt: 'KelDev Logo',
         src: 'img/logoVector_Green_Round.svg',
