@@ -1,3 +1,7 @@
+---
+description: "A big list of software that I use regularly, and generally recommend."
+---
+
 # Software that I use
 
 Here's a big list of software I use regularly, and generally recommend.  

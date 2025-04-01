@@ -114,6 +114,8 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-blog',
       {
+        // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog#ex-config
+        blogDescription: 'Technical posts about software development. Thoughts about media, games, life, miscellanea.',
         routeBasePath: 'blog',
         path: './blog',
         showReadingTime: true,
