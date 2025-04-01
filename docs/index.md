@@ -1,7 +1,11 @@
+---
+title: ""
+description: "Another personal/professional blog site."
+---
 
 # Welcome
 
-Welcome to yet another personal/professional blog site. This one is mine!  
+Welcome to yet another personal/professional blog site. This one belongs to me!  
 You can read [about me here](/about).
 
 I've worked on some Projects that you can [read about here](/about/projects).

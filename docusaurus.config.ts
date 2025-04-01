@@ -45,7 +45,9 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    metadata: [
+      {name: 'image', content: 'https://keldev.net/img/logoVector_Green_Round_120x120.png'}
+    ],
     navbar: {
       title: 'Isaac K',
       logo: {
