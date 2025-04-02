@@ -132,16 +132,6 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'default',
-        path: 'docs',
-        routeBasePath: '/',
-        sidebarPath: require.resolve('./sidebars.ts'),
-        include: ['index.md']
-      }
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
         id: 'about',
         path: 'about',
         routeBasePath: 'about',

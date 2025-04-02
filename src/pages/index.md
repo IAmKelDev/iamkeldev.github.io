@@ -1,6 +1,7 @@
 ---
-title: ""
+title: "Home"
 description: "Another personal/professional blog site."
+slug: /
 ---
 
 # Welcome
