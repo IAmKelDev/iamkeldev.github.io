@@ -1,6 +1,9 @@
 ---
 sidebar_position: 2
+description: "A list of all my past a current projects, both professional and personal."
 ---
+
+import OpenDIReactDecisionEngine from './assets/OpenDI-React-Decision-Engine.png';
 
 # Projects
 
@@ -8,7 +11,30 @@ sidebar_position: 2
 
 ### OpenDI Initiative (2024-Current)
 
-[OpenDI.org](https://opendi.org)
+The [Open Decision Intelligence initiative](https://opendi.org/) is an open source project working on interoperability standards for the Decision Intelligence (DI) industry.
+
+<a class="zoomable" href={OpenDIReactDecisionEngine}><img decoding="async" loading="lazy" alt="OpenDI React Decision Engine" width="2149" height="834" class="img_ev3q" src={OpenDIReactDecisionEngine}/></a>
+
+I worked with one of the co-founders, Dr. Roberts, on the [Coccidia Detection](#coccidia-detection-2022-2024) project, and he decided I'd be a good fit for helping them get this project started!
+
+I've gotten to contribute a fairly eclectic bunch of solutions for various portions of a mostly web-based tech stack for this project. I set up most of the organization's [GitHub repos](https://github.com/orgs/opendi-org/repositories?q=visibility%3Apublic+archived%3Afalse), as well as all of OpenDI's public websites. They're all Docusaurus-based, serving markdown content via GitHub Pages (sound familiar?).
+
+The main bulk of my work, though, has been architecting standards for interoperability. DI practices align around the concept of [Causal Decision Diagrams](https://www.lorienpratt.com/a-framework-for-how-data-informs-decisions/) (CDDs) and Causal Decision Models (CDMs). So interoperability in this sort of framework means being able to agree upon methods for storing and transmitting these models and diagrams, and to settle ideas around best practices, terminology, typical team members, roles and user stories, etc.
+
+Why is this useful? This allows companies, researchers, and anyone else to _specialize_ their role in DI, naturally encouraging an ecosystem of many tools created by many parties. The ideal situation is one where a CDD authored in one tool can be sent to another tool to have logical/simulation components attached, then connected to databases and simulated in yet another environment. Or a community could collaborate to build a model hub full of foundational decision models that can be freely extended in any toolset, adapted to more specific or complex contexts by experts, or used for research.
+
+My work has largely been in laying foundations for this ecosystem. To that end, I have:
+- Created [a JSON Schema](https://github.com/opendi-org/cdm-json-schema) for representing CDMs (with CDDs attached), using [the JSON Schema standard](https://json-schema.org/)
+- Specified [standard API endpoints](https://opendi.org/api-specification/api) for transmitting model JSON, using [OpenAPI 3.0](https://en.wikipedia.org/wiki/OpenAPI_Specification)
+- Contributed various bits of documentation and other content to our public sites
+- Helped build a community for [OpenDI on Discord](https://discord.gg/FtAX3JStJz)
+
+On top of this foundation, I've also been implementing examples to demonstrate how the standards can be used:
+- I started a [working Go implementation](https://github.com/opendi-org/example-api-go) of our API specification
+- I created a browser-based prototype [CDD authoring tool](https://opendi.org/cdd-authoring-tool/) so you can graphically edit CDDs and see the JSON constructed in real-time
+- I joined the above two projects together with a database in a fully [containerized](https://www.docker.com/) Docker Compose project [(repo)](https://github.com/opendi-org/containerized-authoring-demo), with Docker Hub images for the [authoring tool](https://hub.docker.com/repository/docker/iamkeldev/opendi-cdd-authoring-tool/general) and [api](https://hub.docker.com/repository/docker/iamkeldev/opendi-example-api-go/general)
+
+The screenshot at the top of this project section is the (work-in-progress) next step of the authoring tool: a browser-based decision engine with support for authoring, rendering, and simulating JavaScript decision logic, built with React.
 
 ### 481Engine - 2D Game Engine (2021-???)
 Flexible 2D game engine. Uses [SFML](https://www.sfml-dev.org/) for basic rendering, with a custom C++ backend.  

@@ -45,7 +45,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    image: "img/logoVector_Green_Round_120x120.png",
     navbar: {
       title: 'Isaac K',
       logo: {
@@ -114,6 +114,8 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-blog',
       {
+        // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog#ex-config
+        blogDescription: 'Technical posts about software development. Thoughts about media, games, life, miscellanea.',
         routeBasePath: 'blog',
         path: './blog',
         showReadingTime: true,
@@ -126,16 +128,6 @@ const config: Config = {
         onInlineAuthors: 'warn',
         onUntruncatedBlogPosts: 'warn',
       },
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'default',
-        path: 'docs',
-        routeBasePath: '/',
-        sidebarPath: require.resolve('./sidebars.ts'),
-        include: ['index.md']
-      }
     ],
     [
       '@docusaurus/plugin-content-docs',

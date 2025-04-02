@@ -1,3 +1,7 @@
+---
+description: "A big list of software that I use regularly, and generally recommend."
+---
+
 # Software that I use
 
 Here's a big list of software I use regularly, and generally recommend.  
@@ -33,7 +37,7 @@ They offer a paid subscription for multi-device note syncing. I just put the not
 **Free?** Yes.  
 [VS Code site](https://code.visualstudio.com/)
 
-Nice balance between feeling lightweight and having extensive functionality. That's the plugin model working well, I guess. I'm not super picky with IDEs. For a little while I regularly used Notepad++ as my main editor for [a Python project](./projects.md/#coccidia-detection-2022-2024) and had a fine time.
+Nice balance between feeling lightweight and having extensive functionality. That's the plugin model working well, I guess. I'm not super picky with IDEs. For a little while I regularly used Notepad++ as my main editor for [a Python project](./projects/#coccidia-detection-2022-2024) and had a fine time.
 
 ### Firefox
 **Type:** Internet browser  
@@ -49,7 +53,7 @@ Get you a fox browser that runs with the help of its little [Gecko](https://en.w
 **Free?** No. Priced according to usage ($/TB/Month).  
 [B2 Storage Site](https://www.backblaze.com/cloud-storage)
 
-This is my general recommendation for personal cloud storage.  
+This is what I use for personal cloud storage.  
 Their pricing setup is one of the most straightforward. It's worth shopping around different providers for your individual use case, but I like that I'm not paying for a total capacity that I may or may not ever use.
 
 ## Media
@@ -70,7 +74,7 @@ I have not had good experiences trying to get GIMP to be an art creation tool (t
 As someone who never got to spend much time with Adobe Illustrator anyway, Inkscape is pretty great. I can do most of the vector graphics tasks I want in it. I made this site's logo and the logo for [Blue Helm Tech](https://www.bluehelmtech.com/) using just Inkscape.
 
 ### DaVinci Resolve
-**Type:** Video editor
+**Type:** Video editor  
 **Free?** Yes. They ask you to do a usage survey though.  
 [DaVinci Resolve site](https://www.blackmagicdesign.com/products/davinciresolve)
 

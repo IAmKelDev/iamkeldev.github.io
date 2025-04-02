@@ -1,15 +1,14 @@
 ---
 sidebar_position: 1
+description: "Hello! I'm Isaac K."
 ---
 # About Me
 
-Hello! I'm Isaac K.
+Hello! I'm Isaac K.  
+I like to write about software, hardware, media (games, books, movies/TV, etc), and other standard personal blog fare.
 
-> If I linked you this site in a professional capacity, you probably want my [projects](./projects.md) page.  
-> I may put up a resume page later; I haven't decided.
+I'm a software engineer, currently working for the [Open Decision Intelligence](https://opendi.org/) initiative, as a standards architect and general-purpose software engineer. I set up and now maintain the OpenDI websites, and developed a few example implementations for the standards I helped draft. My favorite professor at NC State offered me the job! It's been excellent.
 
-I like to write about software, hardware, media (games, books, movies/TV, etc), and other standard personal blog fare.  
-I'm a software engineer, currently working for the [Open Decision Intelligence](https://opendi.org/) initiative, as a standards architect and general-purpose software engineer. I set up and now maintain the OpenDI websites, and developed a few example implementations for the standards I helped draft. My favorite professor at NC State offered me the job! It's been excellent.  
 I live near [Danville, VA](https://wset.com/news/local/growing-number-of-confederate-flags-in-danville-sparks-concern) with my partner. We'd like to move to the [Portland](https://www.huffpost.com/entry/ap-us-oregon-googly-eyes-sculptures_n_675ccb29e4b0890282a00ea8) area soon.
 
 ## Media Tastes
