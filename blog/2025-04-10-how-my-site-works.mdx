@@ -1,8 +1,8 @@
 ---
-slug: how-this-blog-works
-title: How This Blog Works
+slug: how-my-site-works
+title: How My Site Works
 tags: [technical, meta]
-description: Some technical details for how I set up this blog, and my plans for the future.
+description: Some technical details for how I set up my website, and some plans for the future.
 ---
 
 import MarkdownView from './assets/2025-04-how-this-blog-works/markdown_raw_view.png';
@@ -10,11 +10,15 @@ import MarkdownPreview from './assets/2025-04-how-this-blog-works/markdown_previ
 import SideBySideEditing from './assets/2025-04-how-this-blog-works/side_by_side_editing.png';
 import DirectoryStructure from './assets/2025-04-how-this-blog-works/directory_structure.png';
 
-I'm often curious about this sort of thing with other personal sites, so I figured I'd share some details about how this site works!
+I'm often curious about this sort of thing with other personal sites, so I figured I'd share some details about how my site works! I'm hoping to give non-technical readers a broad sense of what it takes to get something like this set up, but I plan to leave enough breadcrumbs throughout that technical readers can pick up the trail if they wish.
 
-I'm hoping to give non-technical readers a broad sense of what it takes to get something like this set up, but I plan to leave enough breadcrumbs throughout that technical readers can pick up the trail if they wish.
+That means the reading time prediction is going to be _way_ off for this one.
 
 {/*truncate*/}
+
+If you're a technical reader who wants to use this post as a jumping-off point, plan to spend a lot more time in the [Setup](#what-was-setup-like) section. If you're non-technical or only mildly curious, you'll likely be most interested in the first couple sections, and my [plans for the future](#plans-for-the-future) down at the bottom.
+
+Feel free to skip around!
 
 ## Goals
 
@@ -134,7 +138,10 @@ My repo is configured with an Action that triggers when changes get merged to `m
 
 Not bad! Took me a few hours over a few afternoons.
 
-I'd recommend a project like this to anyone who is comfortable with Git and GitHub, who feels like exploring Pages and maybe dipping a toe into Actions. 
+In the next few sections, I'll provide details and starting points for some of these setup steps.  
+**If that's not for you, skip to my [plans for the future](#plans-for-the-future)!**
+
+I'd recommend a project like this to anyone who is comfortable with Git and GitHub, who feels like exploring Pages and maybe trying Actions. 
 
 At a high level, the setup process looks like this:
 - Create a GitHub repository for your site
@@ -146,17 +153,21 @@ At a high level, the setup process looks like this:
 
 Docusaurus configuration is technically done in TypeScript, but you'll mostly be modifying existing config values (e.g. "swap out `title: 'Docusaurus Test Site'` for `title: 'KelDev'`"), so you don't have to actually learn TypeScript. I'd never bought a domain or configured DNS settings before, but those were both surprisingly quick and easy tasks.
 
-The next few sections will give some details and starting points for some of these setup steps. If that's not for you, skip to my [plans for the future](#plans-for-the-future)!
+Let's get into it!
 
 ### GitHub + Pages
 
-[GitHub Pages](https://pages.github.com/) is GitHub's free hosting service for [static sites](https://en.wikipedia.org/wiki/Static_web_page). If you have a GitHub account, you can put up a basic website pretty quickly. Usually, you'll use some static site framework or even something like [webpack](https://webpack.js.org/) to convert your dev-friendly source files into a bundle that GitHub Pages is already preconfigured to deploy as a live site. GitHub wants you to use Pages ["to host a website about yourself, your organization, or your project"](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages). Generally-speaking, don't plan to host your money-making businessy websites for free on Pages.
+[GitHub Pages](https://pages.github.com/) is GitHub's free hosting service for [static sites](https://en.wikipedia.org/wiki/Static_web_page).
 
-This is a "yourself" kinda website, so its GitHub repository uses the special name set aside for my User Site: [IAmKelDev/iamkeldev.github.io](https://github.com/IAmKelDev/iamkeldev.github.io). With some configuration tweaks you can tell GitHub to use your custom domain instead of the auto-assigned domain you get for free. My free domain was https://iamkeldev.github.io, which now just redirects to https://keldev.net.
+If you have a GitHub account, you can put up a basic website pretty quickly. Usually, you'll use some static site framework (or just something like [webpack](https://webpack.js.org/)) with a "build" step, to convert your dev-friendly source files into a server-friendly bundle that GitHub Pages is preconfigured to deploy as a live site. [Later, you can automate this step.](#automatic-deployment-with-github-actions)
+
+GitHub wants you to use Pages ["to host a website about yourself, your organization, or your project"](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages). Generally speaking, don't plan to host your money-making, businessy websites for free on Pages.
+
+I wanted a "yourself" kinda website, so my GitHub repository uses the special name set aside for my User Site: [IAmKelDev/iamkeldev.github.io](https://github.com/IAmKelDev/iamkeldev.github.io). GitHub assigns you a free domain for your username, but you can easily configure your repo to use a custom domain instead. My free domain was https://iamkeldev.github.io, which now just redirects to https://keldev.net. (Click it and see!)
 
 Here's some relevant documentation if you want to try this out:  
-> - [GitHub documentation about User Sites vs. Project Sites](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites).
-> - [GitHub documentation about configuring your Pages repo to use a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
+> - [GitHub docs: User Sites vs. Project Sites](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites).
+> - [GitHub docs: Configuring your Pages repo for a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
 
 ### Buying a domain and configuring DNS
 
@@ -181,29 +192,65 @@ Here are [GitHub's registrar-agnostic instructions](https://docs.github.com/en/p
 
 ### Configuring Docusaurus
 
-This step has the largest time-sink potential, but *the bare minimum is still quick!* Remember, your personal site doesn't have to be perfect immediately. Tinker as you go! I'm still making style adjustments as I write this post.
+This step has the largest time-sink potential, but *the bare minimum is still quick!* Remember, your personal site doesn't have to be perfect immediately. Tinker as you go! I'm [still making style adjustments](https://github.com/IAmKelDev/iamkeldev.github.io/commit/654a310388e4d75fca9147850aaffe73146d98ab) as I write this post.
 
-You get a fairly complete site skeleton just from installing the packed-in example site. If you want to poke around without putting any files on your computer, use one of the in-browser sandboxes recommended on the [Docusarus Playground page](https://docusaurus.io/docs/playground). Otherwise, the main [Installation Guide](https://docusaurus.io/docs/installation) goes through the basics in just a couple minutes. In the simplest case, you might decide to just throw out the default Markdown content files in the example site, replace them with your own, and call it done.
+#### Bare minimum
+You get a fairly complete site skeleton just from installing the packed-in example site!
 
-If you need something different, you can look at configuring different folders as instances of one of the main Docusaurus [Content Plugins](https://docusaurus.io/docs/api/plugins#content-plugins) to create new [Docs](https://docusaurus.io/docs/docs-introduction), [Pages](https://docusaurus.io/docs/creating-pages), or [Blog](https://docusaurus.io/docs/blog) sections for your site.
+If you want to poke around without putting any files on your computer, use one of the in-browser sandboxes recommended on the [Docusarus Playground page](https://docusaurus.io/docs/playground). Otherwise, the main [Installation Guide](https://docusaurus.io/docs/installation) goes through the basics in just a couple minutes.
 
-Much of your overall site layout and technical setup comes from the main `docusaurus.config.(ts/js)` file. There's a lot of config stuff you can set. [Here's my (fairly standard) config](https://github.com/IAmKelDev/iamkeldev.github.io/blob/7d664d31c2dd92cfe6e312963c869f9116004d08/docusaurus.config.ts) as of this post. Whenever you're unsure what config options are even available for your plugins, or what markdown frontmatter you can use, refer to the plugin API pages, which are all in [this plugins list](https://docusaurus.io/docs/api/plugins).
+In the simplest case, you might decide to just throw out the default Markdown content files in the example site, replace them with your own, and call it done.
 
-#### Going further
-Once you've got your basic configuration and layout stuff done, you should be more than ready to start putting up content.  
-When you want to go further:
+#### More tailored
+If you need something different, start adding more instances of the main Docusaurus [Content Plugins](https://docusaurus.io/docs/api/plugins#content-plugins) to create new [Docs](https://docusaurus.io/docs/docs-introduction), [Pages](https://docusaurus.io/docs/creating-pages), or [Blog](https://docusaurus.io/docs/blog) sections for your site. Or remove, rename, or rearrange the default ones. You can assign each instance to a separate directory, so your content layout makes sense.
+
+Most of your site's navigation structure comes from the main Docusaurus config file. There's a lot of stuff you can configure. Here's [my (fairly standard) file](https://github.com/IAmKelDev/iamkeldev.github.io/blob/e76989a6a5d774a76030bb0373ad2edd4ccf1c40/docusaurus.config.ts) as of this post.
+
+Whenever you're not sure what config options are even available for your plugins, or what markdown frontmatter you can use, refer to the plugin API pages, which are all in [this plugins list](https://docusaurus.io/docs/api/plugins).
+
+#### Going further: Plugins and styling
+Once you've got your basic configuration and layout sorted, you should be more than ready to start putting up content. Remember to do that at some point! Don't just configure forever. When you do want to go further, though:
 - There are [community plugins](https://docusaurus.community/plugindirectory/) out there.
-- For blogging specifically, you may find it useful to [define global author info](https://docusaurus.io/docs/blog#global-authors) (or remove all the example authors), and to set up [post tagging](https://docusaurus.io/docs/blog#blog-post-tags)
+- For blogging specifically, you might want to [define global authors](https://docusaurus.io/docs/blog#global-authors) (or remove all the example authors), and set up [post tagging](https://docusaurus.io/docs/blog#blog-post-tags).
 
-Possibly the biggest time sink here is all that you can do by modifying site-wide styling in `src/css/custom.css`. Be sure to look at the [Styling and Layout](https://docusaurus.io/docs/styling-layout) guide. Not only are there a lot of global Infima variables for things like color, but you can also use this space to define style rules for any HTML that you embed in your markdown content.
+The biggest time sink early on is easily **styling**.
+
+There is _so much_ site-wide styling you can customize in `src/css/custom.css`. Be sure to look at the [Styling and Layout](https://docusaurus.io/docs/styling-layout) guide. Not only are there a lot of global [Infima](https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima) variables for things like color, but you can also use this space to define style rules for any HTML that you embed in your markdown content.
+
+Here is [the CSS file for my site](https://github.com/IAmKelDev/iamkeldev.github.io/blob/e76989a6a5d774a76030bb0373ad2edd4ccf1c40/src/css/custom.css), as of this post.
 
 ### Automatic deployment with GitHub Actions
 
-Maybe put my GH action in here as a code block? And explain it? It's pretty quick.
+[GitHub Actions](https://docs.github.com/en/actions) is GitHub's free [CI/CD](https://en.wikipedia.org/wiki/CI/CD) toolset. If you want something to automatically happen when you push code to your repository, use an Actions workflow.
+
+If you've ever set up something like a [Docker container](https://en.wikipedia.org/wiki/Docker_(software)), GitHub Actions workflow files will look familiar. If you haven't they'll look sort of like a roundabout method for shell scripting, but in YAML. Check out GitHub's [Quickstart guide for Actions](https://docs.github.com/en/actions/writing-workflows/quickstart#creating-your-first-workflow).
+
+My Actions workflow for auto-deploying my site is nothing special as far as Actions workflows go. I've added lots of comments to explain what's going on. Feel free to reuse or adapt it for your own projects!
+
+If you intend to reuse the file, you'll need to configure your repo first.
+<details>
+<summary>Steps:</summary>
+<p>
+1. Create a new [empty branch](https://stackoverflow.com/a/34100189) called `gh-pages`.
+2. In `gh-pages`, add a `docs/` directory, and put any file in there, so git sees the change.
+3. Commit and publish the new branch with its `docs/` directory and temporary file.
+4. In your repository settings on GitHub, under `Settings > (Code and automation) > Pages`, pick `Source: Deploy from a branch`.
+5. For `Branch` select `gh-pages`, then specify the `/docs` directory next to it.
+6. Finally, add the workflow file to your `main` branch. It must go in the `.github/workflows/` directory for GitHub to recognize it as an Action. Create the directory if necessary.
+7. Push changes to your site and check the Actions tab in your GitHub repo to verify it's working.
+</p>
+</details>
 
 ## Plans for the future
 
+```
+TODO
+```
 
+- Reactions
+- Comments
+- Hosting my images elsewhere
+- Splitting my content into a separate repo, pros/cons
 
 ## Too many options
 
