@@ -183,13 +183,19 @@ Here are [GitHub's registrar-agnostic instructions](https://docs.github.com/en/p
 
 This step has the largest time-sink potential, but *the bare minimum is still quick!* Remember, your personal site doesn't have to be perfect immediately. Tinker as you go! I'm still making style adjustments as I write this post.
 
-Mention that you can see what the default Docusaurus example site gets you by running one of the in-browser sandboxes here: https://docusaurus.io/docs/playground
+You get a fairly complete site skeleton just from installing the packed-in example site. If you want to poke around without putting any files on your computer, use one of the in-browser sandboxes recommended on the [Docusarus Playground page](https://docusaurus.io/docs/playground). Otherwise, the main [Installation Guide](https://docusaurus.io/docs/installation) goes through the basics in just a couple minutes. In the simplest case, you might decide to just throw out the default Markdown content files in the example site, replace them with your own, and call it done.
 
-Mention the default plugins and the fact that others are available.
+If you need something different, you can look at configuring different folders as instances of one of the main Docusaurus [Content Plugins](https://docusaurus.io/docs/api/plugins#content-plugins) to create new [Docs](https://docusaurus.io/docs/docs-introduction), [Pages](https://docusaurus.io/docs/creating-pages), or [Blog](https://docusaurus.io/docs/blog) sections for your site.
 
-Then move into custom styling and how I adjusted things for my own site. Blog tags, removed authors, frontmatter, etc.
+Much of your overall site layout and technical setup comes from the main `docusaurus.config.(ts/js)` file. There's a lot of config stuff you can set. [Here's my (fairly standard) config](https://github.com/IAmKelDev/iamkeldev.github.io/blob/7d664d31c2dd92cfe6e312963c869f9116004d08/docusaurus.config.ts) as of this post. Whenever you're unsure what config options are even available for your plugins, or what markdown frontmatter you can use, refer to the plugin API pages, which are all in [this plugins list](https://docusaurus.io/docs/api/plugins).
 
-Link to the overall Docusaurus API.
+#### Going further
+Once you've got your basic configuration and layout stuff done, you should be more than ready to start putting up content.  
+When you want to go further:
+- There are [community plugins](https://docusaurus.community/plugindirectory/) out there.
+- For blogging specifically, you may find it useful to [define global author info](https://docusaurus.io/docs/blog#global-authors) (or remove all the example authors), and to set up [post tagging](https://docusaurus.io/docs/blog#blog-post-tags)
+
+Possibly the biggest time sink here is all that you can do by modifying site-wide styling in `src/css/custom.css`. Be sure to look at the [Styling and Layout](https://docusaurus.io/docs/styling-layout) guide. Not only are there a lot of global Infima variables for things like color, but you can also use this space to define style rules for any HTML that you embed in your markdown content.
 
 ### Automatic deployment with GitHub Actions
 

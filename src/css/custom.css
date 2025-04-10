@@ -46,7 +46,8 @@ blockquote {
   margin-top: 0rem;
 }
 
-.codeBlockLines_e6Vv {
+/* For the BIG code blocks */
+[class*='codeBlockLine'] {
   background-color: var(--ifm-code-background);
   border: 0.1rem solid rgba(0, 0, 0, 0.1)
 }
