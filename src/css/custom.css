@@ -102,6 +102,16 @@ blockquote {
   margin-top: -0.4rem;
 }
 
+/* Same hack for unordered lists */
+ul {
+  margin-top: -0.8rem;
+}
+
+/* Same for ordered lists */
+ol {
+  margin-top: -0.8rem;
+}
+
 .navbar__title {
   overflow: visible !important;
 }
@@ -110,8 +120,6 @@ blockquote {
 .zoomable {
   cursor: zoom-in
 }
-
-
 
 /* VIDEO STUFF, FOR BETTER VIDEO EMBEDS */
 .video-container {
