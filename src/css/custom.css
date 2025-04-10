@@ -17,9 +17,11 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-background-color: #f4f3ed;
+  --ifm-background-color: rgba(244, 243, 237, 1);
   --ifm-heading-font-family: "Oswald", sans-serif;
   --ifm-font-family-base: "Source Sans 3", sans-serif;
+
+  --ifm-code-background: rgba(240, 234, 220, 0.8);
 }
 
 .navbar {
@@ -32,6 +34,21 @@
 
 .zoomable {
   cursor: zoom-in
+}
+
+/* Fix weird code alignment issue in default Docusaurus styling */
+code {
+  vertical-align: inherit !important;
+}
+
+/* Quick hack to make it so blockquotes aren't ALWAYS so separate */
+blockquote {
+  margin-top: 0rem;
+}
+
+.codeBlockLines_e6Vv {
+  background-color: var(--ifm-code-background);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1)
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -48,13 +65,15 @@
   --ifm-font-family-base: "Source Sans 3", sans-serif;
 
   --ifm-background-color: #100b17;
+
+  --ifm-code-background: rgb(61, 47, 83) !important;
 }
 
 [data-theme='dark'] body,
 [data-theme='dark'] .main-wrapper,
 [data-theme='dark'] .theme-doc-markdown,
 [data-theme='dark'] .theme-doc-markdown--centered {
-  background-color: #100b17;
+  background-color: rgba(16, 11, 23, 1);
 }
 
 [data-theme='dark'] .navbar {
@@ -63,6 +82,10 @@
 
 [data-theme='dark'] .footer {
   background-color: #4f3191;
+}
+
+[data-theme='dark'] code {
+  border: 0.1rem solid rgba(204, 172, 255, 0.281) !important;
 }
 
 .navbar__title {
