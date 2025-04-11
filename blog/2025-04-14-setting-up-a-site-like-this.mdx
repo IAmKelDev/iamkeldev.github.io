@@ -5,10 +5,7 @@ tags: [technical, blog-updates]
 description: Some technical details for how I set up my website
 ---
 
-import MarkdownView from './assets/2025-04-how-this-blog-works/markdown_raw_view.png';
-import MarkdownPreview from './assets/2025-04-how-this-blog-works/markdown_preview.png';
-import SideBySideEditing from './assets/2025-04-how-this-blog-works/side_by_side_editing.png';
-import DirectoryStructure from './assets/2025-04-how-this-blog-works/directory_structure.png';
+import DirectoryStructure from './assets/2025-04-setup-post/directory_structure.png';
 
 I'm often curious about this sort of thing with other personal sites, so I figured I'd share some details about how my site works! I'm hoping to give non-technical readers a broad sense of what it takes to get something like this set up, but I plan to leave enough breadcrumbs throughout that technical readers can pick up the trail if they wish.
 
@@ -69,14 +66,12 @@ Every page on this website starts as a markdown file.
 [Markdown](https://www.markdownguide.org/) is ubiquitous these days. If you frequently send or publish text over the internet, it's handy to be familiar with it! If you're unfamiliar, [the basics](https://www.markdownguide.org/cheat-sheet/#basic-syntax) are pretty straightforward. I think it's a rite of passage for new markdown users to accidentaly discover that some new app they're using supports markdown because it happened to work when they used it out of habit.
 
 Here's what the raw markdown for this section looks like as it's being edited in [VS Code](/about/software-I-use#visual-studio-code):  
-<a class="zoomable" href={MarkdownView}><img decoding="async" loading="lazy" alt="Markdown View" class="img_ev3q" src={MarkdownView}/></a>
 > Markdown view.  
 > Every page starts out this way!
 
 Like many markdown-friendly editors, VS Code applies basic [sytnax highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting) to help with readability. You can also preview a rendered-out form of the document (with standard styling) as you edit it.
 
 Here's VS Code's preview for this section:  
-<a class="zoomable" href={MarkdownPreview}><img decoding="async" loading="lazy" alt="Markdown Preview" class="img_ev3q" src={MarkdownPreview}/></a>
 > Markdown preview.  
 > This preview doesn't like the way I'm formatting images right now. The [live preview](#live-preview) is fine with it though!
 
@@ -106,7 +101,6 @@ By default, you're expected to name your files `<date-of-post>-<title-of-post>.m
 
 It's nice to have the option to draft posts in _any_ markdown-friendly editor (even something like [Obsidian mobile](https://obsidian.md/mobile)), and just drop the files into the site when they're ready. When I'm in serious-drafting mode though, I'm usually working on my content from directly within the configured folders, with a preview instance of my website open right beside it!
 
-<a class="zoomable" href={SideBySideEditing}><img decoding="async" loading="lazy" alt="Side By Side Editing" class="img_ev3q" src={SideBySideEditing}/></a>
 {/*This is a more complicated way to show an image, so that it's clickable.*/}
 {/*These are code comments, so they won't appear on the webpage.*/}
 > Side-by-side view.  

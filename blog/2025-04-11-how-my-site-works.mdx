@@ -5,11 +5,10 @@ tags: [blog-updates]
 description: Some details about my website, and some plans for the future.
 ---
 
-import MarkdownView from './assets/2025-04-how-this-blog-works/markdown_raw_view.png';
-import MarkdownPreview from './assets/2025-04-how-this-blog-works/markdown_preview.png';
-import SideBySideEditing from './assets/2025-04-how-this-blog-works/side_by_side_editing.png';
-import DirectoryStructure from './assets/2025-04-how-this-blog-works/directory_structure.png';
-import Frontmatter from './assets/2025-04-how-this-blog-works/frontmatter.png';
+import MarkdownView from './assets/2025-04-how-my-site-works/markdown_raw_view.png';
+import MarkdownPreview from './assets/2025-04-how-my-site-works/markdown_preview.png';
+import SideBySideEditing from './assets/2025-04-how-my-site-works/side_by_side_editing.png';
+import Frontmatter from './assets/2025-04-how-my-site-works/frontmatter.png';
 
 
 I'm usually curious about this sort of thing with other personal sites, so I'm sharing some details about how my site works, and how I landed on the toolset I'm using! This will be lighter on technical specifics. If you're looking to set up something similar and you're interested in advice or some good starting points, look for a setup-focused blog post in the near future!
@@ -21,10 +20,10 @@ For this post, I'll focus on my thought processes during the initial stages of t
 ## Goals
 
 Here's what I wanted out of this project:
-- **A personal site**, with some about/bio information, a space for descriptions of my projects, and a blog with a feed of posts (with [RSS](https://en.wikipedia.org/wiki/RSS)).
-- **Minimal subscriptions.** Domain names aren't free, but I don't want to pay for much else if I can help it.
+- **A personal site**, with some about/bio info, a space for descriptions of my projects, and a blog with a feed of posts (with [RSS](https://en.wikipedia.org/wiki/RSS)).
+- **Minimal subscriptions.** Domain names aren't free, but I wanted to avoid paying for much else if possible.
 - **Markdown files for my source content.** Markdown is easy to write and fairly mobile. More detail [below](#markdown-for-drafting).
-- **A default template that looks nice**, with the option to change things like color and layout if I want.
+- **A default template that looks nice**, but with options to change things like color and layout.
 - **Room for technical expansion.**
 
 ## Picking a toolset
@@ -43,18 +42,22 @@ Especially if it's a propritary service, owned by one company. If it's gonna be 
 **Clunky graphical editors for site content.**
 
 This usually goes hand-in-hand with the above point. Drag-and-drop site builders can be *great* for non-technical people who are interested in getting something done quickly, who aren't worried about dealing with limitations. I'd still urge caution with these, though.  
-You might get far enough with the basics, but these tools become problematic when you find _that one fun thing_ you want to add, and wind up spending significant time and effort building up expertise with a particular graphical site builder. That's a relatively fragile skillset! You might get _some_ transferrable knowledge, but if you find yourself needing to use a different tool, much of your prior experience is only useful if the new tool (or the brand new, redesigned version of your longtime favorite tool) is sufficiently similar to the one you're familiar with.
+You might get far enough with the basics, but these tools become problematic if you dig in too deep. It's easy to wind up spending significant time and effort building up expertise with a particular graphical site builder... but that's a relatively fragile skillset! You might get _some_ transferrable knowledge, but if you find yourself needing to use a different tool, much of your prior experience is only useful if the new tool (or the brand new, redesigned version of your longtime favorite tool) is sufficiently similar to the one you're familiar with.
 
 ### Good enough to recommend
 
 Before I made this site, I got furthest with BearBlog. I still think it's great!  
 If my solution looks like too much trouble, **BearBlog is my recommended alternative.**
 
-Their recent [Bear Manifesto](https://herman.bearblog.dev/manifesto/) addresses a lot of my points of irritation. If you have markdown content that you want to turn into a personal website somewhere, and you're not too concerned about styling, you can easily throw it in there. It's lightweight by design, but I found I wanted more style control and extensibility.
+Their recent [Bear Manifesto](https://herman.bearblog.dev/manifesto/) addresses a lot of my points of irritation. If you have markdown content that you want to turn into a personal website somewhere, and you're not too concerned about styling, you can easily throw it in there. You get a little subdomain for yourself (or you can bring your own domain), and your posts join a nice pseudo-network of blogs with [a little discovery feed](https://bearblog.dev/discover/). It's lightweight by design, but I found I wanted more style control and extensibility, personally.
+
+> Side note: My sister is on BearBlog. [Check her out!](https://maymoe87.bearblog.dev/)
 
 ### Landing on something
 
-My job is what finally pushed me over that initial learning curve for a static site framework. We needed a reasonably polished site, using open source or free tools wherever possible. That's how [the OpenDI website](https://opendi.org/) (and my own personal site in turn) wound up using [Docusaurus](https://docusaurus.io/). I stuck pretty close to the default Docusaurus styling with the OpenDI site.
+My job is what finally pushed me over that initial learning curve for a static site framework.
+
+We needed a reasonably polished site, using open source or free tools wherever possible. That's how [the OpenDI website](https://opendi.org/) (and my own personal site in turn) wound up using [Docusaurus](https://docusaurus.io/). I stuck pretty close to the default Docusaurus styling with the OpenDI site.
 
 ## My solution
 
@@ -64,11 +67,11 @@ Here are the main tools I'm using:
 [Here's my repo!](https://github.com/IAmKelDev/iamkeldev.github.io) Have a look at my source code if you want.
 - My domain registrar is [porkbun](https://porkbun.com/).
 
-This setup accomplishes all of my goals, and avoids a lot of my concerns and points of irritation. Domain registration was cheap, and I spent no other money. I'm not paying for GitHub or Pages, and Docusaurus is open source. If I decide to ditch it later on, I've still got my markdown files. Plenty of other static site frameworks can use them!
+This setup accomplishes all of my goals, and avoids a lot of my concerns and points of irritation. Domain registration was cheap, and I spent no other money. I'm not paying for GitHub or Pages, and Docusaurus is open source. If I decide to ditch it later on, I've still got my markdown files. Plenty of other static site frameworks can use those!
 
-Meanwhile, I've got plenty of room for expansion and customization. I've already done some basic style tweaks. If you're familiar with the hallmarks of a Docusaurus website layout then mine will look familiar, but I'm hoping the cookie-cutter effect won't be too strong for most readers.
+Meanwhile, I've got plenty of room for expansion and customization. I've already done some basic style tweaks. If you know the hallmarks of a typical Docusaurus site layout then mine will look familiar, but I'm hoping the cookie-cutter effect won't be too strong for most readers.
 
-Overall I'm not doing anything crazy with Docusaurus yet, but my [future plans](#plans-for-the-future) should get more interesting.
+Overall I'm not doing anything crazy with Docusaurus yet, but my [future plans](#plans-for-the-future) should get more interesting!
 
 ## What's the content workflow like?
 
@@ -113,7 +116,7 @@ To [tag a post](/blog/tags), I just add a list of tags in the markdown frontmatt
 
 #### Live preview
 
-It's nice to have the option to draft posts in _any_ markdown-friendly editor (even something like [Obsidian mobile](https://obsidian.md/mobile)), and just drop the files into the site when they're ready. When I'm in serious-drafting mode though, I'm usually working on my content from directly within the configured folders, with a preview instance of my website open beside it.
+It's nice to have the option to draft posts in _any_ markdown-friendly editor (even something like [Obsidian mobile](https://obsidian.md/mobile)), and to just drop the files into the site when they're ready. When I'm in serious-drafting mode though, I'm usually working on my content from directly within the configured folders, with a preview instance of my website open beside it.
 
 <a class="zoomable" href={SideBySideEditing}><img decoding="async" loading="lazy" alt="Side By Side Editing" class="img_ev3q" src={SideBySideEditing}/></a>
 {/*This is a more complicated way to show an image, so that it's clickable.*/}
@@ -121,13 +124,13 @@ It's nice to have the option to draft posts in _any_ markdown-friendly editor (e
 > Side-by-side view.  
 > Keen-eyed readers might notice some artifacts from earlier drafts in this image.
 
-With a preview instance running, Docusaurus scans for file changes and regenerates the preview site in realtime wenever I save. This is a prime intended workflow, so you can see your content in its final form as you edit. Local preview functionality comes with the default project setup. It's a single command to spin up each time.
+With a preview instance running, Docusaurus scans for file changes and regenerates the preview site in realtime wenever I save. This is a primary intended workflow, so you can see your content in its final form as you edit. Local preview functionality comes with the default project setup. It's a single command to spin up each time. It's nice!
 
 ### Publishing to the live site
 
 Once I've finished the content for a new page, and it's in the expected folder, I just have to send the new stuff to GitHub. Essentially, this involves running one command and clicking a couple buttons over on GitHub. After a minute or two, my changes will wind up as pretty HTML content on the live site.
 
-If you've used Git for develompent before, you'll recognize my process as your bog-standard "run `git push`, then PR to `main` and let my custom Action deploy to Pages" workflow. Git tracks all of my site assets (for now), including markdown content and images.  
+If you've used Git for develompent before, you'll recognize my process as your bog-standard "run `git push`, then PR to `main` and let my custom Action deploy to Pages" workflow. Git tracks all of my site assets [(for now)](#better-image-hosting), including markdown content and images.  
 
 If you're _not_ familiar with Git, that was a lot of jargon right there!
 
@@ -167,26 +170,29 @@ One intended solution for something like this is to turn the content files into 
 
 In a similar vein, I'd rather not store all the images for this blog on GitHub. It's not uncommon for small sites without many images to just throw all of their images into their repo, but many of Git's core features focus on managing historical changes to *text* data. You're not doing that with a `.png`, so a lot of the value of Git is lost on images. Meanwhile, they generally take up a lot more space than text, which can eventually make it take longer to clone your repository down to a new machine for local editing.
 
-A common quick fix is to just throw your images on an existing image hosting provider, but some of my [toolset irritations](#picking-a-toolset) apply there.
+A common quick fix is to just put your images on an existing image hosting provider, but some of my [toolset irritations](#picking-a-toolset) from the beginning of this post apply there.
 
-I [already use Backblaze B2](/about/software-I-use/#backblaze-b2) for general cloud storage. You can make your Backblaze Buckets public, and a little research turned up some [official Backblaze docs](https://www.backblaze.com/docs/cloud-storage-deliver-public-backblaze-b2-content-through-cloudflare-cdn) describing how to use a public B2 bucket for media delivery via Cloudflare CDN. I don't mind the Backblaze rates for storage, so if it's possible to set up the Cloudflare end of this on a free plan there, this could be a perfect solution for me.
+I [already use Backblaze B2](/about/software-I-use/#backblaze-b2) for general cloud storage. You can make your Backblaze Buckets public, and a little research turned up some official Backblaze docs describing [how to use a public B2 bucket for media delivery via Cloudflare CDN](https://www.backblaze.com/docs/cloud-storage-deliver-public-backblaze-b2-content-through-cloudflare-cdn). I don't mind the Backblaze rates for storage, so if it's possible to set up the Cloudflare end of this on a free Cloudflare plan, this could be a perfect solution for me.
 
 ### Image gallery
 
-I take pictures for fun sometimes! I mostly just use my phone. Sometimes it bothers me to think about how many photos I have enjoyed taking, maybe shared with one or two people, and then left to sit for eternity. My local storage got so backed up on my phone that I finally caved and paid for some more Google storage a while back. But _I [already use Backblaze B2](/about/software-I-use/#backblaze-b2) for general cloud storage!_ I have needed to move my phone pictures over to Backblaze for too long.
+I take pictures for fun sometimes! I mostly just use my phone. Sometimes it bothers me to think about how many photos I have enjoyed taking, maybe shared with one or two people, and then left to sit for eternity. A little while back, my phone's local storage got so backed up that I finally caved and paid for some more Google storage. But _I [already use Backblaze B2](/about/software-I-use/#backblaze-b2) for general cloud storage!_ I have needed to move my phone pictures over to Backblaze for too long.
 
 I think it'd be fun to set up a public gallery while I'm at it. Could be a good test run for seriously extending my Docusaurus site! Or it could be too much. We'll see. My end goal would be to have some sort of tagging system for images, so you could sort them by subject.
 
 ### Basic analytics
 
-I go back and forth on analytics. I don't want detailed click heatmaps or realtime session recordings ([this is too much](https://clarity.microsoft.com/)). I just want to see if any of my blog posts get unexpected traffic. I'll probably look at setting up [GoatCounter](https://www.goatcounter.com/) with [this community plugin](https://github.com/Addono/docusaurus-plugin-goatcounter).
+I go back and forth on analytics. I don't want detailed click heatmaps or realtime session recordings. ([This is too much.](https://clarity.microsoft.com/)) I just want to see if any of my blog posts get unexpected traffic. I'll probably look at setting up [GoatCounter](https://www.goatcounter.com/) with [this community plugin for Docusaurus](https://github.com/Addono/docusaurus-plugin-goatcounter).
 
 ### Email list
 
-The built-in RSS feed in the Docusaurus Blog plugin is great! More people use email than RSS though, so it's a lower barrier subscription option that I'd like to include. I imagine this will be a better than the [image gallery idea](#image-gallery) as a first project for extending the basic Docusaurus functionality, and [this walkthrough](https://heromodeapp.com/blog/docusaurus-blog-customizations) looks promising, so I'll be giving that a try soon!
+The built-in RSS feed in the Docusaurus Blog plugin is great! More people use *email* than RSS though, so that's a lower-barrier subscription option that I'd like to include. I imagine this will be a better than the [image gallery idea](#image-gallery) as a first project for extending the basic Docusaurus functionality, and [this walkthrough](https://heromodeapp.com/blog/docusaurus-blog-customizations) looks promising, so I'll be giving it a try soon!
 
 ## Thanks for reading!
 
-This actually took _forever_ to write. If you have thoughts or questions... Email me?  
+This actually took _quite a while_ to write.  
+I initially had a lot more of my technical setup details in here. Eventually I realized I was trying to speak to two different audiences in one post, and the thing was gonna take half an hour to read, and would probably lose both audiences for different reasons at different points. Splitting it up helped. Now I can lose each audience individually! Just gotta finish that setup post now.
+
+If you have thoughts or questions... Email me?  
 [Email me!](mailto:keldtdev@gmail.com)  
 Hopefully in the near future I can just direct you to a comments section.
