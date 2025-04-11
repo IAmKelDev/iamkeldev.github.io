@@ -1,7 +1,7 @@
 name: Build for Pages Deployment
-
 # Create new build files. Put them in gh-pages branch for GitHub Pages deployment.
 
+# Trigger this workflow when I push (or PR) to main
 on:
   push:
     branches:
@@ -9,16 +9,17 @@ on:
 
   workflow_dispatch: # Allow manual re-run from GitHub web UI.
 
-
+# Main workflow job
 jobs:
-  build:
 
-    name: Build Docusaurus
+  deliver:
+    name: Deliver Docusaurus to gh-pages Branch
     permissions:
       contents: write # Need permission to push to gh-pages branch
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # This Action will run in Ubuntu
 
     steps:
+        # Check out the repo
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -29,16 +30,18 @@ jobs:
           git config --global user.email 'actions-build-docusaurus@users.noreply.github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4 # Get NPM so we can install our packages
         with:
           node-version: 18
           cache: npm
 
+        # Install our node packages
         # Note: node_modules/ is in .gitignore so this shouldn't register uncommitted changes.
       - name: Install dependencies
         run:
           npm ci
 
+        # Get Docusaurus to build our deployable site files (build artifacts)
         # Note: build/ is in .gitignore so this shouldn't register uncommitted changes.
       - name: Build website
         run: 
@@ -53,7 +56,10 @@ jobs:
           git switch gh-pages
           rm -rf ./docs/
           mv ../TEMP_BUILD_ARTIFACTS/docs ./docs
-      
+        
+        # Once the new build artifacts are pushed to gh-pages, GitHub will automatically re-deploy
+        # the site using the new files, because we have the repo configured so Pages builds
+        # from the gh-pages branch, from the /docs/ directory
       - name: Push new artifacts
         run: |
           git add docs/*
