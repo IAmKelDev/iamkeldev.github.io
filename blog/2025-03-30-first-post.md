@@ -1,7 +1,7 @@
 ---
 slug: first-post
 title: First Post
-tags: [meta, misc]
+tags: [blog-updates, misc]
 ---
 
 Blog is live!

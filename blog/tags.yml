@@ -13,10 +13,10 @@ media:
   permalink: /media
   description: Posts about media (music, games, books, etc.).
 
-meta:
-  label: Meta
-  permalink: /meta
-  description: Meta updates about this blog. New features or changes.
+blog-updates:
+  label: Blog Updates
+  permalink: /blog-updates
+  description: Updates about this blog! New features or changes.
 
 misc:
   label: Misc.
