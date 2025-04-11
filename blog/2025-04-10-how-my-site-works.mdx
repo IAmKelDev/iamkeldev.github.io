@@ -2,56 +2,73 @@
 slug: how-my-site-works
 title: How My Site Works
 tags: [technical, meta]
-description: Some technical details for how I set up my website, and some plans for the future.
+description: Some details about  website, and some plans for the future.
 ---
 
 import MarkdownView from './assets/2025-04-how-this-blog-works/markdown_raw_view.png';
 import MarkdownPreview from './assets/2025-04-how-this-blog-works/markdown_preview.png';
 import SideBySideEditing from './assets/2025-04-how-this-blog-works/side_by_side_editing.png';
 import DirectoryStructure from './assets/2025-04-how-this-blog-works/directory_structure.png';
+import Frontmatter from './assets/2025-04-how-this-blog-works/frontmatter.png';
 
-I'm often curious about this sort of thing with other personal sites, so I figured I'd share some details about how my site works! I'm hoping to give non-technical readers a broad sense of what it takes to get something like this set up, but I plan to leave enough breadcrumbs throughout that technical readers can pick up the trail if they wish.
 
-That means the reading time prediction is going to be _way_ off for this one.
+I'm often curious about this sort of thing with other personal sites, so I figured I'd share some details about how my site works, and how I landed on the toolset I'm using!
+
+This will be lighter on technical details. Look for a setup-focused blog post in the near future for more technical details on creating a site like this.
 
 {/*truncate*/}
-
-If you're a technical reader who wants to use this post as a jumping-off point, plan to spend a lot more time in the [Setup](#what-was-setup-like) section. If you're non-technical or only mildly curious, you'll likely be most interested in the first couple sections, and my [plans for the future](#plans-for-the-future) down at the bottom.
-
-Feel free to skip around!
 
 ## Goals
 
 Here's what I wanted out of this project:
-- **A personal site,**  
-with some about/bio information, a space for descriptions of my projects, and a blog with a feed of posts.
-    - (RSS feed for the blog.)
-- **Minimal subscriptions.**  
-Domain names aren't free, but I don't want to pay for much else (if anything).
-- **Markdown files for my source content.**  
-Markdown is easy to write and fairly mobile. Many website frameworks injest it.
-- **A default template that looks nice,**  
-with the option to change things like color and layout if I want.
+- **A personal site**, with some about/bio information, a space for descriptions of my projects, and a blog with a feed of posts (preferably with an auto-gen [RSS](https://en.wikipedia.org/wiki/RSS) feed).
+- **Minimal subscriptions.** Domain names aren't free, but I don't want to pay for much else if I can help it.
+- **Markdown files for my source content.** Markdown is easy to write and fairly mobile. More detail [below](#markdown-for-drafting).
+- **A default template that looks nice**, with the option to change things like color and layout if I want.
 - **Room for technical expansion.**
 
+## Picking a toolset
 
-## High-level summary
+There are _way too many_ options for setting up a personal website or blog. It's overwhelming!  
+I've had several false starts setting up a personal site of my own.
 
-The super-quick version! Here's what I'm using:
-- [Docusaurus](https://docusaurus.io/) for markdown-based static site generation (supports [MDX](https://mdxjs.com/)).
-- GitHub Pages for hosting. ([Here's my repo!](https://github.com/IAmKelDev/iamkeldev.github.io))  
-I set up the repo to auto-redeploy the site whenever there are relevant changes.
+I tried [WordPress.com](https://wordpress.com/). I tried [BearBlog](https://bearblog.dev/). I looked at [Medium](https://medium.com/) and [Substack](https://substack.com/about). I did some reading about static frameworks and various low-code site builders. Generally, I either immediately bounced off of the time requirement for getting over a framework's initial learning curve, or I eventually got irritated with one thing or another.
+
+Here's what irritated me most often:
+
+**Feeling locked into using one particular tool or service forever.**
+
+Especially if it's a propritary service, owned by one company. If it's gonna be a huge headache for me to export my content into a set of local files that I can send to a different tool, I'm uncomfortable. If I have to wonder what happens to my content if *Company X* goes under, or sells, or changes its pricing or terms of service, I'm double uncomfortable.
+
+**Clunky graphical editors for site content.**
+
+This usually goes hand-in-hand with the above point. Drag-and-drop site builders can be a *great* solution for non-technical people who are interested in getting further faster, who aren't worried about dealing with limitations. I'd still urge caution with these, though.  
+You might get by with the basics for the most part, but these tools become problematic when you find _that one fun thing_ you want to add, and wind up spending significant time and effort building up expertise with a particular graphical site builder. That's a relatively fragile skillset! You might get _some_ transferrable knowledge, but if you find yourself needing to use a different tool, much of your knowledge is only useful if the new tool (or the brand new, redesigned version of your longtime favorite tool) is sufficiently similar to the tool you're familiar with.
+
+### Good enough to recommend
+
+Before I made this site, I got furthest with BearBlog. I still think it's great!  
+If my solution looks like too much trouble, **BearBlog is my recommended alternative.**
+
+Their recent [Bear Manifesto](https://herman.bearblog.dev/manifesto/) addresses a lot of my points of irritation. If you have markdown content that you want to turn into a personal website somewhere, and you're not too concerned about styling, you can easily throw it in there.
+
+### Landing on something
+
+My job is what finally pushed me over that initial learning curve for a static site framework. I work for an open source project. We needed a reasonably polished site, using open source or free tools wherever possible. That's how [the OpenDI website](https://opendi.org/) (and my own personal site in turn) wound up using [Docusaurus](https://docusaurus.io/).
+
+## My solution
+
+Here's what I'm using:
+- Docusaurus for markdown-based static site generation (supports [MDX](https://mdxjs.com/) for more complex markdown).
+- GitHub Pages for hosting, with Actions for automatic deployment.  
+[Here's my repo!](https://github.com/IAmKelDev/iamkeldev.github.io) Have a look at my source code if you want.
 - My domain registrar is [porkbun](https://porkbun.com/).
 
-This accomplishes all of my goals. Domain registration was cheap, and I spent no other money. I'm not paying for GitHub or Pages, and Docusaurus is open source. I've got some avenues for expansion and customization, and if I decide to ditch Docusaurus later on, I've still got my markdown files.
+This setup accomplishes all of my goals, and avoids a lot of my concerns and points of irritation. Domain registration was cheap, and I spent no other money. I'm not paying for GitHub or Pages, and Docusaurus is open source. If I decide to ditch it later on, I've still got my markdown files. Plenty of other statis site frameworks can use them!
+
+Meanwhile, I've got plenty of room for expansion and customization. I've already done some basic style tweaks. If you're familiar with the hallmarks of a Docusaurus website then mine will look familiar, but I'm hoping it won't have that cookie-cutter effect for most readers.
 
 I'm not doing anything crazy with Docusaurus yet, but my [future plans](#plans-for-the-future) should get more interesting.
-
-## Why these tools?
-
-```
-TODO: Put stuff from the too many options bit in here!
-```
 
 ## What's the content workflow like?
 
@@ -60,47 +77,38 @@ It's simple!
 2) Put content in the right spot
 3) Publish
 
-Read on for a bit more detail on each step.
+### Markdown for drafting
 
-### 1. Draft content in markdown
-
-Every page on this website starts as a markdown file.
+Every page starts as a markdown file.
 
 [Markdown](https://www.markdownguide.org/) is ubiquitous these days. If you frequently send or publish text over the internet, it's handy to be familiar with it! If you're unfamiliar, [the basics](https://www.markdownguide.org/cheat-sheet/#basic-syntax) are pretty straightforward. I think it's a rite of passage for new markdown users to accidentaly discover that some new app they're using supports markdown because it happened to work when they used it out of habit.
 
-Here's what the raw markdown for this section looks like as it's being edited in [VS Code](/about/software-I-use#visual-studio-code):  
+Here's what the raw markdown for this section looks like while I'm editing it in [VS Code](/about/software-I-use#visual-studio-code):  
 <a class="zoomable" href={MarkdownView}><img decoding="async" loading="lazy" alt="Markdown View" class="img_ev3q" src={MarkdownView}/></a>
-> Markdown view.  
-> Every page starts out this way!
+> Markdown view.
 
-Like many markdown-friendly editors, VS Code applies basic [sytnax highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting) to help with readability. You can also preview a rendered-out form of the document (with standard styling) as you edit it.
+Like many markdown-friendly editors, VS Code applies basic [sytnax highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting) to help with readability. You can also preview a rendered form of the document (with standard styling) as you edit it.
 
 Here's VS Code's preview for this section:  
 <a class="zoomable" href={MarkdownPreview}><img decoding="async" loading="lazy" alt="Markdown Preview" class="img_ev3q" src={MarkdownPreview}/></a>
 > Markdown preview.  
 > This preview doesn't like the way I'm formatting images right now. The [live preview](#live-preview) is fine with it though!
 
-### 2. Put content in the right spot
+### Arranging content
 
-Docusaurus is a typical site generator. You do some initial configuration, tell it where to look for your markdown content, and you're free thereafter to just drop new content in the designated folder(s) and let it re-generate the site.
+Once you've told Docusaurus where to look for your markdown content, you're free to just drop finished drafts into those designated locations. Docusaurus will rebuild the site with the new content for you.
 
-<details>
-<summary>Here's some info on the project folder structure:</summary>
-<p>
-<a class="zoomable" href={DirectoryStructure}><img decoding="async" loading="lazy" alt="Directory structure for my main project folder" class="img_ev3q" src={DirectoryStructure}/></a>
-> Structure for my main project folder.
+For my site, Docusaurus watches 3 locations.  
+I have:
+- a folder for my [About](/about/) content
+- a folder for my [Blog](/blog/) posts, and
+- a special location for my welcome page (https://keldev.net/), so that it doesn't get bundled into the `About` sidebar.
 
-Blue stuff is mostly initial configuration and project metadata for GitHub.  
-All text (and image) content goes in the red folders. Each folder is configured differently with Docusaurus.
+Each blog post's filename starts with its publish date so the Docusaurus Blog feature can sort it in my *Recent posts* list. To [tag a post](/blog/tags), I just add a list of tags in the markdown frontmatter.
 
-- `about/` is using a basic [Docs](https://docusaurus.io/docs/docs-introduction)-style configuration, the original use case for Docusaurus.  
-Content maps to my [About](/about/) section. Each file there gets an entry in that section's sidebar.
-- `blog/` is using the [Blog](https://docusaurus.io/docs/blog)-style configuration.  
-By default, you're expected to name your files `<date-of-post>-<title-of-post>.md`, so the Blog plugin can sort your posts by date. You're viewing this section of the site now!
-- `src/pages/index.md` is a special case.  
-`src/pages` holds "standalone" pages. These aren't part of any section and generally don't get a sidebar. so `src/pages/index.md` is the overall landing/welcome page at https://keldev.net/.
-</p>
-</details>
+<a class="zoomable" href={Frontmatter}><img decoding="async" loading="lazy" alt="Markdown Frontmatter" class="img_ev3q" src={Frontmatter}/></a>
+> Frontmatter for this post.  
+> It has a couple tags, the title, and a description for embeds. The "slug" is the intended URL ending for the final page
 
 #### Live preview
 
@@ -112,153 +120,50 @@ It's nice to have the option to draft posts in _any_ markdown-friendly editor (e
 > Side-by-side view.  
 > Keen-eyed readers might notice some artifacts from earlier drafts in this image.
 
-With a preview instance running, Docusaurus scans for file changes and quickly regenerates the preview site each time I save. This is an intended workflow, so you can see your content in its final form as you edit. Local preview functionality comes with the default project setup. It's a single command to spin up each time.
+With a preview instance running, Docusaurus scans for file changes and regenerates the preview site in realtime wenever I save. This is an intended workflow, so you can see your content in its final form as you edit. Local preview functionality comes with the default project setup. It's a single command to spin up each time.
 
-### 3. Publish
+### Publishing to the live site
 
 Once I've finished the content for a new page, and it's in the expected folder, I just have to send the new stuff to GitHub. Essentially, this involves running one command and clicking a couple buttons over on GitHub. After a minute or two, my changes will wind up as pretty HTML content on the live site.
 
-If you've used Git for develompent before, I'm using your bog-standard "run `git push`, then PR to `main` and let my custom Action deploy to Pages" workflow. Git tracks all of my site assets (for now), including the markdown content.  
+If you've used Git for develompent before, you'll recognize my process as your bog-standard "run `git push`, then PR to `main` and let my custom Action deploy to Pages" workflow. Git tracks all of my site assets (for now), including markdown content and images.  
 
-If you're _not_ familiar with Git, that might sound like an arcane techno-incantation to you!
+If you're _not_ familiar with Git, that was a lot of jargon right there!
 
 <details>
 <summary>Here's an explanation:</summary>
 <p>
 For the sake of this post, you can think of Git/GitHub as fancy file storage for code. You can have Git keep track of different versions (_branches_) of your code files, and you can have it perform automated tasks (_Actions_) on a particular version.
 
-Usually, you have a `main` branch to hold the most polished, "release" version of your code, and a `dev` branch to hold work-in-progress stuff that's not ready for release yet. As you're working on new stuff, you'll upload it (_push_) to `dev` at first, and you'll move it (_merge_, usually via _Pull Request (PR)_) to `main` when it's ready for release.
+Usually, you have a `main` branch to hold the most polished, "release" version of your code, and a `dev` branch to hold work-in-progress stuff that's not ready for release yet. When you're working on new stuff, you'll upload it (_push_) to `dev` at first, but eventually you'll move it (_merge_, usually via _Pull Request (PR)_) to `main` when it's ready for release.
 
-My repo is configured with an Action that triggers when changes get merged to `main`. The Action tells Docusaurus to build the site, creating the final set of files that GitHub Pages knows how to deploy as an actual live website.
-</p>
-</details>
-
-
-## What was setup like?
-
-Not bad! Took me a few hours over a few afternoons.
-
-In the next few sections, I'll provide details and starting points for some of these setup steps.  
-**If that's not for you, skip to my [plans for the future](#plans-for-the-future)!**
-
-I'd recommend a project like this to anyone who is comfortable with Git and GitHub, who feels like exploring Pages and maybe trying Actions. 
-
-At a high level, the setup process looks like this:
-- Create a GitHub repository for your site
-- Purchase a domain
-- Create and configure your Docusaurus project
-- Configure DNS stuff
-- Set up automatic deployment
-- Write your content!
-
-Docusaurus configuration is technically done in TypeScript, but you'll mostly be modifying existing config values (e.g. "swap out `title: 'Docusaurus Test Site'` for `title: 'KelDev'`"), so you don't have to actually learn TypeScript. I'd never bought a domain or configured DNS settings before, but those were both surprisingly quick and easy tasks.
-
-Let's get into it!
-
-### GitHub + Pages
-
-[GitHub Pages](https://pages.github.com/) is GitHub's free hosting service for [static sites](https://en.wikipedia.org/wiki/Static_web_page).
-
-If you have a GitHub account, you can put up a basic website pretty quickly. Usually, you'll use some static site framework (or just something like [webpack](https://webpack.js.org/)) with a "build" step, to convert your dev-friendly source files into a server-friendly bundle that GitHub Pages is preconfigured to deploy as a live site. [Later, you can automate this step.](#automatic-deployment-with-github-actions)
-
-GitHub wants you to use Pages ["to host a website about yourself, your organization, or your project"](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages). Generally speaking, don't plan to host your money-making, businessy websites for free on Pages.
-
-I wanted a "yourself" kinda website, so my GitHub repository uses the special name set aside for my User Site: [IAmKelDev/iamkeldev.github.io](https://github.com/IAmKelDev/iamkeldev.github.io). GitHub assigns you a free domain for your username, but you can easily configure your repo to use a custom domain instead. My free domain was https://iamkeldev.github.io, which now just redirects to https://keldev.net. (Click it and see!)
-
-Here's some relevant documentation if you want to try this out:  
-> - [GitHub docs: User Sites vs. Project Sites](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites).
-> - [GitHub docs: Configuring your Pages repo for a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain)
-
-### Buying a domain and configuring DNS
-
-If you're like I was going into this project, **buying a domain** will be the daunting hurdle you've never looked into before. It turned out to be easier than I thought!
-
-You'll need to:
-- Think of a domain name. It helps to have some alternatives, and to have a few candidates for domain extensions (`.com`, `.net`, `.dev`, `.org`, etc.)
-- Pick a [domain name registrar](https://en.wikipedia.org/wiki/Domain_name_registrar) to make an account with
-- Pay for the domain
-
-I looked for `keldev` as my domain name. The `.com` extension was taken, so I went with `.net`. When I browsed forums for registrar opinions, these names came up most often:
-- [Cloudflare](https://www.cloudflare.com/products/registrar/)
-- [Namecheap](https://www.namecheap.com/)
-- [porkbun](https://porkbun.com/) (I used this one)
-
-You might find something like [TLD-List](https://tld-list.com/) useful for comparing these and other registrars.  
-*Proceed with caution!* I can't vouch for every registrar in this tool, and they seem to use affiliate links, so you may get a better deal going to registrars directly.
-
-**DNS configuration** was trivial through porkbun. They have a DNS preset for Pages, so you just have to find the DNS menu and pick that option. I imagine it's easy enough on the other services too.  
-See [this article](https://kb.porkbun.com/article/64-how-to-connect-your-domain-to-github-pages) for the steps to configure a porkbun-managed domain for GitHub Pages.  
-Here are [GitHub's registrar-agnostic instructions](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain) as well.
-
-### Configuring Docusaurus
-
-This step has the largest time-sink potential, but *the bare minimum is still quick!* Remember, your personal site doesn't have to be perfect immediately. Tinker as you go! I'm [still making style adjustments](https://github.com/IAmKelDev/iamkeldev.github.io/commit/654a310388e4d75fca9147850aaffe73146d98ab) as I write this post.
-
-#### Bare minimum
-You get a fairly complete site skeleton just from installing the packed-in example site!
-
-If you want to poke around without putting any files on your computer, use one of the in-browser sandboxes recommended on the [Docusarus Playground page](https://docusaurus.io/docs/playground). Otherwise, the main [Installation Guide](https://docusaurus.io/docs/installation) goes through the basics in just a couple minutes.
-
-In the simplest case, you might decide to just throw out the default Markdown content files in the example site, replace them with your own, and call it done.
-
-#### More tailored
-If you need something different, start adding more instances of the main Docusaurus [Content Plugins](https://docusaurus.io/docs/api/plugins#content-plugins) to create new [Docs](https://docusaurus.io/docs/docs-introduction), [Pages](https://docusaurus.io/docs/creating-pages), or [Blog](https://docusaurus.io/docs/blog) sections for your site. Or remove, rename, or rearrange the default ones. You can assign each instance to a separate directory, so your content layout makes sense.
-
-Most of your site's navigation structure comes from the main Docusaurus config file. There's a lot of stuff you can configure. Here's [my (fairly standard) file](https://github.com/IAmKelDev/iamkeldev.github.io/blob/e76989a6a5d774a76030bb0373ad2edd4ccf1c40/docusaurus.config.ts) as of this post.
-
-Whenever you're not sure what config options are even available for your plugins, or what markdown frontmatter you can use, refer to the plugin API pages, which are all in [this plugins list](https://docusaurus.io/docs/api/plugins).
-
-#### Going further: Plugins and styling
-Once you've got your basic configuration and layout sorted, you should be more than ready to start putting up content. Remember to do that at some point! Don't just configure forever. When you do want to go further, though:
-- There are [community plugins](https://docusaurus.community/plugindirectory/) out there.
-- For blogging specifically, you might want to [define global authors](https://docusaurus.io/docs/blog#global-authors) (or remove all the example authors), and set up [post tagging](https://docusaurus.io/docs/blog#blog-post-tags).
-
-The biggest time sink early on is easily **styling**.
-
-There is _so much_ site-wide styling you can customize in `src/css/custom.css`. Be sure to look at the [Styling and Layout](https://docusaurus.io/docs/styling-layout) guide. Not only are there a lot of global [Infima](https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima) variables for things like color, but you can also use this space to define style rules for any HTML that you embed in your markdown content.
-
-Here is [the CSS file for my site](https://github.com/IAmKelDev/iamkeldev.github.io/blob/e76989a6a5d774a76030bb0373ad2edd4ccf1c40/src/css/custom.css), as of this post.
-
-### Automatic deployment with GitHub Actions
-
-[GitHub Actions](https://docs.github.com/en/actions) is GitHub's free [CI/CD](https://en.wikipedia.org/wiki/CI/CD) toolset. If you want something to automatically happen when you push code to your repository, use an Actions workflow.
-
-If you've ever set up something like a [Docker container](https://en.wikipedia.org/wiki/Docker_(software)), GitHub Actions workflow files will look familiar. If you haven't they'll look sort of like a roundabout method for shell scripting, but in YAML. Check out GitHub's [Quickstart guide for Actions](https://docs.github.com/en/actions/writing-workflows/quickstart#creating-your-first-workflow).
-
-My Actions workflow for auto-deploying my site is nothing special as far as Actions workflows go. I've added lots of comments to explain what's going on. Feel free to reuse or adapt it for your own projects!
-
-If you intend to reuse the file, you'll need to configure your repo first.
-<details>
-<summary>Steps:</summary>
-<p>
-1. Create a new [empty branch](https://stackoverflow.com/a/34100189) called `gh-pages`.
-2. In `gh-pages`, add a `docs/` directory, and put any file in there, so git sees the change.
-3. Commit and publish the new branch with its `docs/` directory and temporary file.
-4. In your repository settings on GitHub, under `Settings > (Code and automation) > Pages`, pick `Source: Deploy from a branch`.
-5. For `Branch` select `gh-pages`, then specify the `/docs` directory next to it.
-6. Finally, add the workflow file to your `main` branch. It must go in the `.github/workflows/` directory for GitHub to recognize it as an Action. Create the directory if necessary.
-7. Push changes to your site and check the Actions tab in your GitHub repo to verify it's working.
+My repo is configured with an Action that triggers when changes get merged to `main`. The Action tells Docusaurus to build the site, creating the final set of files that GitHub's _Pages_ service knows how to deploy as an actual live website.
 </p>
 </details>
 
 ## Plans for the future
 
-```
-TODO
-```
+I've already got everything I need to start sharing content publicly on this site. I'm excited to get some posts up!
 
-- Reactions
-- Comments
-- Hosting my images elsewhere
-- Splitting my content into a separate repo, pros/cons
+I've got a few ideas for technical expansions or adjustments I'd like to try sometime soon though.
 
-## Too many options
+### Reactions and comments
 
-There are way too many options for setting up a personal website or blog!
+I like the BearBlog feature where every post has a public upvote count. I'd like to have some form of engagement like that on my posts. Ideally, I'd like reactions *and* comments.
 
-I've had several false starts with my site.  
-I read about static frameworks, and I looked at low-code site builders. I tried [BearBlog](https://bearblog.dev/). I tried [WordPress.com](https://wordpress.com/). I usually struggled with the limitations of low-code options or the more restrictive frameworks, but I've also never had the motivation to dive into the more fully-featured options.
+It recently occurred to me that between [GitHub Discussions](https://docs.github.com/en/discussions) and [GitHub Pages](https://docs.github.com/en/pages), GitHub is surprisingly close to letting you set up forum-style websites. The catch is that Discussions are attached to the repo itself, rather than to whatever website you've got hosted on Pages.
 
-I got furthest with BearBlog. [BearBlog is great!](https://herman.bearblog.dev/manifesto/) If the rest of this looks like too much trouble, **BearBlog is my recommended alternative.** Go support that lil community!
+Apparently, others have had similar thoughts! There's a third-party GitHub app called [Giscus](https://giscus.vercel.app/) that does all the work of automatically mapping comment threads on your repo's GitHub Discussions forum to webpages on your GitHub Pages site. There's even [a promising-looking guide](https://dev.to/m19v/how-to-add-giscus-comments-to-docusaurus-439h) for adding it to a Docusaurus site. I need to look into it more, but at a glance this looks like a nice solution for both comments and reactions!
 
-My job was what finally made me find something and stick through it. We needed a site for documentation (etc), and I was the one who had to make it. I work for an open source project ([OpenDI](https://opendi.org/)), so I needed to avoid proprietary tools throughout. So my goals for work had a lot of overlap with typical goals for individual developers looking to put up a personal website, and I got paid to gain experience with tools that would work just as well for my own site.
+### Better content management
+
+I'd like to store and track my content markdown files separately from my other Docusaurus files. That would let me work on different versions of my Docusaurus configuration, styling, etc., without those changes getting mixed up with changes to my content, my draft posts, etc. Right now, everything is in the same repository. It's not a big deal now, but I could see it getting annoying later on.
+
+The intended solution for something like this is to turn the content files into a [Git Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules), stored in a different repo. It's generally not hard to do, so I plan to get that done soon.
+
+### Better image hosting
+
+### Image gallery?
+
+### Basic analytics
+
