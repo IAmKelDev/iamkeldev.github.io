@@ -1,0 +1,146 @@
+---
+slug: what-is-decision-intelligence
+title: What is Decision Intelligence? (Decision Modeling Intro)
+tags: [decision-intelligence, technical]
+description: "A general-purpose introduction to Decision Intelligence: what it means, why it's useful, and a helpful example."
+draft: true
+---
+
+I have a lot of fun technical topics I want to discuss related to Decision Intelligence (DI), and the process of creating interoperability standards, data formats, and tooling for Decision Intelligence as part of my work for OpenDI. There _is_ good introductory material out there for understanding DI, but much of it is not well tailored to my needs, as a lead-in for upcoming fun technical topics. For the sake of internal consistency among these posts, I'm laying own groundwork!
+
+I'll note up front that most of the concepts in this post come from [Dr. Lorien Pratt](https://www.lorienpratt.com/), who invented DI in the first place. The [DI Handbook](https://www.oreilly.com/library/view/the-decision-intelligence/9781098139643/) that she co-authored with Nadine Malcolm is the best resource to seek out for a deeper dive into DI in general.
+
+For this post, what even _is_ **Decision Intelligence** anyway?
+
+{/*truncate*/}
+
+This is one of those terms that's often annoyingly vague. If you look it up, you usually either get
+- businessy jargon soup ("Start with a data stock. Add a dash of machine learning, a teaspoon of AI concentrate, 3 or 4 visualizations, shelled, and 3/4 cup of diced managerial theory. Pressure cook on high for 25 minutes. Refrigerate after 3 LinkedIn posts."), or
+- essentially, "it's when you use AI to help make decisions". 
+
+I think this definition [from Gartner](https://www.gartner.com/en/information-technology/glossary/decision-intelligence) is decent:
+> "Decision intelligence (DI) is a practical discipline that advances decision making by explicitly understanding and engineering how decisions are made and how outcomes are evaluated, managed and improved via feedback."
+
+The follow-up questions from this definition are a lot more specific and useful:
+- How do you turn decision-making into an engineering process?
+- How do you evaluate outcomes?
+- What should those feedback processes look like?
+
+One reason this gets turned into jargon soup is because decision-making is _hard_, and we've already created lots of disciplines that approach the problem in different ways. DI often acts as an integration framework that helps _align_ these existing tools around common principles. So a lot of the fields attached to those tasty bits of jargon are still _involved_, but you can't just hand a data scientist an LLM and expect Decision Intelligence to materialize.
+
+You need a structure!
+
+## Modeling decisions
+
+Most of this post will be about that first follow-up question:
+- How do you turn decision-making into an engineering process?
+
+The simple answer is _you model decisions_!
+
+```
+Image of a decision model goes RIGHT HERE
+```
+
+If you can deconstruct the concept of a decision, breaking it down into a vocabulary of common components and features, you can then use that vocabulary to describe any decision you want. You can _capture_ decisions.
+
+### Why is this useful?
+
+Once you have a common vocabulary, you can write stuff down. **You can draw it.** If everyone involved can see the decision drawn out in front of them, anyone can point at it and say "actually, I think this goes here instead".
+
+When you're talking through a decision in any group setting, each person has their own concept of the situation. It can take a lot of careful conversation to tease apart the discrepancies between each perspective. When you model the decision instead, you can collaborate, synthesizing individual mental models into a more concrete consensus. You can align around the mechanics of a decision.
+
+When your model is digital, and your vocabulary is sophisticated enough, you can even do **simulation**.
+
+```
+gif or video of a realtime simulated model goes HERE
+```
+
+To be clear, this particular form of realtime simulation is not always _necessary_. It's nifty! But even if all you have is a whiteboard, you can get plenty of value out of simple diagramming. And there are other types of simulation besides this. The point is that there's enough of a framework here that _engineering_ can take place. You can begin to conceptualize and discuss decisions as systems.
+
+## Causal Decision Models
+
+Let's define the vocabulary for that system!
+
+Decision Intelligence models decisions as a special [Directed Graph](https://en.wikipedia.org/wiki/Directed_graph), where elements in the directed graph are related to each other by _cause_ and _effect_. When an arrow points from `Element A` to `Element B`, you can say that `Element A` _causes_ `Element B`.
+
+Each element in a Decision Model fits into one of ~four categories.
+### Levers and Outcomes
+
+These elements frame the boundaries of a decision. It often helps to brainstorm elements in these categories first when you're trying to draft a Causal Decision Model.
+#### Levers
+
+Levers represent the _actions_ available to the decision-maker. They answer the question "_What can I do in this situation?_" by providing a set or range of possible options.
+
+> An example might be "Amount of money I budget for marketing this year".
+#### Outcomes
+
+Outcomes represent end results of a decision. This is not necessarily the same as a [Goal](https://opendi.org/OpenDI%20Glossary#goal); Outcomes generally don't judge the success or failure of the decision.
+
+> An example might be "Amount of revenue the company made this year".
+
+A Goal would place a _constraint_ on this Outcome, like "The company makes $X in revenue this year".
+
+### Intermediates
+
+Intermediates fill in all of the causal relationships between Levers and Outcomes. Sometimes `Element A` does not _directly_ cause `Element B`.
+
+> An example might be "Number of impressions our marketing campaign generates this year".
+
+Intermediates can get tricky, so it's common to fill these in iteratively, working "inward" from Levers and Outcomes. To fill in "downstream" Intermediates, ask ["Why?"](https://opendi.org/OpenDI%20Glossary/#why-chain). To fill in "upstream" Intermediates, ask ["How?"](https://opendi.org/OpenDI%20Glossary/#how-chain).
+
+I'll demonstrate this approach and add a few more Intermediates to our model.
+`<detail>`
+#### Iterating with "how" and "why"
+In the above example, you might ask:
+> **Why** are we considering changing the marketing budget in the first quarter of this year?
+> _Because it will impact the number of impressions our marketing campaign generates this year._
+
+And further, 
+> **Why** is the number of impressions this year important?
+> _Because somewhere further downstream it will impact our revenue this year._
+
+From this exercise you might determine that it'd make sense to add a few more intermediates to this model!
+
+> **How** can we impact the number of impressions this year?
+> _We could improve the quality our marketing campaigns._
+
+This would imply an Intermediate like "Quality of our marketing this year".
+
+> **Why** is the number of impressions important?
+> Because some number of those impressions turn into new customers!
+
+So maybe we add an element for "Number of new customers this year".
+`<detail/>`
+### Externals
+
+Externals are similar to Levers. They directly affect Intermediates or Outcomes. Unlike Levers, though, Externals are _outside_ of the decision-maker's control for the current decision. Externals might take on a range of possible values that the decision-maker can play with to plan for different scenarios.
+
+> An example might be "Yearly production costs for our products".
+### Keep it quantifiable
+
+Decision elements are much more useful when they represent something explicitly _quantifiable_. What is the timeframe for the decision? What are the units for each Lever, Intermediate, etc.? Not only does this simplify simulation later on, but it also more clearly illustrates _stakes_ and _value_. When are we doing this, and exactly how much will it help?
+### Decision Scope
+
+You might've noticed that some of our elements are kinda vague.  
+Let's take this example:
+> Quality of our marketing this year
+
+_Couldn't this be a little more specific and meaningful? How about "Number of marketing campaigns we run this year" or "Number of platforms we target with our marketing campaigns" or something like that?_
+
+This is a valid concern!
+
+You might realize that the quality of your marketing depends greatly on how your marketing team utilizes their budget. There are indeed a lot of different things they can do with that money. If you try to model all of it, you'll likely find yourself accounting for several other decisions that are effectively embedded in your initial one. _Should the marketing team focus on quantity? What if they put more time into fewer campaigns?_
+
+Causal modeling is like this! A good rule of thumb for decision modeling is that your model should be carefully scoped to consider only _one_ decision. The decision-maker needs to have agency over _all_ of the relevant Levers for that one decision. In this case, you're likely not the head of marketing, and if you were, then budget utilization is still a separate decision.
+
+How do you account for downstream effects that are outside your control? What level of fidelity is useful?  
+It depends!
+
+If you're interested in accounting for a range of possibilities for budget utilization, then _"marketing team's budget utilization"_ might become a simple adjustable multiplier, represented as an External. If a multiplier is too simple, you could model utilization as a curve across a range of different budgets, based on prior data. If this becomes a big enough concern, you might realize you need to sit down with your marketing team and model this utilization decision with them, to give you a better idea of how to account for those downstream effects in this decision.
+
+## Iterate. Do the engineering!
+
+In this post, we've already begun iterating on this model. We've added a few additional Intermediates to fill out the causal links between our Levers and Outcomes. We've considered different options for accounting for more complex downstream effects. We've even noted a specific area where it could be useful to integrate prior data.
+
+This is engineering! We can continue to refine this. Later, we could work out the logic needed to simulate this model.  
+It might turn out like this:
