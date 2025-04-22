@@ -60,7 +60,7 @@ You need structure!
 ## Modeling decisions
 
 Most of this post will be about that first follow-up question:
-> - How do you turn decision-making into an engineering process?
+> How do you turn decision-making into an engineering process?
 
 In short, _you model decisions_!
 
@@ -80,7 +80,7 @@ _Conversation_ is the classic medium for decision-making. But conversation is fu
 When your model is digital, and your vocabulary is sophisticated enough, you can even do **simulation**!
 
 <a class="zoomable" href={CDD_Simulation}><img decoding="async" loading="lazy" alt="Animated .gif of a simulated decision" class="img_ev3q" src={CDD_Simulation}/></a>
-<br/><br/>
+
 Whether you're doing realtime decision simulation or you're just collaborating on some whiteboard doodles of decision diagrams, DI offers enough of a framework that _engineering_ can take place. You can begin to conceptualize and discuss decisions as **systems**.
 
 ## Causal Decision Models
@@ -188,27 +188,30 @@ This gives a better idea of what sorts of numbers we might associate with this e
 
 ### Decision Scope
 
-Some of you may be thinking about how to trace these "How?" and "Why?" chains further. As you fill in gaps around these Intermediates, you might wonder how much of this budgeting decision depends on how the marketing team decides to _utilize_ the budget you give them. There are lots of different things they can do with that money!
+Some of you might still be asking "How?" and "Why?" for the elements we have now. As you fill in gaps around these Intermediates, you might wonder how much of this budgeting decision depends on how the marketing team decides to _utilize_ the budget you give them. There are lots of different things they can do with that money!
 
 What you've uncovered is essentially another decision _embedded_ in your original one. A good rule of thumb is that your model should be carefully scoped to consider only _one_ decision whenever possible. The decision-maker needs to have agency over _all_ of the relevant Levers for that one decision.
 
-In this case, if you're interested in considering a range of possibilities then _"marketing budget utilization strategy"_ might become an adjustable, flat ratio of some sort (e.g. quality vs. quantity), representing this utilization decision as an External.
+In this case, _"marketing budget utilization strategy"_ might become an adjustable, flat ratio of some sort (e.g. quality vs. quantity), representing this utilization decision as an External. This way you can account for a range of possibilities without having to make that decision yourself.
 
 <a class="zoomable" href={CDD_8_Scope}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever, 3 Intermediates, 2 Externals, and 1 Outcome" class="img_ev3q" src={CDD_8_Scope}/></a>
 
 You could easily make this more complex! You could set up your ratio as a curve across a range of possible budgets. You could build a resource allocation algorithm based on prior data.
 
-If it becomes a big enough concern, you might decide to sit down with your marketing team and model this utilization decision with them, to give you a better idea of how to account for it in your own decision. If you come up with a good model, you could even consider embedding it as a sub-model in a simulated version of your budget decision model.
+If it's a big enough concern, you might decide to sit down with your marketing team and model this utilization decision with them, to give you a better idea of how to account for it in your own decision. If you come up with a good model, you might even embed it into a simulated version of your budget decision model, as a sub-model.
 
 ## Engineering decisions
 
-In this post, we've already taken our example model through a design iteration or two.  
-We've added more Intermediates to fill in the causal links between our Levers and Outcomes. We've considered quantifiability and scope. We've even noted a specific area where it could be useful to integrate prior data and talk to other experts (our marketing team).
+In this post, we've already taken our example model through a design iteration or two.
+
+We've added more Intermediates to fill in the causal links between Levers and Outcomes. We've considered quantifiability and scope. We've even noted a specific area where it could be useful to integrate prior data and talk to other experts (our marketing team).
 
 This is engineering!  
-We could continue to refine this with more Intermediates or other elements. We could hook up scripts and input/output values and run simulations. We might even find a specific area or two where it makes sense to add our dash of machine learning or our AI-from-concentrate, to help model some of these causal links.
+We could continue to refine this with more elements. We could hook up scripts and input/output values and run simulations. We might even find a specific area or two where it makes sense to add our dash of machine learning or our AI-from-concentrate, to help model some of these causal links.
 
-For now, we're already approaching a better understanding of this particular decision! At least in theory. I don't work in marketing, so hopefully I haven't misinterpreted or misapplied any basic concepts here. If I did, please [let me know](mailto:keldtdev@gmail.com)!
+For now, we're already approaching a better understanding of this particular decision!  
+At least in theory. I don't work in marketing, so hopefully I haven't misinterpreted or misapplied any basic concepts.  
+If I did, please [let me know](mailto:keldtdev@gmail.com)!
 
 ## Looking ahead
 
