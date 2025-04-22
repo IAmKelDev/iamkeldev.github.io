@@ -18,6 +18,11 @@ blog-updates:
   permalink: /blog-updates
   description: Updates about this blog! New features or changes.
 
+decision-intelligence:
+  label: Decision Intelligence
+  permalink: /decision-intelligence
+  description: Posts about Decision Intelligence (DI), decision modeling, OpenDI, etc.
+
 misc:
   label: Misc.
   permalink: /misc
