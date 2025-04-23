@@ -3,25 +3,28 @@ sidebar_position: 2
 description: "A list of all my past a current projects, both professional and personal."
 ---
 
-import OpenDIReactDecisionEngine from './assets/OpenDI-React-Decision-Engine.png';
+import OpenDIReactDecisionEngine from './assets/OpenDI_Authoring_Tool_April_2025.png';
 
 # Projects
 
 ## Current
 
-### OpenDI Initiative (2024-Current)
+### OpenDI Initiative
+**_(2024-Current)_**
 
 The [Open Decision Intelligence initiative](https://opendi.org/) is an open source project working on interoperability standards for the Decision Intelligence (DI) industry.
 
-<a class="zoomable" href={OpenDIReactDecisionEngine}><img decoding="async" loading="lazy" alt="OpenDI React Decision Engine" width="2149" height="834" class="img_ev3q" src={OpenDIReactDecisionEngine}/></a>
+<a class="zoomable" href={OpenDIReactDecisionEngine} target="_blank"><img decoding="async" loading="lazy" alt="OpenDI React Decision Engine" class="img_ev3q" src={OpenDIReactDecisionEngine}/></a>
+> The latest version of the decision model authoring tool: a browser-based decision engine with support for authoring, rendering, and simulating JavaScript decision logic, built with React.  
+> This version will be deployed sometime on **April 23, 2025**. [Try it here!](https://opendi.org/cdd-authoring-tool/)
 
-I worked with one of the co-founders, Dr. Roberts, on the [Coccidia Detection](#coccidia-detection-2022-2024) project, and he decided I'd be a good fit for helping them get this project started!
+I worked with one of the co-founders, Dr. Roberts, on the [Coccidia Detection](#coccidia-detection) project, and he decided I'd be a good fit for helping them get this project started!
 
 I've gotten to contribute a fairly eclectic bunch of solutions for various portions of a mostly web-based tech stack for this project. I set up most of the organization's [GitHub repos](https://github.com/orgs/opendi-org/repositories?q=visibility%3Apublic+archived%3Afalse), as well as all of OpenDI's public websites. They're all Docusaurus-based, serving markdown content via GitHub Pages (sound familiar?).
 
-The main bulk of my work, though, has been architecting standards for interoperability. DI practices align around the concept of [Causal Decision Diagrams](https://www.lorienpratt.com/a-framework-for-how-data-informs-decisions/) (CDDs) and Causal Decision Models (CDMs). So interoperability in this sort of framework means being able to agree upon methods for storing and transmitting these models and diagrams, and to settle ideas around best practices, terminology, typical team members, roles and user stories, etc.
+The main bulk of my work, though, has been architecting standards for interoperability. DI practices align around the [concept of decision modeling](/blog/what-is-decision-intelligence). So _interoperability_ in this sort of framework means being able to agree upon methods for storing and transmitting these models and diagrams, and to settle ideas around best practices, terminology, typical team members, roles and user stories, etc.
 
-Why is this useful? This allows companies, researchers, and anyone else to _specialize_ their role in DI, naturally encouraging an ecosystem of many tools created by many parties. The ideal situation is one where a CDD authored in one tool can be sent to another tool to have logical/simulation components attached, then connected to databases and simulated in yet another environment. Or a community could collaborate to build a model hub full of foundational decision models that can be freely extended in any toolset, adapted to more specific or complex contexts by experts, or used for research.
+Why is this useful? Interoperability allows companies, researchers, and anyone else to _specialize_ their role in DI, naturally encouraging an ecosystem of many tools created by many parties. The ideal situation is one where a simple decision diagram authored in one tool can be sent to another tool to have logical/simulation components attached, then connected to databases and simulated in yet another environment. Or a community could collaborate to build a model hub full of foundational decision models that can be freely extended in any toolset, adapted to more specific or complex contexts by experts, or used for research.
 
 My work has largely been in laying foundations for this ecosystem. To that end, I have:
 - Created [a JSON Schema](https://github.com/opendi-org/cdm-json-schema) for representing CDMs (with CDDs attached), using [the JSON Schema standard](https://json-schema.org/)
@@ -34,9 +37,8 @@ On top of this foundation, I've also been implementing examples to demonstrate h
 - I created a browser-based prototype [CDD authoring tool](https://opendi.org/cdd-authoring-tool/) so you can graphically edit CDDs and see the JSON constructed in real-time
 - I joined the above two projects together with a database in a fully [containerized](https://www.docker.com/) Docker Compose project [(repo)](https://github.com/opendi-org/containerized-authoring-demo), with Docker Hub images for the [authoring tool](https://hub.docker.com/repository/docker/iamkeldev/opendi-cdd-authoring-tool/general) and [api](https://hub.docker.com/repository/docker/iamkeldev/opendi-example-api-go/general)
 
-The screenshot at the top of this project section is the (work-in-progress) next step of the authoring tool: a browser-based decision engine with support for authoring, rendering, and simulating JavaScript decision logic, built with React.
-
-### 481Engine - 2D Game Engine (2021-???)
+### 481Engine - 2D Game Engine
+**_(2021-???)_**
 Flexible 2D game engine. Uses [SFML](https://www.sfml-dev.org/) for basic rendering, with a custom C++ backend.  
 Supports full game scripting via runtime-interpreted JavaScript.
 
@@ -86,11 +88,12 @@ I still return to this project occasionally. Here's a rough list of things I'm l
 
 ## Past
 
-### Coccidia Detection (2022-2024)
+### Coccidia Detection
+**_(Fall 2022 - December 2023)_**
 
 Applied computer vision for commercial poultry. I trained machine learning models to identify single-celled parasites ([coccidia](https://en.wikipedia.org/wiki/Coccidia)) in images taken from magnified slide samples of poultry feces. I handled software for this project, under the direction of [Dr. David Roberts](https://www.csc.ncsu.edu/people/dlrober4) and [Dr. Rocio Crespo](https://cvm.ncsu.edu/people/rcrespo/) at NC State. We published [an article](https://doi.org/10.3390/ani14020212) in *Animals* about the project.
 
-![Sample Output](https://i.ibb.co/37tNm2f/Sample-Output.png)
+<a class="zoomable" href="https://i.ibb.co/37tNm2f/Sample-Output.png" target="_blank"><img decoding="async" loading="lazy" alt="Coccidia Detection Sample Output" class="img_ev3q" src="https://i.ibb.co/37tNm2f/Sample-Output.png"/></a>
 
 #### Premise
 This was an [instance segmentation](https://paperswithcode.com/task/instance-segmentation) project. The goal was to create lightweight models that workers in the poultry industry can use to analyze images taken from their field samples.  A successfully-trained model should afford users the ability to:
@@ -112,7 +115,8 @@ We got an article published in *Animals* about this project. I was a co-author. 
 
 I put together most of the charts and figures using a combination of [pandas](https://pandas.pydata.org/), [Vega-Altair](https://altair-viz.github.io/), and (good ol') [GIMP](https://www.gimp.org/). I drafted most of the Materials/Methods and Results sections, and had lots of smaller edits and additions throughout the other sections. [Contact me](mailto:keldtdev@gmail.com) for any questions related to this!
 
-### Gmail Add-on for LexisNexis InterAction+ (2023)
+### Gmail Add-on for LexisNexis InterAction+
+**_(2023)_**
 
 [CRM](https://en.wikipedia.org/wiki/Customer_relationship_management) add-on for Gmail, with CRM data sourced from LexisNexis's InterAction+ API. This was a capstone project for NC State's [Senior Design program](https://sdc.csc.ncsu.edu/about/the-center). Meant to be similar to the [existing add-in for Outlook](https://www.lexisnexis.com/pdf/intelligence/IMO_Lit.pdf) (pdf for an _ancient_ version).
 
@@ -140,7 +144,8 @@ The team worked well together! We all traded responsibilities periodically, incl
 
 The biggest challenge throughout this project was just working with [Google Apps Script](https://www.google.com/script/start/) (GAS), and the whole framework for Gmail add-ons. GAS is effectively a JavaScript programming environment that comes with a Google-specific library, where projects must be pushed to [the Apps Script cloud environment](https://script.google.com/home/) to run. It has [some quirks](https://developers.google.com/apps-script/add-ons/how-tos/navigation) that I might write more about later. Notably, sponsors initially wanted to try an add-on for [Contacts](https://contacts.google.com/), but as of Fall 2023 Google hadn't added support for Contacts add-ons yet. Check the "works with" dropdown [here](https://workspace.google.com/marketplace) to see if that has changed!
 
-### Game AI - Monster Chase Demo (2022)
+### Game AI - Monster Chase Demo
+**_(2022)_**
 
 This demo shows my implementation of the final project for a Game AI class taken at NC State in Spring 2022.
 
@@ -170,7 +175,8 @@ The *monster* character's algorithm is more focused. It attempts to close distan
 
 The *monster* and *flee-er* persist until the *flee-er* is inevitably caught.
 
-### Retro Asteroids (2021)
+### Retro Asteroids
+**_(2021)_**
 
 Simple modern implementation of the classic [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) game, with 3D graphics. It uses colorful wireframe rendering to evoke the classic visuals, with force-based movement for a spaceflight feel.
 
@@ -188,7 +194,8 @@ Unity Asteroids (C#)
 
 This was implemented in Unity, for a class (CSC 461 - "Introduction to Computer Graphics") at NC State. This link to the [GitHub repo](https://github.com/IAmKelDev/CSC461-Asteroids) will work once I make it public.
 
-### fLight (Old Game Project) (~2016)
+### fLight (Old Game Project)
+**_(~2016)_**
 
 I created this game for an introductory game development class in high school.
 
