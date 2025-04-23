@@ -3,7 +3,6 @@ slug: what-is-decision-intelligence
 title: What is Decision Intelligence? (Decision Modeling Intro)
 tags: [decision-intelligence, technical]
 description: "An introduction to Decision Intelligence: what it means to engineer decisions and why it's useful, with a worked example."
-unlisted: true
 ---
 
 import Coffee_Decision_Model from './assets/2025-04-what-is-decision-intelligence/Coffee_Decision_Model.png';
@@ -23,7 +22,7 @@ import Schema_Doodle from './assets/2025-04-what-is-decision-intelligence/Schema
 
 I have a lot of fun technical topics I want to discuss related to Decision Intelligence (DI), and the process of creating standards, data formats, and tooling for DI as part of my work for [OpenDI](https://opendi.org/).
 
-<a class="zoomable" href={CDD_Simulation}><img decoding="async" loading="lazy" alt="Animated .gif of a simulated decision" class="img_ev3q" src={CDD_Simulation}/></a>
+<a class="zoomable" href={CDD_Simulation} target="blank"><img decoding="async" loading="lazy" alt=".gif of a simulated decision" class="img_ev3q" src={CDD_Simulation}/></a>
 > (I made this tool! You can [try it here](https://opendi.org/cdd-authoring-tool/), in your browser.)
 
 There _is_ good introductory material out there for understanding DI, but it's generally not well suited as a lead-in for the topics I want to write about. So I'm laying my own groundwork!
@@ -32,7 +31,7 @@ We'll start by defining **Decision Intelligence** and some of its core concepts.
 
 {/*truncate*/}
 
-I'll note up front that most of the concepts in this post are based on the work of [Dr. Lorien Pratt](https://www.lorienpratt.com/), who invented DI in the first place. The [DI Handbook](https://www.oreilly.com/library/view/the-decision-intelligence/9781098139643/) that she co-authored with Nadine Malcolm is the best resource around right now if you want a deeper dive into DI.
+I'll note up front that most of the concepts in this post are based on the work of [Dr. Lorien Pratt](https://www.lorienpratt.com/), who invented DI in the first place. The [DI Handbook](https://www.oreilly.com/library/view/the-decision-intelligence/9781098139643/) that she co-authored with [Nadine Malcolm](https://www.linkedin.com/in/nadine-malcolm-69739/) is the best resource around if you want a deeper dive into DI.
 
 ## What is Decision Intelligence?
 
@@ -53,7 +52,7 @@ This definition implies some follow-up questions that are a lot more specific an
 - How do you evaluate outcomes?
 - What should those feedback processes look like?
 
-One reason DI gets turned into jargon soup is because decision-making is _hard_. We've already created lots of disciplines that approach it in different ways. DI often acts as an integration framework that helps _align_ these existing tools and disciplines around common principles. So a lot of the fields attached to those tasty bits of jargon are still _involved_, but you can't just hand a data scientist an LLM and expect Decision Intelligence to materialize.
+One reason DI gets turned into jargon soup is because decision-making is _hard_. We've already created lots of disciplines that approach it in different ways. DI often acts as an integration framework that helps _align_ these existing tools and disciplines around common principles. So a lot of the disciplines attached to those tasty bits of jargon are still _involved_, but you can't just hand a data scientist a Large Language Model and expect Decision Intelligence to materialize.
 
 You need structure!
 
@@ -64,7 +63,7 @@ Most of this post will be about that first follow-up question:
 
 In short, _you model decisions_!
 
-<a class="zoomable" href={Coffee_Decision_Model}><img decoding="async" loading="lazy" alt="Example: Coffee Decision Model" class="img_ev3q" src={Coffee_Decision_Model}/></a>
+<a class="zoomable" href={Coffee_Decision_Model} target="_blank"><img decoding="async" loading="lazy" alt="Coffee Decision Model" class="img_ev3q" src={Coffee_Decision_Model}/></a>
 
 If you can deconstruct the concept of a decision, break it down into a vocabulary of common components and features, then you can use that vocabulary to describe any decision you want.
 
@@ -79,7 +78,7 @@ _Conversation_ is the classic medium for decision-making. But conversation is fu
 
 When your model is digital, and your vocabulary is sophisticated enough, you can even do **simulation**!
 
-<a class="zoomable" href={CDD_Simulation}><img decoding="async" loading="lazy" alt="Animated .gif of a simulated decision" class="img_ev3q" src={CDD_Simulation}/></a>
+<a class="zoomable" href={CDD_Simulation} target="blank"><img decoding="async" loading="lazy" alt=".gif of a simulated decision" class="img_ev3q" src={CDD_Simulation}/></a>
 
 Whether you're doing realtime decision simulation or you're just collaborating on some whiteboard doodles of decision diagrams, DI offers enough of a framework that _engineering_ can take place. You can begin to conceptualize and discuss decisions as **systems**.
 
@@ -89,7 +88,7 @@ Let's dig into the specific vocabulary for those systems!
 
 DI represents decisions visually as special [Directed Graphs](https://en.wikipedia.org/wiki/Directed_graph), where elements in the directed graph are related to each other by _cause and effect_.
 
-<a class="zoomable" href={CDD_0_Cause_Effect}><img decoding="async" loading="lazy" alt="Example CDD showing cause and effect" class="img_ev3q" src={CDD_0_Cause_Effect}/></a>
+<a class="zoomable" href={CDD_0_Cause_Effect} target="blank"><img decoding="async" loading="lazy" alt="Example showing cause and effect" class="img_ev3q" src={CDD_0_Cause_Effect}/></a>
 
 When an arrow points from `Element A` to `Element B`, you can say that `Element A` _causes_ `Element B`.
 
@@ -102,7 +101,7 @@ These elements frame the boundaries of a decision. When you're trying to draft a
 Levers represent the _actions_ available to the decision-maker.  
 They answer the question "_What can I do in this situation?_" by providing some possible options.
 
-<a class="zoomable" href={CDD_1_Lever}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever" class="img_ev3q" src={CDD_1_Lever}/></a>
+<a class="zoomable" href={CDD_1_Lever} target="blank"><img decoding="async" loading="lazy" alt="Example step 1: Lever" class="img_ev3q" src={CDD_1_Lever}/></a>
 
 An example might be "Amount of money I budget for marketing this year".
 
@@ -111,7 +110,7 @@ An example might be "Amount of money I budget for marketing this year".
 Outcomes represent end results of a decision.  
 This is not necessarily the same as a [Goal](https://opendi.org/OpenDI%20Glossary#goal), since Outcomes generally don't judge the success or failure of the decision.
 
-<a class="zoomable" href={CDD_2_Outcome}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever and 1 Outcome" class="img_ev3q" src={CDD_2_Outcome}/></a>
+<a class="zoomable" href={CDD_2_Outcome} target="blank"><img decoding="async" loading="lazy" alt="Example step 2: Outcome" class="img_ev3q" src={CDD_2_Outcome}/></a>
 
 An example might be "Amount of revenue `{Company}` makes this year".
 
@@ -122,7 +121,7 @@ A Goal would place a _constraint_ on this Outcome, like "`{Company}` makes $`{am
 Intermediates fill in all of the causal relationships between Levers and Outcomes.  
 Sometimes `Element A` does not _directly_ cause `Element B`.
 
-<a class="zoomable" href={CDD_3_Intermediate}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever, 1 Intermediate, and 1 Outcome" class="img_ev3q" src={CDD_3_Intermediate}/></a>
+<a class="zoomable" href={CDD_3_Intermediate} target="blank"><img decoding="async" loading="lazy" alt="Example step 3: Intermediate" class="img_ev3q" src={CDD_3_Intermediate}/></a>
 
 
 An example might be "Number of impressions that marketing generates this year".
@@ -134,7 +133,7 @@ Intermediates are tricky. There are often many indirect links between any given 
 To discover _downstream_ Intermediates, ask ["Why?"](https://opendi.org/OpenDI%20Glossary/#why-chain). To discover _upstream_ Intermediates, ask ["How?"](https://opendi.org/OpenDI%20Glossary/#how-chain).  
 
 <details>
-<summary>Let's explore this approach:</summary>
+<summary>Let's explore this approach!<br/><b>Expand for examples:</b></summary>
 <p>
 In the above example, you might ask:
 > Q: **Why** are we considering changing the marketing budget for this year?  
@@ -149,7 +148,7 @@ From this exercise, you might conclude that it would make sense to add more inte
 > Q: **Why** is the number of impressions important?  
 > A: _Because some of those impressions [convert](https://en.wikipedia.org/wiki/Conversion_marketing) into new customers, which impacts revenue._
 
-<a class="zoomable" href={CDD_4_How_Why}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever, 2 Intermediates, and 1 Outcome" class="img_ev3q" src={CDD_4_How_Why}/></a>
+<a class="zoomable" href={CDD_4_How_Why} target="blank"><img decoding="async" loading="lazy" alt="Example step 4: How/Why Intermediates" class="img_ev3q" src={CDD_4_How_Why}/></a>
 <br/><br/>
 Going the other direction, you might ask:  
 > Q: Aside from changing the number of impressions, **how** else could we get more conversions out of our marketing budget?  
@@ -158,7 +157,7 @@ Going the other direction, you might ask:
 </details>
 
 We could go much further, but we'll leave the example here for now:  
-<a class="zoomable" href={CDD_5_How_Why_2}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever, 3 Intermediates, and 1 Outcome" class="img_ev3q" src={CDD_5_How_Why_2}/></a>
+<a class="zoomable" href={CDD_5_How_Why_2} target="blank"><img decoding="async" loading="lazy" alt="Example step 5: How/Why Intermediates" class="img_ev3q" src={CDD_5_How_Why_2}/></a>
 
 ### Externals
 
@@ -166,7 +165,7 @@ Externals are similar to Levers. They directly affect Intermediates or Outcomes.
 Unlike Levers though, Externals are _outside_ of the decision-maker's control for the current decision.  
 Externals answer the question "_What else might impact this situation besides me?_" by providing some possible options.
 
-<a class="zoomable" href={CDD_6_External}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever, 3 Intermediates, 1 External, and 1 Outcome" class="img_ev3q" src={CDD_6_External}/></a>
+<a class="zoomable" href={CDD_6_External} target="blank"><img decoding="async" loading="lazy" alt="Example step 6: External" class="img_ev3q" src={CDD_6_External}/></a>
 
 An example might be "Yearly production expenses for `{Company}` goods and services".
 
@@ -182,7 +181,7 @@ If you were bothered by the vagueness of our _Quality of marketing_ element, thi
 
 Let's modify it slightly. How might we measure marketing quality? Maybe we could focus on the resources allocated to each individual marketing campaign. 
 
-<a class="zoomable" href={CDD_7_Quantifiability}><img decoding="async" loading="lazy" alt="Example CDD improved quantifiability" class="img_ev3q" src={CDD_7_Quantifiability}/></a>
+<a class="zoomable" href={CDD_7_Quantifiability} target="blank"><img decoding="async" loading="lazy" alt="Example step 7: Quantifiability" class="img_ev3q" src={CDD_7_Quantifiability}/></a>
 
 This gives a better idea of what sorts of numbers we might associate with this element.
 
@@ -194,7 +193,7 @@ What you've uncovered is essentially another decision _embedded_ in your origina
 
 In this case, _"marketing budget utilization strategy"_ might become an adjustable, flat ratio of some sort (e.g. quality vs. quantity), representing this utilization decision as an External. This way you can account for a range of possibilities without having to make that decision yourself.
 
-<a class="zoomable" href={CDD_8_Scope}><img decoding="async" loading="lazy" alt="Example CDD with 1 Lever, 3 Intermediates, 2 Externals, and 1 Outcome" class="img_ev3q" src={CDD_8_Scope}/></a>
+<a class="zoomable" href={CDD_8_Scope} target="blank"><img decoding="async" loading="lazy" alt="Example step 8: Scope" class="img_ev3q" src={CDD_8_Scope}/></a>
 
 You could easily make this more complex! You could set up your ratio as a curve across a range of possible budgets. You could build a resource allocation algorithm based on prior data.
 
@@ -210,8 +209,9 @@ This is engineering!
 We could continue to refine this with more elements. We could hook up scripts and input/output values and run simulations. We might even find a specific area or two where it makes sense to add our dash of machine learning or our AI-from-concentrate, to help model some of these causal links.
 
 For now, we're already approaching a better understanding of this particular decision!  
-At least in theory. I don't work in marketing, so hopefully I haven't misinterpreted or misapplied any basic concepts.  
-If I did, please [let me know](mailto:keldtdev@gmail.com)!
+At least in theory. I don't work in marketing, so hopefully I haven't misinterpreted or misapplied any basic concepts.
+
+If I have, please [let me know](mailto:keldtdev@gmail.com)!
 
 ## Looking ahead
 
@@ -222,7 +222,7 @@ Moving forward, I have plans for a few topics about design decisions and challen
 
 Over the past year I've built a [browser-based engine](https://opendi.org/cdd-authoring-tool/) for displaying and authoring interactive decision models, and designed [data schemas](https://github.com/opendi-org/cdm-json-schema) for representing decisions, [transmitting](https://github.com/opendi-org/example-api-go) them, and using them in the engine. I have a lot to talk about!
 
-<a class="zoomable" href={Schema_Doodle}><img decoding="async" loading="lazy" alt="A juicy doodle of a JSON schema data structure" class="img_ev3q" src={Schema_Doodle}/></a>
+<a class="zoomable" href={Schema_Doodle} target="blank"><img decoding="async" loading="lazy" alt="Juicy doodle of JSON schema data structure" class="img_ev3q" src={Schema_Doodle}/></a>
 > I plan to talk about juicy WIP doodles like this (and some significantly more polished ones as well). Stay tuned!
 
 You can subscribe to my [RSS feed](https://keldev.net/blog/rss.xml) for post notifications.
