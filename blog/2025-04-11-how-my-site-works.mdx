@@ -5,12 +5,6 @@ tags: [blog-updates]
 description: Some details about my website, and some plans for the future.
 ---
 
-import MarkdownView from './assets/2025-04-how-my-site-works/markdown_raw_view.png';
-import MarkdownPreview from './assets/2025-04-how-my-site-works/markdown_preview.png';
-import SideBySideEditing from './assets/2025-04-how-my-site-works/side_by_side_editing.png';
-import Frontmatter from './assets/2025-04-how-my-site-works/frontmatter.png';
-
-
 I'm usually curious about this sort of thing with other personal sites, so I'm sharing some details about how my site works, and how I landed on the toolset I'm using! This will be lighter on technical specifics. If you're looking to set up something similar and you're interested in advice or some good starting points, look for a setup-focused blog post in the near future!
 
 {/*truncate*/}
@@ -87,13 +81,13 @@ Every page starts as a markdown file.
 [Markdown](https://www.markdownguide.org/) is ubiquitous these days. If you frequently send or publish text over the internet, it's handy to be familiar with it! If you're unfamiliar, [the basics](https://www.markdownguide.org/cheat-sheet/#basic-syntax) are pretty straightforward. I think it's a rite of passage for newer markdown users to accidentaly discover that some new app they're using supports markdown because it happened to work when they used it out of habit.
 
 Here's what the raw markdown for this section looks like when I'm editing it in [VS Code](/about/software-I-use#visual-studio-code):  
-<a class="zoomable" href={MarkdownView}><img decoding="async" loading="lazy" alt="Markdown View" class="img_ev3q" src={MarkdownView}/></a>
+<a class="zoomable" href="https://assets.keldev.net/2025/04/how-my-site-works/markdown_raw_view.png" target="_blank"><img decoding="async" loading="lazy" alt="Markdown View" class="img_ev3q" src="https://assets.keldev.net/2025/04/how-my-site-works/markdown_raw_view.png"/></a>
 > Markdown view.
 
 Like many markdown-friendly editors, VS Code applies basic [sytnax highlighting](https://en.wikipedia.org/wiki/Syntax_highlighting) to help with readability. You can also preview a rendered form of the document (with standard styling) as you edit it.
 
 Here's VS Code's preview for this section:  
-<a class="zoomable" href={MarkdownPreview}><img decoding="async" loading="lazy" alt="Markdown Preview" class="img_ev3q" src={MarkdownPreview}/></a>
+<a class="zoomable" href="https://assets.keldev.net/2025/04/how-my-site-works/markdown_preview.png" target="_blank"><img decoding="async" loading="lazy" alt="Markdown Preview" class="img_ev3q" src="https://assets.keldev.net/2025/04/how-my-site-works/markdown_preview.png"/></a>
 > Markdown preview.  
 > This preview doesn't like the way I'm formatting images right now. The [live preview](#live-preview) is fine with it though!
 
@@ -110,7 +104,7 @@ I have:
 Each blog post's filename starts with its publish date so the Docusaurus Blog feature can sort it in my *Recent posts* list.  
 To [tag a post](/blog/tags), I just add a list of tags in the markdown frontmatter.
 
-<a class="zoomable" href={Frontmatter}><img decoding="async" loading="lazy" alt="Markdown Frontmatter" class="img_ev3q" src={Frontmatter}/></a>
+<a class="zoomable" href="https://assets.keldev.net/2025/04/how-my-site-works/frontmatter.png" target="_blank"><img decoding="async" loading="lazy" alt="Markdown Frontmatter" class="img_ev3q" src="https://assets.keldev.net/2025/04/how-my-site-works/frontmatter.png"/></a>
 > Frontmatter for this post.  
 > It has a couple tags, the title, and a description for embeds. The "slug" is the intended URL ending for the final page. The "draft" option keeps this post from deploying to the live site. If you're reading this, I removed that option!
 
@@ -118,7 +112,7 @@ To [tag a post](/blog/tags), I just add a list of tags in the markdown frontmatt
 
 It's nice to have the option to draft posts in _any_ markdown-friendly editor (even something like [Obsidian mobile](https://obsidian.md/mobile)), and to just drop the files into the site when they're ready. When I'm in serious-drafting mode though, I'm usually working on my content from directly within the configured folders, with a preview instance of my website open beside it.
 
-<a class="zoomable" href={SideBySideEditing}><img decoding="async" loading="lazy" alt="Side By Side Editing" class="img_ev3q" src={SideBySideEditing}/></a>
+<a class="zoomable" href="https://assets.keldev.net/2025/04/how-my-site-works/side_by_side_editing.png" target="_blank"><img decoding="async" loading="lazy" alt="Side By Side Editing" class="img_ev3q" src="https://assets.keldev.net/2025/04/how-my-site-works/side_by_side_editing.png"/></a>
 {/*This is a more complicated way to show an image, so that it's clickable.*/}
 {/*These are code comments, so they won't appear on the webpage.*/}
 > Side-by-side view.  
