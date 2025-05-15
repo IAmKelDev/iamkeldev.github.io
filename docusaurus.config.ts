@@ -44,6 +44,10 @@ const config: Config = {
     ],
   ],
 
+  customFields: {
+    forbiddenGiscusBlogPaths: [],
+  },
+
   themeConfig: {
     image: "img/logoVector_Green_Round_120x120.png",
     navbar: {
