@@ -148,7 +148,7 @@
 <blockquote>
 <p>I plan to talk about juicy WIP doodles like this (and some significantly more polished ones as well). Stay tuned!</p>
 </blockquote>
-<p>You can subscribe to my <a href="https://keldev.net/blog/rss.xml" target="_blank" rel="noopener noreferrer">RSS feed</a> for post notifications.</p>]]></content>
+<p>You can subscribe to my <a href="https://keldev.net/blog/rss.xml" target="_blank" rel="noopener noreferrer">RSS feed</a> for post notifications.</p><hr><br>]]></content>
         <category label="Decision Intelligence" term="Decision Intelligence"/>
         <category label="Technical" term="Technical"/>
     </entry>
@@ -281,7 +281,7 @@
 <!-- -->I initially had a lot more of my technical setup details in here. Eventually I realized I was trying to speak to two different audiences in one post, and the thing was gonna take half an hour to read, and would probably lose both audiences for different reasons at different points. Splitting it up helped. Now I can lose each audience individually! Just gotta finish that setup post now.</p>
 <p>If you have thoughts or questions... Email me?<br>
 <a href="mailto:keldtdev@gmail.com" target="_blank" rel="noopener noreferrer">Email me!</a><br>
-<!-- -->Hopefully in the near future I can just direct you to a comments section.</p>]]></content>
+<!-- -->Hopefully in the near future I can just direct you to a comments section.</p><hr><br>]]></content>
         <category label="Blog Updates" term="Blog Updates"/>
     </entry>
     <entry>
@@ -293,7 +293,7 @@
         <content type="html"><![CDATA[<p>Blog is live!</p>
 <p>Technically it's been live for several days, but now there's meaningful stuff in it.</p>
 <p>I've been occasionally working on this in spare evenings over the past week or so. Hopefully the setup I've landed on lets me focus on content without too much fuss.</p>
-<p>I'll put some detail about the technical setup and my plans for the future of this site in another blog post, soon!</p>]]></content>
+<p>I'll put some detail about the technical setup and my plans for the future of this site in another blog post, soon!</p><hr><br>]]></content>
         <category label="Blog Updates" term="Blog Updates"/>
         <category label="Misc." term="Misc."/>
     </entry>
