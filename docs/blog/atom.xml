@@ -2,11 +2,68 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://keldev.net/blog</id>
     <title>KelDev Blog</title>
-    <updated>2025-04-22T00:00:00.000Z</updated>
+    <updated>2025-05-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://keldev.net/blog"/>
     <subtitle>KelDev Blog</subtitle>
     <icon>https://keldev.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Site Update! Blog Comments*, Images]]></title>
+        <id>https://keldev.net/blog/blog-update-comments-images</id>
+        <link href="https://keldev.net/blog/blog-update-comments-images"/>
+        <updated>2025-05-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[My blog has comments and reactions now! Plus some other changes.]]></summary>
+        <content type="html"><![CDATA[<p><strong>*GitHub users only rn.</strong></p>
+<p>In my last blog update post, I <a href="https://keldev.net/blog/how-my-site-works#plans-for-the-future">listed some plans</a> for features I wanted to add to my site and blog, including</p>
+<ul>
+<li>blog post reactions and comments</li>
+<li>better content management, and</li>
+<li>better image hosting</li>
+</ul>
+<p>I've added these in!<br>
+<!-- -->This post will give some basic details about how and why I did each of these things, from most to least interesting.</p>
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="blog-reactions-and-comments">Blog reactions and comments<a href="https://keldev.net/blog/blog-update-comments-images#blog-reactions-and-comments" class="hash-link" aria-label="Direct link to Blog reactions and comments" title="Direct link to Blog reactions and comments">​</a></h2>
+<p>My blog posts have comments and reactions now! They're down at the bottom of each post.</p>
+<p><strong>Why?</strong><br>
+<!-- -->I'm hoping my blog will eventually have some blend of technical content and opinion-y content. So I'm hoping comments will facilitate Q&amp;A for technical content, and give space for broader discussions around opinion-y content. I don't anticipate much activity, but I want to nurture what I can!</p>
+<p><strong>How?</strong><br>
+<a href="https://giscus.app/" target="_blank" rel="noopener noreferrer">Giscus</a>! This little tool lets you associate <a href="https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions" target="_blank" rel="noopener noreferrer">comment threads in your GitHub repo</a> with pages on your website.</p>
+<p>Integration is simple. Giscus is a GitHub App so adding it to a repo is trivial. Once it's added, you can integrate it to a Docusaurus site with the <a href="https://www.npmjs.com/package/@giscus/react" target="_blank" rel="noopener noreferrer"><code>@giscus/react</code></a> npm package. This gives you a little HTML tag that you can tell Docusaurus to attach to every Blog page.</p>
+<p>I used these tutorials for help:</p>
+<ul>
+<li><a href="https://dwf.dev/blog/2022/10/27/2022/giscus-comments" target="_blank" rel="noopener noreferrer">Daniel Farlow - How to add a comments section to doc pages and blog entries using giscus</a></li>
+<li><a href="https://dev.to/m19v/how-to-add-giscus-comments-to-docusaurus-439h" target="_blank" rel="noopener noreferrer">m19v - How to add Giscus comments to Docusaurus</a></li>
+</ul>
+<p>Giscus only supports comments for registered GitHub users right now. GitHub accounts are free and easy to make, but I'd probably enable anonymous comments <a href="https://github.com/giscus/giscus/issues/65" target="_blank" rel="noopener noreferrer">if they ever add support</a>! If you don't want to make a GitHub account, you can always <a href="mailto:keldtdev@gmail.com" target="_blank" rel="noopener noreferrer">email me</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="image-hosting">Image hosting<a href="https://keldev.net/blog/blog-update-comments-images#image-hosting" class="hash-link" aria-label="Direct link to Image hosting" title="Direct link to Image hosting">​</a></h2>
+<p>I'm serving this site's images from a personal cloud storage bucket, via a custom subdomain (<code>assets.keldev.net/[image]</code>).</p>
+<p><strong>Why?</strong><br>
+<!-- -->Usually websites like mine just use something like <a href="https://imgbb.com/" target="_blank" rel="noopener noreferrer">imgbb</a> or <a href="https://en.wikipedia.org/wiki/Imgur" target="_blank" rel="noopener noreferrer">imgur</a> for images (or just store images in their repo directly). These are generally fine!</p>
+<p>The biggest thing I get out of my setup is the ability to serve images over that custom subdomain, with more control over what an image's URL will be. So my image links end up looking like <a href="https://assets.keldev.net/test-flower.jpg" target="_blank" rel="noopener noreferrer">https://assets.keldev.net/test-flower.jpg</a> instead of <a href="https://ibb.co/rRhGd8gH" target="_blank" rel="noopener noreferrer">https://ibb.co/rRhGd8gH</a>. I've also got the same amount of control over my image files that I've got with everything else in my personal storage. I can perma-delete or replace them. I can re-download the original files whenever. I'm already paying for file storage with this service, and this solution didn't add any other costs, so it works out well!</p>
+<a class="zoomable" href="https://assets.keldev.net/test-flower.jpg" target="_blank"><img decoding="async" loading="lazy" alt="Test image of an overexposed peony bud with some ants on it" class="img_ev3q" src="https://assets.keldev.net/test-flower.jpg"></a>
+<blockquote>
+<p>Here's that test flower image, for the curious.</p>
+</blockquote>
+<p><strong>How?</strong><br>
+<!-- -->My solution comes directly from the <a href="https://www.backblaze.com/docs/cloud-storage-deliver-public-backblaze-b2-content-through-cloudflare-cdn" target="_blank" rel="noopener noreferrer">Backblaze B2 docs</a>!<br>
+<!-- -->I followed the instructions here pretty much exactly. This involved setting up a <em>public</em> B2 bucket (which is trivial once you're using B2), and setting up my domain with Cloudflare (which is actually pretty straightforward).</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="content-management">Content management<a href="https://keldev.net/blog/blog-update-comments-images#content-management" class="hash-link" aria-label="Direct link to Content management" title="Direct link to Content management">​</a></h2>
+<p>My site is now split across two repos.<br>
+<a href="https://github.com/IAmKelDev/iamkeldev.github.io" target="_blank" rel="noopener noreferrer">iamkeldev.github.io</a> holds everything <em>except</em> for the actual contents of my blog posts, and <a href="https://github.com/IAmKelDev/keldev-blog-drafts" target="_blank" rel="noopener noreferrer">keldev-blog-drafts</a> holds those blog posts.</p>
+<p><strong>Why?</strong><br>
+<!-- -->This honestly doesn't do much. The site is just <em>slightly</em> more modular. <a href="https://en.wikipedia.org/wiki/Separation_of_concerns" target="_blank" rel="noopener noreferrer">Concerns are <em>slightly</em> more separated</a>. Edit history for the "main" site is no longer tied up with edit history for my blog post drafts. I can do all kinds of messy edits to each repo individually, and the messiness won't overlap as much.</p>
+<p><strong>How?</strong><br>
+<code>keldev-blog-drafts</code> is mounted as a <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="noopener noreferrer">Git Submodule</a>, so that its contents go into the <code>blog/</code> directory. This is a basic Git Submodule use case.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="try-out-the-comments-system">Try out the comments system!<a href="https://keldev.net/blog/blog-update-comments-images#try-out-the-comments-system" class="hash-link" aria-label="Direct link to Try out the comments system!" title="Direct link to Try out the comments system!">​</a></h2>
+<p>If you've never interacted with something like Giscus and you just want to see if you can get it to work, feel free to leave a random comment below!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="other-blog-updates">Other blog updates<a href="https://keldev.net/blog/blog-update-comments-images#other-blog-updates" class="hash-link" aria-label="Direct link to Other blog updates" title="Direct link to Other blog updates">​</a></h2>
+<ul>
+<li><a href="https://keldev.net/blog/how-my-site-works">Previous: How My Site Works</a></li>
+<li><a href="https://keldev.net/blog/tags/blog-updates">All blog update posts</a></li>
+</ul><hr><br>]]></content>
+        <category label="Blog Updates" term="Blog Updates"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[What is Decision Intelligence? (Decision Modeling Intro)]]></title>
         <id>https://keldev.net/blog/what-is-decision-intelligence</id>
