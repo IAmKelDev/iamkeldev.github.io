@@ -12,7 +12,7 @@ I'm a software engineer, currently working for the [Open Decision Intelligence](
 I write about software, hardware, media (games, books, movies/TV, etc), and other standard personal blog fare.  
 For a list of all my blog topics, see [my blog tags page](/blog/tags).
 
-I live near Danville, VA with my partner. We'd like to move to the Portland area soon!
+I live near Danville, VA with my partner. We'd like to move to the west coast soon! Currently considering Portland, Seattle, or SF Bay area.
 
 ## Media Tastes
 
