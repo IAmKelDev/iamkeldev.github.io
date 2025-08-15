@@ -4,43 +4,48 @@ description: "A list of all my past a current projects, both professional and pe
 ---
 
 import OpenDIReactDecisionEngine from './assets/Authoring_Tool_April_2025.gif';
+import OpenDIAuthoringToolPotatoModel from './assets/Authoring_Tool_Sweet_Potato_Model.gif'
 import OpenDIJSONSchema from './assets/JSON_Schema_May_2025.png';
 
 # Projects
 
-## Current
+## Latest
 
 ### OpenDI Initiative
-**_(2024-Current)_**
+**_(March 2024 - August 2025)_**
 
 The [Open Decision Intelligence initiative](https://opendi.org/) is an open source project working on interoperability standards for the Decision Intelligence (DI) industry.
 
-<a class="zoomable" href={OpenDIReactDecisionEngine} target="_blank"><img decoding="async" loading="lazy" alt="OpenDI React Decision Engine" class="img_ev3q" src={OpenDIReactDecisionEngine}/></a>
+<a class="zoomable" href={OpenDIReactDecisionEngine} target="_blank"><img decoding="async" loading="lazy" alt="OpenDI Authoring Tool: React Decision Engine" class="img_ev3q" src={OpenDIReactDecisionEngine}/></a>
 > The latest version of the decision model authoring tool: a browser-based decision engine with support for authoring, rendering, and simulating JavaScript decision logic, built with React.  
-> [Try it online!](https://opendi.org/cdd-authoring-tool/)
+> [Try it online!](https://opendi.org/cdd-authoring-tool/)  
 
-I worked with one of the OpenDI co-founders, Dr. Roberts, on the [Coccidia Detection](#coccidia-detection) project, and he decided I'd be a good fit for helping them get this project started!
+I worked with one of the OpenDI co-founders, Dr. Roberts, on the [Coccidia Detection](#coccidia-detection) project. We enjoyed working together, and he decided I'd be a good fit for helping them get this project started!
 
-I have since contributed several solutions for a (mostly) web-based tech stack for OpenDI. I set up most of the organization's [GitHub repos](https://github.com/orgs/opendi-org/repositories?q=visibility%3Apublic+archived%3Afalse), and all of its public websites. They're all Docusaurus-based, serving markdown content via GitHub Pages [(seem familiar?)](/blog/how-my-site-works/).
+<a class="zoomable" href={OpenDIAuthoringToolPotatoModel} target="_blank"><img decoding="async" loading="lazy" alt="OpenDI Authoring Tool: Sweet Potato Model" class="img_ev3q" src={OpenDIAuthoringToolPotatoModel}/></a> 
+> In August 2025 I added several new display redouts (gauges, dials, stacked bar charts), and the ability to make API calls as part of scripted model simulation.  
 
-Most of my work has gone into architecting standards for **interoperability**. DI practices align around the [concept of decision modeling](/blog/what-is-decision-intelligence). So _interoperability_ in this domain means being able to agree upon methods for storing and transmitting decision models and diagrams, and to define best practices, terminology, typical team members, roles and user stories, etc. The goal is to allow companies, researchers, and anyone else to _specialize_ their role in DI, naturally encouraging an ecosystem of many tools created by many parties.
+I have contributed several solutions for a (mostly) web-based tech stack for OpenDI. I set up most of the organization's [GitHub repos](https://github.com/orgs/opendi-org/repositories?q=visibility%3Apublic+archived%3Afalse), and all of its public websites. They're all Docusaurus-based, serving markdown content via GitHub Pages [(seem familiar?)](/blog/how-my-site-works/).
+
+Much of my work went into architecting (and demonstrating) standards for **interoperability**. DI practices align around the [concept of decision modeling](/blog/what-is-decision-intelligence). So _interoperability_ in this domain means being able to agree upon methods for storing and transmitting decision models and diagrams, and to define best practices, terminology, typical team members, roles and user stories, etc. The goal is to allow companies, researchers, and anyone else to _specialize_ their role in DI, naturally encouraging an ecosystem of many tools created by many parties.
 
 <a class="zoomable" href={OpenDIJSONSchema} target="_blank"><img decoding="async" loading="lazy" alt="OpenDI JSON Schema" class="img_ev3q" src={OpenDIJSONSchema}/></a>
 > Visual representation of the [JSON Schema](https://github.com/opendi-org/cdm-json-schema) I made for storing and sending OpenDI-compliant Decision Models
 
-My work has largely been in laying foundations for this ecosystem. To that end, I have:
-- Created [a JSON Schema](https://github.com/opendi-org/cdm-json-schema) for representing CDMs (with CDDs attached), using [the JSON Schema standard](https://json-schema.org/)
-- Specified [standard API endpoints](https://opendi.org/api-specification/api) for transmitting model JSON, using [OpenAPI 3.0](https://en.wikipedia.org/wiki/OpenAPI_Specification)
-- Contributed various documentation and other content to our public sites
-- Helped build a community for [OpenDI on Discord](https://discord.gg/FtAX3JStJz)
+A major goal for my work was to lay foundations for this ecosystem:
+- I created [a JSON Schema](https://github.com/opendi-org/cdm-json-schema) for representing CDMs (with CDDs attached), using [the JSON Schema standard](https://json-schema.org/)
+- I specified [standard API endpoints](https://opendi.org/api-specification/api) for transmitting model JSON, using [OpenAPI 3.0](https://en.wikipedia.org/wiki/OpenAPI_Specification)
+- I contributed various documentation and other content to our [public sites](https://opendi.org/)
+- I helped build a community for [OpenDI on Discord](https://discord.gg/FtAX3JStJz)
 
-On top of this foundation, I've also been implementing examples to demonstrate how the standards can be used:
+On top of this foundation, I also implemented examples to demonstrate how the standards can be used:
 - I started a [working Go implementation](https://github.com/opendi-org/example-api-go) of our API specification
 - I created a browser-based prototype [CDD authoring tool](https://opendi.org/cdd-authoring-tool/) so you can graphically edit CDDs and see the JSON constructed in real-time
-- I combined the above two projects and a database in a [containerized](https://www.docker.com/) Docker Compose project [(repo)](https://github.com/opendi-org/containerized-authoring-demo), with Docker Hub images for the [authoring tool](https://hub.docker.com/repository/docker/iamkeldev/opendi-cdd-authoring-tool/general) and [api](https://hub.docker.com/repository/docker/iamkeldev/opendi-example-api-go/general)
+- I combined and [containerized](https://www.docker.com/) the above two projects, so you can hook the authoring tool up to your own MySQL or SQLite decision model database to view and edit your own models
+  - There are images for the [authoring tool](https://hub.docker.com/repository/docker/iamkeldev/opendi-cdd-authoring-tool/general) and [api](https://hub.docker.com/repository/docker/iamkeldev/opendi-example-api-go/general) up on Docker Hub, or you can use the Docker Compose files and instructions [on GitHub](https://github.com/opendi-org/containerized-authoring-demo) to build everything yourself
 
 ### 481Engine - 2D Game Engine
-**_(2021-???)_**
+**_(2021 - ???)_**
 Flexible 2D game engine. Uses [SFML](https://www.sfml-dev.org/) for basic rendering, with a custom C++ backend.  
 Supports full game scripting via runtime-interpreted JavaScript.
 
@@ -88,7 +93,7 @@ I still return to this project occasionally. Here's a rough list of things I'm l
 - Public release build, so you don't have to [Contact me](mailto:keldtdev@gmail.com) for the executable.
 - Public scripting documentation, so you don't have to [Contact me](mailto:keldtdev@gmail.com) to figure out how scripting works.
 
-## Past
+## Older
 
 ### Coccidia Detection
 **_(Fall 2022 - December 2023)_**
