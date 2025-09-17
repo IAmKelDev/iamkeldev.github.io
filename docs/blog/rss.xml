@@ -95,7 +95,7 @@
 <blockquote>
 <p>"Decision intelligence (DI) is a practical discipline that advances decision making by explicitly understanding and engineering how decisions are made and how outcomes are evaluated, managed and improved via feedback."</p>
 </blockquote>
-<p>This definition implies some follow-up questions that are a lot more specific and useful:</p>
+<p>This definition implies some follow-up questions that are actually <em>specific</em> and useful:</p>
 <ul>
 <li>How do you turn decision-making into an engineering process?</li>
 <li>How do you evaluate outcomes?</li>
@@ -196,7 +196,7 @@
 <!-- -->At least in theory. I don't work in marketing, so hopefully I haven't misinterpreted or misapplied any basic concepts.</p>
 <p>If I have, please <a href="mailto:keldtdev@gmail.com" target="_blank" rel="noopener noreferrer">let me know</a>!</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-ahead">Looking ahead<a href="https://keldev.net/blog/what-is-decision-intelligence#looking-ahead" class="hash-link" aria-label="Direct link to Looking ahead" title="Direct link to Looking ahead">​</a></h2>
-<p>Hopefully this post has laid a solid foundation for the answer to this question:</p>
+<p>This post set out to provide a solid foundation for the answer to this question:</p>
 <blockquote>
 <p>How do you turn decision-making into an engineering process?</p>
 </blockquote>
@@ -206,7 +206,12 @@
 <blockquote>
 <p>I plan to talk about juicy WIP doodles like this (and some significantly more polished ones as well). Stay tuned!</p>
 </blockquote>
-<p>You can subscribe to my <a href="https://keldev.net/blog/rss.xml" target="_blank" rel="noopener noreferrer">RSS feed</a> for post notifications.</p><hr><br>]]></content:encoded>
+<p>You can subscribe to my <a href="https://keldev.net/blog/rss.xml" target="_blank" rel="noopener noreferrer">RSS feed</a> for post notifications.</p>
+<hr>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Expand for info about edits</summary><div><div class="collapsibleContent_i85q"><p></p><ul>
+<li>Sep 17 2025: Couple minor line edits for tone</li>
+<li>See <a href="https://github.com/IAmKelDev/keldev-blog-drafts/commits/main/2025-04-22-what-is-decision-intelligence.mdx" target="_blank" rel="noopener noreferrer">commit history</a></li>
+</ul><p></p></div></div></details><hr><br>]]></content:encoded>
             <category>Decision Intelligence</category>
             <category>Technical</category>
         </item>
