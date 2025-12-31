@@ -12,13 +12,14 @@ import OpenDIJSONSchema from './assets/JSON_Schema_May_2025.png';
 ## Latest
 
 ### OpenDI Initiative
-**_(March 2024 - August 2025)_**
+**_(Contractor March 2024 - August 2025)_**  
+**_(Open-source Contributor August 2025 - Present)_**
 
 The [Open Decision Intelligence initiative](https://opendi.org/) is an open source project working on interoperability standards for the Decision Intelligence (DI) industry.
 
 <a class="zoomable" href={OpenDIReactDecisionEngine} target="_blank"><img decoding="async" loading="lazy" alt="OpenDI Authoring Tool: React Decision Engine" class="img_ev3q" src={OpenDIReactDecisionEngine}/></a>
 > The latest version of the decision model authoring tool: a browser-based decision engine with support for authoring, rendering, and simulating JavaScript decision logic, built with React.  
-> [Try it online!](https://opendi.org/cdd-authoring-tool/)  
+> [Try it online!](https://opendi-org.github.io/cdd-authoring-tool/)  
 
 I worked with one of the OpenDI co-founders, Dr. Roberts, on the [Coccidia Detection](#coccidia-detection) project. We enjoyed working together, and he decided I'd be a good fit for helping them get this project started!
 
@@ -34,18 +35,19 @@ Much of my work went into architecting (and demonstrating) standards for **inter
 
 A major goal for my work was to lay foundations for this ecosystem:
 - I created [a JSON Schema](https://github.com/opendi-org/cdm-json-schema) for representing CDMs (with CDDs attached), using [the JSON Schema standard](https://json-schema.org/)
-- I specified [standard API endpoints](https://opendi.org/api-specification/api) for transmitting model JSON, using [OpenAPI 3.0](https://en.wikipedia.org/wiki/OpenAPI_Specification)
+- I specified [standard API endpoints](https://opendi-org.github.io/api-specification/api) for transmitting model JSON, using [OpenAPI 3.0](https://en.wikipedia.org/wiki/OpenAPI_Specification)
 - I contributed various documentation and other content to our [public sites](https://opendi.org/)
 - I helped build a community for [OpenDI on Discord](https://discord.gg/FtAX3JStJz)
 
 On top of this foundation, I also implemented examples to demonstrate how the standards can be used:
 - I started a [working Go implementation](https://github.com/opendi-org/example-api-go) of our API specification
-- I created a browser-based prototype [CDD authoring tool](https://opendi.org/cdd-authoring-tool/) so you can graphically edit CDDs and see the JSON constructed in real-time
+- I created a browser-based prototype [CDD authoring tool](https://opendi-org.github.io/cdd-authoring-tool/) so you can graphically edit CDDs and see the JSON constructed in real-time
 - I combined and [containerized](https://www.docker.com/) the above two projects, so you can hook the authoring tool up to your own MySQL or SQLite decision model database to view and edit your own models
   - There are images for the [authoring tool](https://hub.docker.com/repository/docker/iamkeldev/opendi-cdd-authoring-tool/general) and [api](https://hub.docker.com/repository/docker/iamkeldev/opendi-example-api-go/general) up on Docker Hub, or you can use the Docker Compose files and instructions [on GitHub](https://github.com/opendi-org/containerized-authoring-demo) to build everything yourself
 
 ### 481Engine - 2D Game Engine
 **_(2021 - ???)_**
+
 Flexible 2D game engine. Uses [SFML](https://www.sfml-dev.org/) for basic rendering, with a custom C++ backend.  
 Supports full game scripting via runtime-interpreted JavaScript.
 
