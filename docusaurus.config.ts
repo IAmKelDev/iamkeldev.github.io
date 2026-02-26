@@ -123,6 +123,10 @@ const config: Config = {
         routeBasePath: 'blog',
         path: './blog',
         showReadingTime: true,
+        readingTime: ({ content, frontMatter, defaultReadingTime }) => 
+          frontMatter.hide_reading_time
+            ? undefined
+            : defaultReadingTime({ content }),
         feedOptions: {
           type: ['rss', 'atom'],
           xslt: true,
