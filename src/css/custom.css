@@ -159,3 +159,17 @@ ol {
   height: 100%;
   border: 0;
 }
+
+/* FOR STUFF THAT SHOULD ONLY SHOW ON MOBILE */
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 996px)
+{
+  .mobile-only {
+    display: block;
+  }
+}
+
