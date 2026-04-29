@@ -19,8 +19,3 @@
     color: black;
 }
 
-@media screen and (max-width: 996px) {
-    .gallery-tile {
-        width: 95% !important;
-    }
-}
