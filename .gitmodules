@@ -1,3 +1,6 @@
 [submodule "blog"]
 	path = blog
 	url = git@github.com:IAmKelDev/keldev-blog-drafts.git
+[submodule "src/external/gallery"]
+	path = src/external/gallery
+	url = git@github.com:IAmKelDev/keldev-gallery-component.git

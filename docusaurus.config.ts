@@ -70,6 +70,11 @@ const config: Config = {
           position: 'left'
         },
         {
+          to: '/gallery',
+          label: 'Gallery',
+          position: 'left'
+        },
+        {
           to: '/blog',
           label: 'Blog',
           position: 'left'
@@ -146,6 +151,14 @@ const config: Config = {
         sidebarPath: require.resolve('./about/sidebars.about.ts')
       }
     ],
+    [
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'gallery',
+        path: 'gallery',
+        routeBasePath: 'gallery',
+      }
+    ]
   ]
 };
 
