@@ -7,7 +7,7 @@ export default function GalleryComponent() {
   {
     const Gallery = require('@site/src/external/gallery/src/Gallery').default;
     return <Gallery
-        manifestsPrefix={'https://gallery.keldev.net/manifests/'}
+        apiPrefix={'https://api.keldev.net/gallery/'}
         photosPrefix={'https://gallery.keldev.net/'}
     />;
   }
