@@ -6,9 +6,12 @@ slug: /
 
 # Welcome
 
-Welcome to yet another personal/professional blog site. This one belongs to me!  
+You found my website. Have a look around!
+
 You can read [about me here](/about).
 
-I've worked on some Projects that you can [read about here](/about/projects).
+I've worked on some projects that you can [explore here](/about/projects).
 
-My [blog](/blog) doesn't have much going on yet, but I plan to write about various things.
+I take pictures sometimes, so I set up [a personal gallery](/gallery) for them. The images live in my personal Backblaze storage, and I have a little CloudFlare D1 database with a worker API serving the metadata. It's very WIP, so let me know ~~if~~ when you encounter issues with it!
+
+My [blog](/blog) has a few technical posts and some music thoughts. I have ambitions to write more than, like, one post per year. We'll get there!
