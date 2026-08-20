@@ -80,6 +80,11 @@ const config: Config = {
           position: 'left'
         },
         {
+          to: '/thoughts',
+          label: 'Thoughts',
+          position: 'left'
+        },
+        {
           href: 'https://github.com/IAmKelDev',
           label: 'GitHub',
           position: 'right',
@@ -124,6 +129,7 @@ const config: Config = {
       '@docusaurus/plugin-content-blog',
       {
         // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog#ex-config
+        id: 'blog',
         blogDescription: 'Technical posts about software development. Thoughts about media, games, life, miscellanea.',
         routeBasePath: 'blog',
         path: './blog',
@@ -141,6 +147,24 @@ const config: Config = {
         onInlineAuthors: 'warn',
         onUntruncatedBlogPosts: 'warn',
       },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'thoughts',
+        blogTitle: 'Thoughts',
+        blogDescription: 'Random thoughts, lower-effort higher-frequency less-polished bloggy posts, reshares of my stuff from elsewhere, stuff like that. For higher-effort posts, see my actual blog.',
+        routeBasePath: 'thoughts',
+        blogSidebarCount: 0,
+        postsPerPage: 50,
+        path: './thoughts',
+        showReadingTime: false,
+        onUntruncatedBlogPosts: 'ignore',
+        feedOptions: {
+          type: ['rss', 'atom'],
+          xslt: true,
+        }
+      }
     ],
     [
       '@docusaurus/plugin-content-docs',
