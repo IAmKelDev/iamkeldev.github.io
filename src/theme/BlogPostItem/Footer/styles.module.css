@@ -1,6 +1,8 @@
 .infoInFooter {
     margin: 0.1rem !important;
+    margin-top: 0.3rem !important;
     font-style: italic;
     font-weight: normal;
     font-size: 0.85rem;
+    border-top: 0.1rem var(--ifm-color-emphasis-400) solid;
 }

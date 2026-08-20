@@ -1,0 +1,16 @@
+.thoughtContainer {
+    background: var(--ifm-color-emphasis-100);
+    padding: 1rem 1.5rem 0.5rem;
+    border-radius: 1rem;
+    border: 0.15rem var(--ifm-color-emphasis-400) solid;
+    display: inline-block;
+}
+
+.thoughtContainer :global(.markdown) {
+    font-size: 0.9rem;
+}
+
+.thoughtContainer :global(.zoomable) img {
+    max-height: 25rem;
+    width: auto;
+}
