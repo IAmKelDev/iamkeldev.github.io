@@ -130,7 +130,7 @@ const config: Config = {
       {
         // https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog#ex-config
         id: 'blog',
-        blogDescription: 'Technical posts about software development. Thoughts about media, games, life, miscellanea.',
+        blogDescription: 'Technical posts about software development. Thoughts about media. For looser, more frequent posts check my Thoughts page.',
         routeBasePath: 'blog',
         path: './blog',
         showReadingTime: true,
@@ -153,7 +153,7 @@ const config: Config = {
       {
         id: 'thoughts',
         blogTitle: 'Thoughts',
-        blogDescription: 'Random thoughts, lower-effort higher-frequency less-polished bloggy posts, reshares of my stuff from elsewhere, stuff like that. For higher-effort posts, see my actual blog.',
+        blogDescription: 'Lower-effort, higher-frequency, less-polished bloggy posts, about a wider variety of topics. For higher-effort posts, see my actual Blog.',
         routeBasePath: 'thoughts',
         blogSidebarCount: 0,
         postsPerPage: 50,
