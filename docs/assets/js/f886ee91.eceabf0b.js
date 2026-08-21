@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkeldev=self.webpackChunkkeldev||[]).push([[1211],{4832:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/thoughts","page":1,"postsPerPage":50,"totalPages":1,"totalCount":3,"blogDescription":"Lower-effort, higher-frequency bloggy posts, about a wider variety of topics. For higher-effort posts, see my actual Blog.","blogTitle":"Thoughts"}}')}}]);
