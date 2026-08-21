@@ -153,7 +153,7 @@ const config: Config = {
       {
         id: 'thoughts',
         blogTitle: 'Thoughts',
-        blogDescription: 'Lower-effort, higher-frequency, less-polished bloggy posts, about a wider variety of topics. For higher-effort posts, see my actual Blog.',
+        blogDescription: 'Lower-effort, higher-frequency bloggy posts, about a wider variety of topics. For higher-effort posts, see my actual Blog.',
         routeBasePath: 'thoughts',
         blogSidebarCount: 0,
         postsPerPage: 50,
