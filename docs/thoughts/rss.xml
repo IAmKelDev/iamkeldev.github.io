@@ -60,5 +60,82 @@ Remove stuff I don't want to see. Change colors.</p>
             <category>Software</category>
             <category>Media</category>
         </item>
+        <item>
+            <title><![CDATA[midinous-scale-loop]]></title>
+            <link>https://keldev.net/thoughts/2026/01/19/midinous-scale-loop</link>
+            <guid>https://keldev.net/thoughts/2026/01/19/midinous-scale-loop</guid>
+            <pubDate>Mon, 19 Jan 2026 19:20:00 GMT</pubDate>
+            <description><![CDATA[Been wanting to try this music software thing out for a while.]]></description>
+            <content:encoded><![CDATA[<p>Been wanting to try this music software thing out for a while.<br>
+<a href="https://store.steampowered.com/app/1727420/Midinous/" target="_blank" rel="noopener noreferrer"><strong>Midinous</strong></a><br>
+<!-- -->Finally got it recently!</p>
+<p>It's fun to mess with but I really dunno how music making works man.</p>
+<div class="video-wrap"><div class="video-container"><iframe src="https://www.youtube.com/embed/KAfm0v-B7Pw" title="Midinous-Scale-Rounds-G-Maj.mp4" frameborder="0"></iframe></div></div>
+<p>The main portion of this is just a basic scale arranged in a loop with somewhat random spacing between each point.<br>
+<!-- -->The scale is G Major. The notes go up the scale, then back down, and then it does the arpeggio. The scale starts with
+the top left point.</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2026/01/19/midinous-labeled.png" target="blank"><img decoding="async" loading="lazy" alt="Image of the track loop with notes labeled and a few areas circled." class="img_ev3q" src="https://assets.keldev.net/thoughts/2026/01/19/midinous-labeled.png"></a>
+<p>The blue-circled portions are loops meant to randomly hold some of the "travelers" outside of the main loop for a
+random amount of time. Travelers are the things that move around and activate the points that play sounds.<br>
+<!-- -->The cyan-circled points will randomly decide whether to send a traveler to one of these "holding" loops or not.
+The holding loops are muted so no sound plays while the travelers are "held" away.</p>
+<p>The "X" thing in the middle bottom of the loop (I point it out at <a href="https://youtu.be/KAfm0v-B7Pw?t=105" target="_blank" rel="noopener noreferrer">1:45 in the video</a>) is a "terminator",
+configured to let travelers pass through only 24 times. After 24 travelers pass through the point, no more are allowed
+to pass, so the next time they reach the terminator they stop there. Eventually the "song" ends from this.</p>
+<p>So this is the G Major scale (+arpeggio) played in rounds with random timing, by 4 players spaced randomly, with
+the random spacing shifting by random amounts at random times, where the song lasts for a sorta random duration.</p><hr><br>]]></content:encoded>
+            <category>Music</category>
+            <category>Software</category>
+        </item>
+        <item>
+            <title><![CDATA[qud-caves-caaaw]]></title>
+            <link>https://keldev.net/thoughts/2026/01/09/qud-caves-caaaw</link>
+            <guid>https://keldev.net/thoughts/2026/01/09/qud-caves-caaaw</guid>
+            <pubDate>Fri, 09 Jan 2026 20:19:00 GMT</pubDate>
+            <description><![CDATA[I've been playing this game called Caves of Qud.]]></description>
+            <content:encoded><![CDATA[<p>I've been playing this game called <a href="https://store.steampowered.com/app/333640/Caves_of_Qud/" target="_blank" rel="noopener noreferrer">Caves of Qud</a>.<br>
+<!-- -->Let me explain this screenshot cuz it's wild.</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2026/01/09/qud-caaaw.jpg" target="blank"><img decoding="async" loading="lazy" alt="Screenshot of the wacky weird caves of qud" class="img_ev3q" src="https://assets.keldev.net/thoughts/2026/01/09/qud-caaaw.jpg"></a>
+<p>This game is a roguelike in the "classic" sense. (See games like <a href="https://sites.google.com/site/broguegame/" target="_blank" rel="noopener noreferrer">Brogue</a>)<br>
+<!-- -->So the entire game world is a flat grid with very simple graphics, and ALL of the gameplay is turn-based. Nothing happens
+unless you take some action (like moving, attacking, casting a spell, resting, etc). You can always plan out your next
+move.</p>
+<p>The main window is the game view. The top left of that window shows my character standing in a cave, near the stairs
+that led down from the floor above. The torch I'm holding lights up some of the tiles. On the right is a log of stuff
+that happened over the past few turns. There's info about a fight that just occurred, involving a cannibal and a skunk.
+Skunk's still present, in the lower-right portion of the area lit by my torch.</p>
+<p>So here I'm inspecting a club dropped by a cannibal that I finished off after it stumbled out of a cloud of bright green
+acid emitted by the skunk it attacked. The acid has killed some cave flora and <em>melted a hole in the shale cave wall</em>.</p>
+<p>The club I'm inspecting is painted.<br>
+<!-- -->When the cannibal was swinging it at me, I assumed this just meant it was red or green or orange or something,<br>
+<!-- -->but no!</p>
+<p>The last few entries in the event log on the side show my character taking note of a historic site I've just learned
+about, and some info about the ancient sultan <em>Polyxerhim IV</em>. I've even received a quest to go visit the site.<br>
+<!-- -->This all happened because the club is painted with a whole scene from the life of this sultan. The scene gets an entire paragraph
+in the object description. Down at the bottom you can also see that this club would give me +40 reputation with
+<em>the Flock of the Wife to Caaw-caaaw-caaw</em>.</p>
+<p>I have no idea what this means! But it sounds like a good perk to get from the painted club I looted from the skunk
+acid-weakened cannibal I finished off. This lil chunk of painful wood just exudes history and import I guess. It should probably
+go in a museum, but I might need to hit a skunk with it instead.</p>
+<br>
+<br>
+<p>This game has some unique vibes. What I've seen so far of the setting and general world lore is fun, and the writing
+style for all the in-game descriptions is interesting:</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2026/01/09/qud-writing-sample.png" target="blank"><img decoding="async" loading="lazy" alt="Screenshot showing another in-game description with writing like 'time has shortened his ears, pushed canines through his jaw, and dressed him in a scratch-fur coat.'" class="img_ev3q" src="https://assets.keldev.net/thoughts/2026/01/09/qud-writing-sample.png"></a>
+<p>The setting has that eclectic sci-fantasy blend going on where the world has been around long enough for civilization
+to rise and fall long ago, so now you can have your magic robot villages or whatever. Swords and magic and bows ..and
+guns and lasers and genetic mutations. You find a weird artifact in a cave and the local village tinker identifies it
+for you as ..a battery cell. You pay him in freshwater, because apparently the apocalypse made the world extra salty. No
+but like <em>extra</em> extra salty.</p>
+<p>The main hesitation I have right now is run length..<br>
+<!-- -->Cuz so far it plays like a whole big RPG only I can't <a href="https://tvtropes.org/pmwiki/pmwiki.php/Main/SaveScumming" target="_blank" rel="noopener noreferrer">save-scum</a> and there's permadeath.<br>
+<!-- -->I am multiple hours into my first run right now and feel like I haven't scratched the surface of basically anything!<br>
+<!-- -->So it might be pretty devastating to die in this game.</p>
+<p>They do have an alternative gamemode called "Roleplay" mode where you're allowed to save at settlements though,
+so if the permadeath gets annoying I guess I'll switch to that to experience the whole main questline.<br>
+<!-- -->Apparently the main quest is good!</p><hr><br>]]></content:encoded>
+            <category>Games</category>
+            <category>Media</category>
+        </item>
     </channel>
 </rss>
