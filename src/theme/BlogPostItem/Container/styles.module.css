@@ -14,3 +14,7 @@
     max-height: 25rem;
     width: auto;
 }
+
+.thoughtContainer :global(footer.docusaurus-mt-lg) {
+    margin-top: 0.5rem;
+}
