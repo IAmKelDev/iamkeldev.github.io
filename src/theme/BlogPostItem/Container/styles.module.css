@@ -6,6 +6,13 @@
     display: inline-block;
 }
 
+@media screen and (max-width: 996px)
+{
+    .thoughtContainer {
+        padding: 0.3rem 0.45rem 0.15rem;
+    }
+}
+
 .thoughtContainer :global(.markdown) {
     font-size: 0.9rem;
 }
@@ -17,4 +24,5 @@
 
 .thoughtContainer :global(footer.docusaurus-mt-lg) {
     margin-top: 0.5rem;
+    font-size: 0.8rem;
 }
