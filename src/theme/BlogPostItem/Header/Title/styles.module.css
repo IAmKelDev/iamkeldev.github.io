@@ -1,5 +1,7 @@
 .thoughtTitle {
     font-size: 1.5rem;
     text-decoration: underline;
-    margin-bottom: 0.1rem;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 0.1rem var(--ifm-color-emphasis-400) solid;
 }
