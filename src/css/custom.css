@@ -171,5 +171,13 @@ ol {
   .mobile-only {
     display: block;
   }
+
+  html.plugin-id-thoughts .main-wrapper {
+    padding: 0.5rem;
+  }
+
+  html.plugin-id-thoughts {
+    --ifm-spacing-horizontal: 0.1rem;
+  }
 }
 
