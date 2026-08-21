@@ -4,3 +4,6 @@
 [submodule "src/external/gallery"]
 	path = src/external/gallery
 	url = git@github.com:IAmKelDev/keldev-gallery-component.git
+[submodule "thoughts"]
+	path = thoughts
+	url = git@github.com:IAmKelDev/keldev-thoughts-drafts.git
