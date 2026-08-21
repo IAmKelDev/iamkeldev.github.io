@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://keldev.net/thoughts</id>
+    <title>KelDev Blog</title>
+    <updated>2026-08-20T18:53:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://keldev.net/thoughts"/>
+    <subtitle>KelDev Blog</subtitle>
+    <icon>https://keldev.net/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[free-radio-foobar]]></title>
+        <id>https://keldev.net/thoughts/2026/08/20/free-radio-foobar</id>
+        <link href="https://keldev.net/thoughts/2026/08/20/free-radio-foobar"/>
+        <updated>2026-08-20T18:53:00.000Z</updated>
+        <summary type="html"><![CDATA[I recently discovered you can set up a fun, customizable, capable internet radio listening experience without purchasing anything.]]></summary>
+        <content type="html"><![CDATA[<p>I recently discovered you can set up a fun, customizable, capable internet radio listening experience without purchasing anything.</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2026/08/20/foobar2000-radio-kexp.gif" target="blank"><img decoding="async" loading="lazy" alt=".gif of my foobar2000 setup tuned to KEXP." class="img_ev3q" src="https://assets.keldev.net/thoughts/2026/08/20/foobar2000-radio-kexp.gif"></a>
+<p>The program is <a href="https://www.foobar2000.org/" target="_blank" rel="noopener noreferrer">foobar2000</a>. It's classic freeware.
+I'd heard of it before but I haven't maintained a library of local music files in like 10 years, so I never had
+much reason to download it until recently when I wanted to try <a href="https://kinggizzard.bandcamp.com/album/alien-metal" target="_blank" rel="noopener noreferrer">the new album from King Gizzard &amp; The Lizard Wizard</a>.
+They <a href="https://brobible.com/culture/article/australian-psychedelic-rock-gods-king-gizzard-appear-to-be-nuking-their-catalog-from-spotify/" target="_blank" rel="noopener noreferrer">removed their catalog from Spotify</a> a while back,
+but all their albums are available at "name your price" on Bandcamp.</p>
+<p>I wanted a program that wasn't just Windows Media Player, and it turns out <a href="https://www.videolan.org/vlc/index.html" target="_blank" rel="noopener noreferrer">VLC</a> (which I already use for video)
+doesn't do gapless playback for audio. Figured this is my chance to try out foobar.</p>
+<p>And, well, it's really cool! And it does radio too.</p>
+<p>It's ancient and modular. The standard version of the program is a collection of built-in components,
+and you can add whatever <a href="https://www.foobar2000.org/components/by+date" target="_blank" rel="noopener noreferrer">community-made components</a> you
+want on top of that. You can go fully custom for themes/skins/icons and layout as well.</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2026/08/20/foobar2000-radio-layout.png" target="blank"><img decoding="async" loading="lazy" alt="Screenshot of my foobar2000 setup with all UI panels labeled." class="img_ev3q" src="https://assets.keldev.net/thoughts/2026/08/20/foobar2000-radio-layout.png"></a>
+<p>I set mine up so I could throw it on my portrait monitor. Here are my UI components:</p>
+<ol>
+<li><strong>Album List</strong>. Built-in. Shows local media. I pointed mine at the 4 KGLW albums I downloaded.</li>
+<li><strong>Selection Properties</strong>. Built-in. Metadata for the "selected" track. When radio is playing this shows info about the current station.</li>
+<li><strong>Playlist View</strong>. Built-in. Basic track-by-track view of your current playlist, or artist/trackname info for the current radio track.</li>
+<li><strong>OpenLyrics Panel</strong>. <a href="https://www.foobar2000.org/components/view/foo_openlyrics" target="_blank" rel="noopener noreferrer">Community-made.</a> Uses the current track name and artist info to search a few online sources for lyrics. Depending on source this can also time the display to auto-scroll and highlight lyrics as the song progresses. Mine favors Genius, and I've turned off scrolling.</li>
+<li><strong>Internet Radio</strong>. Built-in. Lets you search, bookmark, and tune in to whatever public internet radio stations you want. Right now I have <a href="https://kexp.org/" target="_blank" rel="noopener noreferrer">KEXP</a>, NPR,
+and WBEZ Chicago.</li>
+<li><strong>Artwork Display</strong>. <a href="https://github.com/jame25/foo_artwork" target="_blank" rel="noopener noreferrer">Community-made.</a> Uses the current track name and artist info to search online sources for album artwork, when local artwork isn't found. I also have the built-in EQ component on another tab here.</li>
+<li><strong>Spectrogram</strong>, <strong>Oscilloscope</strong>, and <strong>Spectrum Analyzer</strong>. All built-in. The Spectrogram is using the 2-channel view and has custom orange coloring. The Oscilloscope is downmixing to mono, with a 200ms curve duration. Spectrum analyzer uses 160 bands.</li>
+</ol>
+<p>I've also set up a <a href="https://github.com/gix/foo_scrobble" target="_blank" rel="noopener noreferrer">community-made</a> scrobbling component
+for <a href="https://www.last.fm/user/A_Univrsal_Sigh" target="_blank" rel="noopener noreferrer">LastFM</a>. It sets "now playing" for radio but does not save
+the scrobbles. Listens from local files are scrobbled. I only want my more intentional listening tracked, but
+don't mind sharing what I've got playing on the radio, so this does exactly that.</p>
+<p>End result is a neat display I leave off to the side, with fun visualizers, lyrics, art, and a human connection to
+the live DJs on KEXP, all for free.</p>
+<p>This actually reminded me how much the Spotify UX irritates me. I would love to stare at a spectrogram or to be able to change
+the source that Spotify is using for lyrics, or replace album artwork.. Or listen without having to see all the
+content that Spotify's suggestion algorithms are serving me today if I don't want to. Or rearrange the UI panels.
+Remove stuff I don't want to see. Change colors.</p>
+<p>Basically I would love to be able to pipe my Spotify streaming through foobar2000.</p>
+<p><a href="https://github.com/TheQwertiest/foo_spotify/issues/68" target="_blank" rel="noopener noreferrer">Alas.</a> This only <em>used to be</em> possible:</p>
+<blockquote>
+<p>Spotify deprecated the library that was used to implement playback in this component.<br>
+<!-- -->There are no viable Windows alternatives that could be used to replace it, hence this project is suspended until such alternative appears.</p>
+</blockquote>
+<p>Live radio has been fun to rediscover though. Give it a try!</p><hr><br>]]></content>
+        <category label="Music" term="Music"/>
+        <category label="Software" term="Software"/>
+        <category label="Media" term="Media"/>
+    </entry>
+</feed>

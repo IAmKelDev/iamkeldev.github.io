@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkeldev=self.webpackChunkkeldev||[]).push([[1922],{3961:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Technical posts about software development. Thoughts about media. For looser, more frequent posts check my Thoughts page.","blogTitle":"Blog"}}')}}]);
