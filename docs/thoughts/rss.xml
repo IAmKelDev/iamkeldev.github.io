@@ -138,5 +138,109 @@ so if the permadeath gets annoying I guess I'll switch to that to experience the
             <category>Games</category>
             <category>Media</category>
         </item>
+        <item>
+            <title><![CDATA[drop-cstm80-review]]></title>
+            <link>https://keldev.net/thoughts/2024/12/23/drop-cstm80-review</link>
+            <guid>https://keldev.net/thoughts/2024/12/23/drop-cstm80-review</guid>
+            <pubDate>Mon, 23 Dec 2024 17:00:00 GMT</pubDate>
+            <description><![CDATA[Note: This was originally posted to Drop's website as a review for their "Signature Series Ryokucha Keyboard",]]></description>
+            <content:encoded><![CDATA[<p></p>
+<blockquote>
+<p>Note: This was originally posted to Drop's website as a review for their "Signature Series Ryokucha Keyboard",
+which was a CSTM80 pre-configured with a green faceplate, a particular keycap set, and gateron yellow switches.
+The Drop store has <a href="https://www.pcgamer.com/hardware/drop-seller-of-lord-of-the-rings-themed-keyboards-and-more-will-be-shutting-down-in-march/" target="_blank" rel="noopener noreferrer">effectively shut down</a>
+since then, and while old product listings and community features (like reviews) stayed up for a little while,
+it looks like they've finally taken those down too. This review used to live <a href="https://drop.com/buy/drop-signature-series-ryokucha-keyboard/reviews/2962547" target="_blank" rel="noopener noreferrer">at this URL</a>
+but that now redirects to Drop's current homepage, where they're basically just an ad display for the few brand
+collab-based products of theirs that remain. As of right now you can still buy the CSTM80 via Corsair under the new name
+"Corsair One CSTM80". I dunno if they still sell the faceplates separately. This was a pretty disappointing development
+tbh, Drop had some cool products for a while, and the CSTM80 would still be highly recommended by me if it wasn't
+in this weird limbo state where it feels like Corsair doesn't want to fully support it as a platform the way Drop
+did. These days I'd lean toward recommending Keychron for getting into mechanical keyboards. Anyway, here's my original
+review relatively un-edited from the copy I saved in my notes back in 2024. (This note written 2026-08-23).</p>
+</blockquote>
+<p>This keyboard has been an excellent introduction to custom mechanical keyboards for me!</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-jasmine-diagonal-view.jpg" target="blank"><img decoding="async" loading="lazy" alt="CSTM80 with the green case and Jasmine keycaps. Diagonal view showing my desktop with various brown accessories." class="img_ev3q" src="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-jasmine-diagonal-view.jpg"></a>
+<p>(Desk mat pictured: <a href="https://drop.com/buy/drop-noctua-desk-mat?searchId=f3e7d2f96c98c180976e6e37e496fff9&amp;defaultSelectionIds=977016" target="_blank" rel="noopener noreferrer">Drop + Noctua Desk Mat, Blueprint version</a>)<br>
+<em>(2026 edit note: I dunno if you can buy this deskmat anymore. That link is dead.)</em></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="overall-build--assembly">OVERALL BUILD / ASSEMBLY:<a href="https://keldev.net/thoughts/2024/12/23/drop-cstm80-review#overall-build--assembly" class="hash-link" aria-label="Direct link to OVERALL BUILD / ASSEMBLY:" title="Direct link to OVERALL BUILD / ASSEMBLY:">​</a></h4>
+<p>Feels great! It's got a hefty weight that keeps it firmly planted on my desk. The case is not creaky when typing. The
+metal plate on the bottom is pretty fun. My keycaps came assembled properly, and the out-of-the-box experience was pretty
+flawless. The included USB-C cable was nothing special, but it was long enough for me, and there are lots of options out
+there for fancier or longer USB-C cables.</p>
+<p>I have two notes/wishes about the build:</p>
+<ol>
+<li>I noticed at least one other Drop prebuilt model has magnetic detachable feet. I wish the CSTM80 had those! Adjustable
+height would be fun.</li>
+<li>Similarly, at least one other Drop prebuilt offers more than one USB C port for connecting to your computer on either
+the back-left OR back-right side. <strong>This board only has a connection port ont he left side of the back face.</strong> Keep
+this in mind for your setup!</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="keycaps">KEYCAPS:<a href="https://keldev.net/thoughts/2024/12/23/drop-cstm80-review#keycaps" class="hash-link" aria-label="Direct link to KEYCAPS:" title="Direct link to KEYCAPS:">​</a></h4>
+<p>The included Jasmine keycap set looks lovely in person, and goes perfectly with the CSTM80 green base.<br>
+<!-- -->The DCX profile on these keycaps is nice and familiar, nothing too wild.</p>
+<p><em>(2026 edit note: As of 2026-08-23 the Drop DCX Jasmine Keycap set is actually still sold through Amazon, dunno if
+you can get it through any other storefront.)</em></p>
+<p><strong>My shipment included what appears to be the complete packaging and all unused keycaps in the Jasmine Keycap Base kit.</strong><br>
+<!-- -->This is super useful!<br>
+<!-- -->If I want to throw these keycaps on a differently-formatted keyboard, or add a numpad later on, I'm prepared! It also
+means I have somewhere to put these Jasmine keycaps if I want to throw on another set for a while.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="lighting">LIGHTING:<a href="https://keldev.net/thoughts/2024/12/23/drop-cstm80-review#lighting" class="hash-link" aria-label="Direct link to LIGHTING:" title="Direct link to LIGHTING:">​</a></h4>
+<p>The LED lighting is pretty subtle with the included keycaps, which I personally enjoy.</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-led-lighting.jpg" target="blank"><img decoding="async" loading="lazy" alt="CSTM80 from above with the LED lights turned on. They peek around the bottom of the keys with a brownish amber glow." class="img_ev3q" src="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-led-lighting.jpg"></a>
+<p>The Jasmine keycaps have no translucent portions themselves, so the south-facing LEDs just appear to light up the tiny
+gaps at the "bottom" of each row of keys. The LEDs offer very good customizability, letting you step through full hue,
+saturation, and value for solid colors. There are also tons of animations (many of which will use your custom HSV
+selection).</p>
+<p>Doing this all through hotkeys is a little clunky, but it's mostly a set-and-forget thing for me anyway, so it works!
+You can see the hotkeys listed <a href="https://drop.com/talk/9382/how-to-configure-your-drop-keyboard" target="_blank" rel="noopener noreferrer">here</a> <em>(2026 edit note:
+not anymore! dead link)</em> though I will note that <strong>on my unit I had to use the right "Super" key instead of the Fn
+key to work the hotkeys.</strong></p>
+<p>I haven't yet tried this board with translucent keycaps, but from looking at the bare switches with LEDs enabled,
+I feel like this use case should work at least <em>well enough</em>. You could potentially look for fully-clear switches for
+more light.</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-bare-switches.jpg" target="blank"><img decoding="async" loading="lazy" alt="Close-up of CSTM80's arrow keys with they keycaps removed, showing Gateron yellow switches and a brownish amber LED glow under each one." class="img_ev3q" src="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-bare-switches.jpg"></a>
+<p>(Note that this image does not have the LEDs on full brightness.)</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="switches">SWITCHES:<a href="https://keldev.net/thoughts/2024/12/23/drop-cstm80-review#switches" class="hash-link" aria-label="Direct link to SWITCHES:" title="Direct link to SWITCHES:">​</a></h4>
+<p>I'm enjoying the Gateron Yellow KS-3 linears so far!<br>
+<!-- -->I knew going in that these switches were going to be smooth and not clicky. They still sound very satisfying when pressed,
+especially if I'm pressing the keys fully. I've read that pre-lubed switches often feel better with aftermarket
+lube manually applied, but I have not felt a need for this yet. I'm inexperienced though, so others may disagree.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="swapping-keys">SWAPPING KEYS:<a href="https://keldev.net/thoughts/2024/12/23/drop-cstm80-review#swapping-keys" class="hash-link" aria-label="Direct link to SWAPPING KEYS:" title="Direct link to SWAPPING KEYS:">​</a></h4>
+<p>I have not yet tried to swap the switches themselves, but I was recently able to swap out my keycap set!</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-biip-operator-keycaps.jpg" target="blank"><img decoding="async" loading="lazy" alt="Diagonal view of CSTM80 with Biip Operator keycaps installed. The keycaps are rounded and scooped, with a taller Mt3 profile. They use a soft blue and white color scheme." class="img_ev3q" src="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-biip-operator-keycaps.jpg"></a>
+<p>(Keycap set pictured: <a href="https://drop.com/buy/drop-biip-mt3-operator-keycap-set?searchId=6bdd0ec877715c5f1ef8cd186a26090b&amp;defaultSelectionIds=975258" target="_blank" rel="noopener noreferrer">Drop + biip MT3 Operator</a>)<br>
+<em>(2026 edit note: dead link, I don't see these on amazon. <a href="https://biipmk.com/works/mt3-operator" target="_blank" rel="noopener noreferrer">The biip website</a> still links to Drop saying they're available, but they're not. Maybe contact them if you're extra curious?)</em></p>
+<p>The included keycap puller kept this process nice and straightforward.<br>
+<!-- -->The tray included with the Jasmine set helps things stay neat, and the overall build is very tidy under the keys.</p>
+<a class="zoomable" href="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-changing-keycaps.jpg" target="blank"><img decoding="async" loading="lazy" alt="CSTM80 with the Jasmine keycaps removed. They sit in a keycap tray above the keyboard, which still has its green faceplate on. All the Gateron yellow switches are visible. The keycap puller tool sits off to the right." class="img_ev3q" src="https://assets.keldev.net/thoughts/2024/12/23/cstm80-review-changing-keycaps.jpg"></a>
+<p>There aren't too many places for dust to stick to, so a simple air dusting got rid of everything for me.</p>
+<p><strong>My one hurdle with this part of the experience was the fact that this keyboard has an F13 key.</strong><br>
+<!-- -->From what I can tell, this isn't generally considered standard on an 80%/Tenkeyless keyboard layout, so not every
+keycap set will have a "nice" solution for it. For example, the Operator set in the image above only had repeat
+keys for any extra spots on that top row. I ended up using a repeat of their "insert" symbol.</p>
+<p>This extra key should be useful if you feel like setting up a fun macro or throwing an artisan keycap over there or
+something, though!</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="softwarefirmware">SOFTWARE/FIRMWARE:<a href="https://keldev.net/thoughts/2024/12/23/drop-cstm80-review#softwarefirmware" class="hash-link" aria-label="Direct link to SOFTWARE/FIRMWARE:" title="Direct link to SOFTWARE/FIRMWARE:">​</a></h4>
+<p>Since this is a Drop CSTM80, it uses the Drop Keyboard Configurator software for customization and firmware flashing.
+I haven't messed around with this much, but it seems at least pretty good!</p>
+<p><strong>One quirk is that the software never recognizes my keyboard right away when I launch it.</strong> Instead, I always have to
+launch the software, then unplug and re-plug the keyboard to get it to show up.</p>
+<p>The one thing I've tried to do in this software that I wasn't immediately able to figure out set up a shortcut for
+Fn+F13 to put my (Windows) computer to sleep. I've seen dedicated "sleep" buttons on a lot of other keyboards,
+but I never found Windows Sleep as a shortcut option in the software. I could have just missed it, not sure.</p>
+<p><em>(2026 edit note: I dunno if there's an easy public way to get this software anymore. Right now I can't even find it via
+the "Corsair One CSTM80" page. I need to flash some other firmware on my board soon using the copy of the Drop
+software that I already have.)</em></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">CONCLUSION:<a href="https://keldev.net/thoughts/2024/12/23/drop-cstm80-review#conclusion" class="hash-link" aria-label="Direct link to CONCLUSION:" title="Direct link to CONCLUSION:">​</a></h4>
+<p>I'm very satisfied with this!<br>
+<!-- -->If you're thinking about getting into mechanical keyboards, this or any similar Drop CSTM80-based prebuilt is probably
+a good buy!</p>
+<p><em>(2026 edit note: Unless Corsair commits to continued sale of the faceplates and to keeping the software publicly
+available, or otherwise just flashing these with a different firmware like <a href="https://qmk.fm/" target="_blank" rel="noopener noreferrer">QMK</a>, I can't call this
+a good buy anymore. This makes me sad.)</em></p><hr><br>]]></content:encoded>
+            <category>Keyboards</category>
+            <category>Review</category>
+        </item>
     </channel>
 </rss>
