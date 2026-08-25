@@ -1,0 +1,22 @@
+.inline-spoiler-collapsed {
+    color: var(--ifm-link-color);
+    text-decoration: var(--ifm-link-decoration);
+    transition: color var(--ifm-translation-fast) var(--ifm-transition-timing-default);
+    background-color: var(--ifm-color-emphasis-300);
+}
+
+.inline-spoiler-collapsed:hover {
+    color: var(--ifm-link-hover-color);
+    text-decoration: var(--ifm-link-hover-decoration);
+    background-color: var(--ifm-color-emphasis-400);
+    cursor: pointer;
+}
+
+.inline-spoiler-expanded {
+    background-color: var(--ifm-color-emphasis-200);
+}
+
+.inline-spoiler-expanded:hover {
+    background-color: var(--ifm-color-emphasis-300);
+    cursor: pointer;
+}
